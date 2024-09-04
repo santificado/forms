@@ -1,123 +1,264 @@
-/* Reset básico para remover margens e espaçamentos indesejados */
-* {
+/* style.css */
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilo do corpo */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
-}
-
-/* Estilo do contêiner */
+/* Container principal */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Estilo do título */
-h2 {
-    margin-bottom: 20px;
-    color: #4a90e2;
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Título do quiz */
+.container h2 {
     text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    transition: color 0.3s ease;
 }
 
-/* Estilo das páginas do formulário */
-.page {
-    display: none;
-}
-
-/* Estilo da pergunta */
+/* Estilo das perguntas */
 .question {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .question label {
-    display: block;
     font-weight: bold;
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .question input[type="text"],
 .question select {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .question input[type="text"]:focus,
 .question select:focus {
-    border-color: #4a90e2;
+    border-color: #007bff;
     outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
 }
 
-/* Estilo dos botões */
-button {
-    background-color: #4a90e2;
-    color: #fff;
+/* Estilo dos botões de navegação */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.navigation-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+/* Estilo do botão de submissão */
+button[type="button"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
 }
 
-button:hover {
-    background-color: #357abd;
+button[type="button"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
 }
 
-/* Estilo do botão de Submeter */
-button[type="button"]:last-of-type {
-    margin-right: 0;
+button[type="button"]:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(40, 167, 69, 0.4);
 }
 
-button[type="submit"] {
-    background-color: #e94e77;
-}
-
-button[type="submit"]:hover {
-    background-color: #d43f5f;
-}
-
-/* Estilo da seção de resultados */
+/* Estilo do resultado */
 .result {
     display: none;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px;
-    background: #f9f9f9;
+    background-color: #f8f9fa;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .result h3 {
-    margin-bottom: 10px;
-    color: #4a90e2;
+    color: #333;
+    margin-bottom: 18px;
+    font-size: 20px;
+    transition: color 0.3s ease;
 }
 
 .result p {
-    margin-bottom: 10px;
+    margin: 10px 0;
+    color: #555;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.correct {
-    color: #4a90e2;
-    font-weight: bold;
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-.incorrect {
-    color: #e94e77;
-    font-weight: bold;
+.container.dark-mode {
+    background-color: #1f1f1f;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container.dark-mode h2 {
+    color: #e0e0e0;
+}
+
+.question.dark-mode label {
+    color: #cccccc;
+}
+
+.question.dark-mode input[type="text"],
+.question.dark-mode select {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.question.dark-mode input[type="text"]:focus,
+.question.dark-mode select:focus {
+    border-color: #bb86fc;
+    box-shadow: 0 0 8px rgba(187, 134, 252, 0.3);
+}
+
+.navigation-buttons.dark-mode button {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.navigation-buttons.dark-mode button:hover {
+    background-color: #9a67ea;
+}
+
+.navigation-buttons.dark-mode button:focus {
+    box-shadow: 0 0 6px rgba(187, 134, 252, 0.4);
+}
+
+button[type="button"].dark-mode {
+    background-color: #03dac6;
+    color: #121212;
+}
+
+button[type="button"].dark-mode:hover {
+    background-color: #00c4b4;
+}
+
+button[type="button"].dark-mode:focus {
+    box-shadow: 0 0 6px rgba(3, 218, 198, 0.4);
+}
+
+.result.dark-mode {
+    background-color: #333;
+    border-color: #444;
+}
+
+.result.dark-mode h3 {
+    color: #ffffff;
+}
+
+.result.dark-mode p {
+    color: #cccccc;
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .question label {
+        font-size: 14px;
+    }
+
+    .question input[type="text"],
+    .question select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .navigation-buttons button {
+        width: 45%;
+        font-size: 13px;
+    }
+
+    button[type="button"] {
+        font-size: 14px;
+    }
+
+    .result h3 {
+        font-size: 18px;
+    }
+
+    .result p {
+        font-size: 14px;
+    }
 }
