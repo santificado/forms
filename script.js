@@ -34,19 +34,24 @@ function submitQuiz() {
 
     // Itera sobre todos os elementos do formulário
     for (let element of formElements) {
+        // Verifica se o elemento é um campo de texto ou select
         if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
             const userAnswer = element.tagName === 'SELECT' ? element.options[element.selectedIndex].value : element.value;
             const correctAnswer = element.getAttribute('data-correct');
             
-            // Verifica se a resposta do usuário está correta
-            if (userAnswer === correctAnswer) {
-                score++;
-                resultHtml += `<p>${element.name}: Resposta correta!</p>`;
-            } else if (correctAnswer) {
-                // Mostra a resposta correta se a resposta do usuário estiver errada
-                resultHtml += `<p>${element.name}: Resposta incorreta. Resposta correta: ${correctAnswer}</p>`;
+            // Apenas considera a questão se ela tiver uma resposta correta
+            if (correctAnswer !== null) {
+                totalQuestions++;
+
+                // Verifica se a resposta do usuário está correta
+                if (userAnswer === correctAnswer) {
+                    score++;
+                    resultHtml += `<p>${element.name}: <span class="correct">Resposta correta!</span></p>`;
+                } else {
+                    // Mostra a resposta correta se a resposta do usuário estiver errada
+                    resultHtml += `<p>${element.name}: <span class="incorrect">Resposta incorreta.</span> <span class="correct-answer">Resposta correta: ${correctAnswer}</span></p>`;
+                }
             }
-            totalQuestions++;
         }
     }
 
@@ -55,10 +60,12 @@ function submitQuiz() {
     resultHtml += `<p>Você acertou ${score} de ${totalQuestions} perguntas.</p>`;
     resultHtml += `<p>Percentual de acerto: ${percentage.toFixed(2)}%</p>`;
     
-    // Exibe o resultado
+    // Exibe o resultado no gabarito
     document.getElementById('result').innerHTML = resultHtml;
-    document.getElementById('result').style.display = 'block';
-    showPage(1); // Volta para a primeira página após a submissão
+    document.getElementById('result').style.display = 'block'; // Garante que o gabarito será mostrado
+
+    // Move para o topo da página após a submissão para que o usuário veja o gabarito
+    window.scrollTo(0, 0);
 }
 
 // Inicializa na primeira página

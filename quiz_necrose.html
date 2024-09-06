@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Patologia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Quiz de Patologia</h2>
+    
+    <form id="quizForm">
+        <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <label for="q1">1. Defina o que é patologia.</label>
+                <input type="text" id="q1" name="q1" data-correct="Patologia é a ciência que estuda as doenças.">
+            </div>
+            <button type="button" onclick="nextPage(2)">Próxima</button>
+        </div>
+        
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <label for="q2">2. Diferencie lesão reversível da lesão irreversível.</label>
+                <select id="q2" name="q2" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) lesão reversível, é uma lesão leve e transitória, enquanto a irreversível leva a morte celular, ou apoptose ou necrose.</option>
+                    <option value="b">b) lesão reversível não há dano na célula enquanto a irreversível sofre hipóxia e se regenera.</option>
+                    <option value="c">c) lesão reversível é quando ocorre apoptose da célula, irreversível quando ocorre necrose</option>
+                    <option value="d">d) lesão reversível é quando a célula pode se regenerar, já a irreversível sempre ocorre necrose.</option>
+                </select>
+            </div>            
+            <button type="button" onclick="nextPage(3)">Próxima</button>
+            <button type="button" onclick="prevPage(1)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <label for="q3">3. Qual a diferença entre hipóxia e isquemia?</label>
+                <input type="text" id="q3" name="q3" data-correct="Hipóxia é a condição em que tem pouco oxigênio disponível para as células, enquanto isquemia é quando as células param de receber sangue. Uma é consequência da outra, pois a isquemia leva a hipóxia, já que o sangue é fonte de oxigênio para as células.">
+            </div>            
+            <button type="button" onclick="nextPage(4)">Próxima</button>
+            <button type="button" onclick="prevPage(2)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <label for="q4">4. Quais são os sinais morfológicos que indicam irreversibilidade?</label>
+                <input type="text" id="q4" name="q4" data-correct="Grande tumefação mitocondrial, perda de cristas, depósitos floculares na matriz, bolhas e solução de continuidade da membrana.">
+            </div>
+            <button type="button" onclick="nextPage(5)">Próxima</button>
+            <button type="button" onclick="prevPage(3)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <label for="q5">5. Dê o conceito de apoptose e cite 2 exemplos.</label>
+                <input type="text" id="q5" name="q5" data-correct="A apoptose é a morte celular programada, é fundamental para o desenvolvimento dos organismos vivos, por exemplo a menstruação onde o óvulo não é fecundado, logo é eliminado através do fluido menstrual. Outro exemplo é a deleção de células intestinais renováveis.">
+            </div>
+            <button type="button" onclick="nextPage(6)">Próxima</button>
+            <button type="button" onclick="prevPage(4)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <div class="question">
+                <label for="q6">6. A necrose pode ser definida como uma morte celular que acomete um organismo vivo e é seguida de autólise. Verdadeiro ou falso?</label>
+                <select id="q6" name="q6" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">Verdadeiro</option>
+                    <option value="b">Falso</option>
+                </select>
+            </div>
+                        <button type="button" onclick="nextPage(7)">Próxima</button>
+            <button type="button" onclick="prevPage(5)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <div class="question">
+                <label for="q7">7. Cite as causas de necrose.</label>
+                <input type="text" id="q7" name="q7" data-correct="Uma lesão irreversível leva a necrose. Os agentes de agressores podem produzir necrose por: redução de energia, (ex: hipóxia, anóxia) (inibição do processo respiratório); produção de radicais livres; ações diretas sobre as enzimas (toxinas e agentes químicos); agressão direta a membrana citoplasmática (criação de canais hidrofílicos).">
+            </div>
+                        <button type="button" onclick="nextPage(8)">Próxima</button>
+            <button type="button" onclick="prevPage(6)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <div class="question">
+                <label for="q8">8. Diferencie picnose celular, cariólise e cariorrexe.</label>
+                <input type="text" id="q8" name="q8" data-correct="Picnose celular é a intensa contração e condensação da cromatina, tornando núcleo intensamente basófilo, de aspecto homogêneo e bem menor do que o normal. Cariólise é a digestão da cromatina, desaparecimento da atividade tintorial do núcleo a ponto de não ser mais possível identificá-lo em coloração de rotina. Cariorrexe é a fragmentação e dispersão do núcleo no citoplasma.">
+            </div>
+                        <button type="button" onclick="nextPage(9)">Próxima</button>
+
+            <button type="button" onclick="prevPage(7)">Anterior</button>
+        </div>
+        
+        <!-- Página 9 -->
+        <div id="page9" class="page">
+            <div class="question">
+                <label for="q9">9. Dentre as alternativas abaixo, qual representa necrose que aparece na tuberculose e qual é encontrada na sífilis, respectivamente?</label>
+                <select id="q9" name="q9" data-correct="d">
+                    <option value="">Selecione uma opção</option>
+                    <option value="a">a) necrose caseosa e necrose lítica</option>
+                    <option value="b">b) necrose lítica e necrose casosa</option>
+                    <option value="c">c) necrose lítica e necrose gomosa</option>
+                    <option value="d">d) necrose caseosa e necrose gomosa</option>
+                    <option value="e">e) necrose por coagulação ou necrose lítica</option>
+                </select>
+            </div>
+                        <button type="button" onclick="nextPage(10)">Próxima</button>
+
+            <button type="button" onclick="prevPage(8)">Anterior</button>
+        </div>
+        
+        <!-- Página 10 -->
+        <div id="page10" class="page">
+            <div class="question">
+                <label for="q10">10. Qual necrose tem seu aparecimento nas hepatites virais que ocorre nos hepatócitos?</label>
+                <input type="text" id="q10" name="q10" data-correct="A necrose que aparece na hepatite é a necrose lítica, onde ocorre lise ou esfarelo. Zona necrosa adquire consistência mole, semi fluida.">
+            </div>
+            <button type="button" onclick="nextPage(11)">Próxima</button>
+
+            <button type="button" onclick="prevPage(9)">Anterior</button>
+        </div>
+        
+        <!-- Página 11 -->
+        <div id="page11" class="page">
+            <div class="question">
+                <label for="q11">11. A imagem abaixo representa qual tipo de necrose. Justifique.</label>
+                <img src="./images/necrose.jpg" alt="necrose" />              
+                <input type="text" id="q11" name="q11" data-correct="Esteatonecrose, por conta das gotas de vela.">
+            </div>
+            <button type="button" onclick="nextPage(12)">Próxima</button>
+            <button type="button" onclick="prevPage(10)">Anterior</button>
+
+        </div>
+        
+        <!-- Página 12 -->
+        <div id="page12" class="page">
+            <div class="question">
+                <label for="q12">12. Diferencie os tipos de gangrena.</label>
+                <input type="text" id="q12" name="q12" data-correct="Gangrena seca ocorre devido à falta de irrigação sanguínea, resultando em necrose seca e desidratação dos tecidos. Gangrena úmida ocorre devido à infecção bacteriana e umidade, resultando em necrose úmida e inflamação. Gangrena gasosa é causada por infecção por bactérias anaeróbias que produzem gás, resultando em necrose acompanhada de formação de gás.">
+            </div>
+            <button type="button" onclick="nextPage(13)">Próxima</button>
+            <button type="button" onclick="prevPage(11)">Anterior</button>
+
+        </div>
+
+        <!-- Página 13 -->
+        <div id="page13" class="page">
+            <div class="question">
+                <label for="q13">13. O que é inflamação e quais são os seus sinais cardinais?</label>
+                <input type="text" id="q13" name="q13" data-correct="Inflamação é a resposta do organismo a uma agressão, com sinais cardinais que são: rubor (vermelhidão), calor, dor, edema (inchaço) e perda de função.">
+            </div>
+            <button type="button" onclick="nextPage(14)">Próxima</button>
+            <button type="button" onclick="prevPage(12)">Anterior</button>
+
+        </div>
+
+        <!-- Página 14 -->
+        <div id="page14" class="page">
+            <div class="question">
+                <label for="q14">14. Explique o conceito de necrose coagulativa.</label>
+                <input type="text" id="q14" name="q14" data-correct="Necrose coagulativa é um tipo de necrose onde a estrutura do tecido é preservada, mas as células morrem. É comum em casos de infarto do miocárdio e outros eventos isquêmicos, e é caracterizada pela solidificação do tecido devido à coagulação das proteínas.">
+            </div>
+            <button type="button" onclick="nextPage(15)">Próxima</button>
+            <button type="button" onclick="prevPage(13)">Anterior</button>
+            
+        </div>
+
+        <!-- Página 15 -->
+        <div id="page15" class="page">
+            <div class="question">
+                <label for="q15">15. Qual é o papel dos radicais livres na necrose celular?</label>
+                <input type="text" id="q15" name="q15" data-correct="Os radicais livres causam danos às células ao oxidar lipídios, proteínas e DNA, resultando em estresse oxidativo. Isso pode levar à necrose celular ao comprometer a integridade das membranas celulares e estruturas intracelulares.">
+            </div>
+            <button type="button" onclick="nextPage(16)">Próxima</button>
+            <button type="button" onclick="prevPage(14)">Anterior</button>
+            
+        </div>
+
+        <!-- Página 16 -->
+        <div id="page16" class="page">
+            <div class="question">
+                <label for="q16">16. Diferencie necrose por coagulação de necrose por liquefação.</label>
+                <input type="text" id="q16" name="q16" data-correct="Necrose por coagulação é caracterizada pela preservação da estrutura do tecido, onde ocorre coagulação das proteínas. Necrose por liquefação é caracterizada pela transformação do tecido em uma massa líquida, geralmente associada a infecções bacterianas.">
+            </div>
+            <button type="button" onclick="nextPage(17)">Próxima</button>
+            <button type="button" onclick="prevPage(15)">Anterior</button>
+            
+        </div>
+
+        <!-- Página 17 -->
+        <div id="page17" class="page">
+            <div class="question">
+                <label for="q17">17. Qual das alternativas abaixo NÃO é um sinal morfológico de lesão irreversível?</label>
+                <select id="q17" name="q17" data-correct="b">
+                    <option value="">Selecione uma opção</option>
+                    <option value="a">a) Grande tumefação mitocondrial</option>
+                    <option value="b">b) Preservação da crista mitocondrial</option>
+                    <option value="c">c) Depósitos floculares na matriz</option>
+                    <option value="d">d) Solução de continuidade da membrana</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="nextPage(18)">Próxima</button>
+            <button type="button" onclick="prevPage(16)">Anterior</button>
+        </div>
+
+        <!-- Página 18 -->
+        <div id="page18" class="page">
+            <div class="question">
+                <label for="q18">18. Qual dos seguintes processos leva à apoptose?</label>
+                <select id="q18" name="q18" data-correct="c">
+                    <option value="">Selecione uma opção</option>
+                    <option value="a">a) Inflamação aguda</option>
+                    <option value="b">b) Reparo tecidual</option>
+                    <option value="c">c) Sinalização celular inadequada</option>
+                    <option value="d">d) Regeneração celular</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage(19)">Próxima</button>
+            <button type="button" onclick="prevPage(17)">Anterior</button>
+            
+        </div>
+
+        <!-- Página 19 -->
+        <div id="page19" class="page">
+            <div class="question">
+                <label for="q19">19. A necrose liquefativa é mais comum em qual tipo de tecido?</label>
+                <select id="q19" name="q19" data-correct="b">
+                    <option value="">Selecione uma opção</option>
+                    <option value="a">a) Tecido ósseo</option>
+                    <option value="b">b) Tecido cerebral</option>
+                    <option value="c">c) Tecido muscular</option>
+                    <option value="d">d) Tecido epitelial</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage(20)">Próxima</button>
+            <button type="button" onclick="prevPage(18)">Anterior</button>
+            
+        </div>
+
+        <!-- Página 20 -->
+        <div id="page20" class="page">
+            <div class="question">
+                <label for="q20">20. Em qual tipo de necrose é mais provável encontrar calcificação distrófica?</label>
+                <select id="q20" name="q20" data-correct="d">
+                    <option value="">Selecione uma opção</option>
+                    <option value="a">a) Necrose caseosa</option>
+                    <option value="b">b) Necrose liquefativa</option>
+                    <option value="c">c) Necrose gordurosa</option>
+                    <option value="d">d) Necrose coagulativa</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="prevPage(19)">Anterior</button>
+            <button type="button" onclick="submitQuiz()">Concluir</button>
+        </div>
+    </form>
+
+    <div id="result" class="result"></div>
+    
+</div>
+
+</body>
+</html>

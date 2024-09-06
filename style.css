@@ -262,3 +262,124 @@ button[type="button"].dark-mode:focus {
         font-size: 14px;
     }
 }
+img {
+    display: block; 
+    margin: 20px auto; 
+    max-width: 50%; 
+    height: auto; 
+    border: 5px solid #2c3e50; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+/* Estilo dos links principais */
+a.form-link {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a.form-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+a.form-link:active {
+    background-color: #004494;
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para links em dispositivos móveis */
+@media (max-width: 600px) {
+    a.form-link {
+        padding: 12px;
+        font-size: 16px;
+        margin: 8px 0;
+    }
+}
+
+/* Estilo do gabarito */
+#result {
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #d1e7ff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título do gabarito */
+#result h3 {
+    color: #007bff;
+    margin-bottom: 18px;
+    font-size: 22px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Parágrafos do gabarito */
+#result p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+/* Estilo das respostas corretas */
+#result .correct {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline;
+}
+
+/* Estilo das respostas incorretas */
+#result .incorrect {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline;
+}
+
+/* Estilo da resposta certa após erro */
+#result .correct-answer {
+    color: #007bff;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Responsividade para o gabarito */
+@media (max-width: 600px) {
+    #result {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #result h3 {
+        font-size: 20px;
+    }
+
+    #result p {
+        font-size: 14px;
+    }
+}
