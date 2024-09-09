@@ -323,3 +323,22 @@ a.form-link:focus {
     outline: none;
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
 }
+/* Estilo para o botão de voltar com ícone */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-back {
+    background-color: transparent; /* Sem cor de fundo */
+    color: #4CAF50; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px; /* Espaçamento */
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.btn-back:hover {
+    color: #45a049; /* Muda a cor ao passar o mouse */
+}

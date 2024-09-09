@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Imunologia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+<body>
+
+<div class="container">
+    <h2>Quiz de Imunologia</h2>
+    
+    <form id="quizForm">
+        <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <label for="q1"> 1. Explique como ocorre a ativação das células T e a importância do MHC nesse processo. </label>
+                <input type="text" id="q1" name="q1" data-correct="As células T são ativadas quando o receptor TCR delas reconhece antígenos apresentados pelas moléculas MHC nas células apresentadoras de antígenos. O MHC mostra partes do patógeno para as células T, iniciando a resposta imune.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </div>
+        
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <label for="q2">2. O receptor TCR (receptor de célula T) reconhece: </label>
+                <select id="q2" name="q2" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Antígenos solúveis</option>
+                    <option value="b">b) Antígenos processados e apresentados pelo MHC</option>
+                    <option value="c">c) PAMPs</option>
+                    <option value="d">d) IgG</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <label for="q3">3. Como os anticorpos ajudam a combater infecções?</label>
+                <input type="text" id="q3" name="q3" data-correct="Os anticorpos se ligam aos patógenos, impedindo que infectem células e marcando-os para destruição pelo sistema imune.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <label for="q4">4. Qual das seguintes moléculas é uma citocina pró-inflamatória?</label>
+                <select id="q4" name="q4" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) IL-10</option>
+                    <option value="b">b) TGF-β</option>
+                    <option value="c">c) IL-1</option>
+                    <option value="d">d) IL-12</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <label for="q5">5. Descreva a função das células NK no sistema imune</label>
+                <input type="text" id="q5" name="q5" data-correct="As células NK eliminam células infectadas ou tumorais sem a necessidade de reconhecimento específico.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <div class="question">
+                <label for="q6">6. A imunidade inata difere da adaptativa porque</label>
+                <select id="q6" name="q6" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Não possui memória imunológica</option>
+                    <option value="b">b) Requer a ativação de células T</option>
+                    <option value="c">c) Reage especificamente a cada patógeno</option>
+                    <option value="d">d) Produz anticorpos mais rapidamente</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <div class="question">
+                <label for="q7">7. Qual a importância das células dendríticas na imunidade?</label>
+                <input type="text" id="q7" name="q7" data-correct="Elas capturam antígenos e os apresentam às células T, iniciando a resposta imune adaptativa.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <div class="question">
+                <label for="q8">8. Qual é a função da proteína C-reativa (PCR) durante a inflamação?</label>
+                <input type="text" id="q8" name="q8" data-correct="A PCR se liga a patógenos e células danificadas, promovendo a ativação do sistema complemento e facilitando a fagocitose.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 9 -->
+        <div id="page9" class="page">
+            <div class="question">
+                <label for="q9">9. Cite um exemplo de imunidade passiva e sua importância.</label>
+                <input type="text" id="q9" name="q9" data-correct="A imunidade passiva pode ocorrer através da transferência de anticorpos maternos para o bebê via leite materno, oferecendo proteção temporária contra infecções.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 10 -->
+        <div id="page10" class="page">
+            <div class="question">
+                <label for="q10">10. A resposta imune adaptativa possui duas características principais: especificidade e memória. Explique por que essas características são importantes.</label>
+                <input type="text" id="q10" name="q10" data-correct="A especificidade permite que o sistema imune ataque diretamente o patógeno, enquanto a memória garante uma resposta mais rápida e eficaz em infecções futuras.">
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+                <!-- Página 11 -->
+                <div id="page11" class="page">
+                    <div class="question">
+                        <label for="q11">11. Qual das opções a seguir é um exemplo de célula apresentadora de antígeno?</label>
+                        <select id="q11" name="q11" data-correct="a">
+                            <option value="">Selecione uma alternativa</option>
+                            <option value="a">a) Macrófago</option>
+                            <option value="b">b) Eritrócito</option>
+                            <option value="c">c) Neurônio</option>
+                            <option value="d">d) Fibrócito</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 12 -->
+                <div id="page12" class="page">
+                    <div class="question">
+                        <label for="q12">12. Descreva o papel dos linfócitos B na resposta imune humoral.</label>
+                        <input type="text" id="q12" name="q12" data-correct="Os linfócitos B produzem anticorpos específicos que neutralizam patógenos ou os marcam para destruição por outras células do sistema imune.">
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 13 -->
+                <div id="page13" class="page">
+                    <div class="question">
+                        <label for="q13">13. Qual é a função principal das citocinas no sistema imune?</label>
+                        <select id="q13" name="q13" data-correct="b">
+                            <option value="">Selecione uma alternativa</option>
+                            <option value="a">a) Elas atuam como receptores de antígenos</option>
+                            <option value="b">b) Elas modulam a comunicação entre as células imunológicas</option>
+                            <option value="c">c) Elas destroem diretamente os patógenos</option>
+                            <option value="d">d) Elas funcionam como anticorpos solúveis</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 14 -->
+                <div id="page14" class="page">
+                    <div class="question">
+                        <label for="q14">14. Explique o conceito de imunidade adquirida.</label>
+                        <input type="text" id="q14" name="q14" data-correct="Imunidade adquirida é a defesa específica desenvolvida pelo organismo após a exposição a patógenos, caracterizada pela ativação de linfócitos T e B e pela memória imunológica.">
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 15 -->
+                <div id="page15" class="page">
+                    <div class="question">
+                        <label for="q15">15. Qual das opções a seguir é um exemplo de imunidade inata?</label>
+                        <select id="q15" name="q15" data-correct="c">
+                            <option value="">Selecione uma alternativa</option>
+                            <option value="a">a) Produção de anticorpos por linfócitos B</option>
+                            <option value="b">b) Ativação de células T auxiliares</option>
+                            <option value="c">c) Ação de neutrófilos na fagocitose</option>
+                            <option value="d">d) Memória imunológica após uma infecção</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 16 -->
+                <div id="page16" class="page">
+                    <div class="question">
+                        <label for="q16">16. Explique como os linfócitos T citotóxicos eliminam células infectadas.</label>
+                        <input type="text" id="q16" name="q16" data-correct="Os linfócitos T citotóxicos reconhecem células infectadas através do MHC de classe I e liberam perforinas e granzimas, que levam à morte celular.">
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 17 -->
+                <div id="page17" class="page">
+                    <div class="question">
+                        <label for="q17">17. Qual componente do sistema complemento atua como opsonina?</label>
+                        <select id="q17" name="q17" data-correct="a">
+                            <option value="">Selecione uma alternativa</option>
+                            <option value="a">a) C3b</option>
+                            <option value="b">b) C5a</option>
+                            <option value="c">c) C9</option>
+                            <option value="d">d) C1q</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 18 -->
+                <div id="page18" class="page">
+                    <div class="question">
+                        <label for="q18">18. Descreva o papel das células de memória no sistema imune adaptativo.</label>
+                        <input type="text" id="q18" name="q18" data-correct="As células de memória permanecem no corpo após a infecção inicial e proporcionam uma resposta mais rápida e eficiente a reinfecções pelo mesmo patógeno.">
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 19 -->
+                <div id="page19" class="page">
+                    <div class="question">
+                        <label for="q19">19. Qual das seguintes células é responsável pela produção de anticorpos?</label>
+                        <select id="q19" name="q19" data-correct="d">
+                            <option value="">Selecione uma alternativa</option>
+                            <option value="a">a) Células NK</option>
+                            <option value="b">b) Neutrófilos</option>
+                            <option value="c">c) Macrófagos</option>
+                            <option value="d">d) Linfócitos B</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="nextPage()">Próxima</button>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                </div>
+        
+                <!-- Página 20 -->
+                <div id="page20" class="page">
+                    <div class="question">
+                        <label for="q20">20. Explique a importância da vacinação na proteção contra doenças infecciosas.</label>
+                        <input type="text" id="q20" name="q20" data-correct="A vacinação estimula a produção de anticorpos e células de memória sem causar a doença, proporcionando proteção eficaz contra futuras infecções.">
+                    </div>
+                    <button type="button" onclick="prevPage()">Anterior</button>
+                    <button type="button" onclick="submitQuiz()">Concluir</button>
+                </div>
+            </form>
+        
+            <div id="result" class="result"></div>
+            
+        </div>
+        <script src="./js/script3.js" defer></script>
+        </body>
+        </html>
+        
