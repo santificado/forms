@@ -35,7 +35,7 @@ function submitQuiz() {
     // Itera sobre todos os elementos do formulário
     for (let element of formElements) {
         // Verifica se o elemento é um campo de texto ou select
-        if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+        if (element.tagName === 'TEXTAREA' || element.tagName === 'SELECT') {
             const userAnswer = element.tagName === 'SELECT' ? element.options[element.selectedIndex].value : element.value;
             const correctAnswer = element.getAttribute('data-correct');
             
