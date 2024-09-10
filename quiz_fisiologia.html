@@ -86,14 +86,29 @@
         <!-- Página 8 -->
         <div id="page7" class="page">
             <div class="question">
-                <label for="q7">7. 0 que é metaplasia ? Cite onde ela pode ocorrer.</label>
+                <label for="q7">7. O que é metaplasia ? Cite onde ela pode ocorrer.</label>
                 <input type="text" id="q8" name="q8" data-correct="Um tipo de célula adulta( epitelial ou  mesenquimal) é substituído por outro tipo de célula adulta, no intuito de apresentar maior capacidade de suportar o ambiente adverso. Isso pode ocorrer no epitélio respiratório de um tabagista por exemplo, onde células epiteliais  cilíndricas ciliadas normais, da traqueia e dos brônquios , frequentemente são  substituídas por células epiteliais escamosas estratificadas, e com isso há  perda do mecanismo de proteção.">
-            </div>
+            </div>            
+            <button type="button" onclick="nextPage()">Próxima</button>
             <button type="button" onclick="prevPage()">Anterior</button>
-            <button type="button" onclick="submitQuiz()">Concluir</button>
-        </div>
-    </form>
 
+        </div>
+
+    <div id="page8" class="page" >      
+        <div class="question">     
+        <label for="q8">8. O que é atrofia?</label>
+        <select name="q8" id="q8" data-correct="c">
+ 
+        <option value=""> </option>
+        <option value="a">a) Rompimento da célula</option>
+        <option value="b">b)Diminuição do tamanho das células por perda substância celular</option>
+        <option value="c">c)Sinônimo de autofagia</option>
+        <option value="d">d)Aumento da carga de trabalho da célula</option>
+        </select>            
+        <button type="button" onclick="prevPage()">Anterior</button>
+         <button type="button" onclick="submitQuiz()">Concluir</button>
+    </div>
+    </form>
     <div id="result" class="result"></div>
     
 </div>
