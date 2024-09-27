@@ -1,7 +1,5 @@
-// script.js
-
 let currentPage = 1;
-const totalPages = 6; // Total de perguntas/páginas
+const totalPages = 5; // Total de perguntas/páginas
 
 function showPage(pageNumber) {
     // Oculta todas as páginas e exibe apenas a página atual
@@ -30,8 +28,9 @@ function submitQuiz() {
     const totalQuestions = totalPages;
     let resultHtml = '<h3>Resultado do Quiz</h3>';
 
-    // Itera sobre todos os elementos do formulário
-    document.querySelectorAll('.page').forEach(page => {
+    // Itera sobre todas as páginas
+    for (let i = 1; i <= totalQuestions; i++) {
+        const page = document.getElementById('page' + i);
         page.querySelectorAll('[data-correct]').forEach(element => {
             const userAnswer = element.tagName === 'SELECT' ? element.options[element.selectedIndex].value : element.value.trim();
             const correctAnswer = element.getAttribute('data-correct').trim();
@@ -45,7 +44,7 @@ function submitQuiz() {
                 resultHtml += `<p>${element.name}: <span class="incorrect">Resposta incorreta.</span> <span class="correct-answer">Resposta correta: ${correctAnswer}</span></p>`;
             }
         });
-    });
+    }
 
     // Calcula o percentual de acerto
     const percentage = (score / totalQuestions) * 100;
