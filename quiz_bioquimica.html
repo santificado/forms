@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Bioquímica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+<body>
+
+<div class="container">
+    <h2>Quiz de Bioquímica</h2>
+    
+    <form id="quizForm">
+        <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <label for="q1"> 1. Qual das alternativas a seguir descreve corretamente o conceito de taxa metabólica basal (TMB)?</label>
+                <select id="q1" name="q1" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) A quantidade de energia gasta durante atividades físicas intensas</option>
+                    <option value="b">b) A quantidade mínima de energia que o corpo precisa em repouso para manter suas funções vitais</option>
+                    <option value="c">c) A quantidade de calorias ingeridas diariamente</option>
+                    <option value="d">d) O aumento do gasto energético após as refeições</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </div>
+
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <label for="q2">2. Qual dos processos a seguir ocorre durante a glicólise?</label>
+                <select id="q2" name="q2" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Quebra da glicose em piruvato com produção de ATP</option>
+                    <option value="b">b) Conversão de ácidos graxos em glicose</option>
+                    <option value="c">c) Formação de água a partir de oxigênio</option>
+                    <option value="d">d) Produção de glicogênio a partir de glicose</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <label for="q3">3. O que acontece com o piruvato gerado na glicólise em condições anaeróbicas?</label>
+                <select id="q3" name="q3" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) É convertido em glicose</option>
+                    <option value="b">b) É transformado em acetil-CoA</option>
+                    <option value="c">c) É convertido em lactato</option>
+                    <option value="d">d) É totalmente oxidado no ciclo de Krebs</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <label for="q4">4. Qual é a principal função dos carboidratos na bioenergética?</label>
+                <select id="q4" name="q4" data-correct="d">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Formação de proteínas estruturais</option>
+                    <option value="b">b) Armazenamento de informações genéticas</option>
+                    <option value="c">c) Construção de membranas celulares</option>
+                    <option value="d">d) Fornecimento de energia rápida para o corpo</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <label for="q5">5. Qual dos seguintes nutrientes tem a maior densidade calórica?</label>
+                <select id="q5" name="q5" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Carboidratos</option>
+                    <option value="b">b) Proteínas</option>
+                    <option value="c">c) Lipídios</option>
+                    <option value="d">d) Vitaminas</option>
+                </select>
+            </div>
+            <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="submitQuiz()">Concluir</button>
+        </div>
+    </form>
+
+    <div id="result" class="result"></div>
+
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
