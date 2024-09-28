@@ -1,5 +1,5 @@
 let currentPage = 1;
-const totalPages = 5; // Total de perguntas/páginas
+const totalPages = 14; // Total de perguntas/páginas
 
 function showPage(pageNumber) {
     // Oculta todas as páginas e exibe apenas a página atual
