@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Sistema Complemento e Anticorpos Monoclonais</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<div class="container">
+    <h2>Quiz de Sistema Complemento e Anticorpos Monoclonais</h2>
+    
+    <form id="quizForm">
+        <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <label for="q1">1. Qual é o papel principal das moléculas de MHC classe I no reconhecimento de antígenos pelos linfócitos T?</label>
+                <select id="q1" name="q1" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Apresentar antígenos extracelulares aos linfócitos T auxiliares (CD4+).</option>
+                    <option value="b">b) Apresentar antígenos intracelulares aos linfócitos T citotóxicos (CD8+).</option>
+                    <option value="c">c) Apresentar antígenos extracelulares aos linfócitos T citotóxicos (CD8+).</option>
+                    <option value="d">d) Apresentar antígenos solúveis diretamente aos linfócitos B.</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </div>
+        
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <label for="q2">2. As moléculas de MHC classe II estão envolvidas na apresentação de antígenos para qual tipo de célula do sistema imune?</label>
+                <select id="q2" name="q2" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Linfócitos T citotóxicos (CD8+).</option>
+                    <option value="b">b) Linfócitos B.</option>
+                    <option value="c">c) Linfócitos T auxiliares (CD4+).</option>
+                    <option value="d">d) Células NK (natural killers).</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <label for="q3">3. Qual das seguintes opções descreve corretamente a diferença entre MHC classe I e MHC classe II?</label>
+                <select id="q3" name="q3" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) O MHC classe I apresenta antígenos extracelulares, enquanto o MHC classe II apresenta antígenos intracelulares.</option>
+                    <option value="b">b) O MHC classe I está presente em todas as células nucleadas, enquanto o MHC classe II é expresso apenas em células apresentadoras de antígenos.</option>
+                    <option value="c">c) O MHC classe II apresenta antígenos para linfócitos T citotóxicos (CD8+), enquanto o MHC classe I apresenta para linfócitos T auxiliares (CD4+).</option>
+                    <option value="d">d) O MHC classe II está presente em todas as células nucleadas, enquanto o MHC classe I é expresso apenas em células apresentadoras de antígenos.</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <label for="q4">4. Como os antígenos extracelulares são apresentados aos linfócitos T auxiliares (CD4+)?</label>
+                <select id="q4" name="q4" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Eles são processados pelas células infectadas e apresentados via MHC classe I.</option>
+                    <option value="b">b) Eles são processados por células apresentadoras de antígenos (APCs) e apresentados via MHC classe II.</option>
+                    <option value="c">c) Eles se ligam diretamente ao receptor TCR nos linfócitos T auxiliares.</option>
+                    <option value="d">d) São apresentados diretamente pelas células NK (natural killers).</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <label for="q5">5. Qual das seguintes células é responsável por apresentar antígenos por meio de moléculas de MHC classe II?</label>
+                <select id="q5" name="q5" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Neutrófilos.</option>
+                    <option value="b">b) Linfócitos B.</option>
+                    <option value="c">c) Células dendríticas, macrófagos e linfócitos B.</option>
+                    <option value="d">d) Eritrócitos.</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <div class="question">
+                <label for="q6">6. Explique como os linfócitos T reconhecem antígenos no organismo e qual o papel das células apresentadoras de antígeno (APCs) nesse processo.</label>
+                <textarea id="q6" name="q6" data-correct="Os linfócitos T não reconhecem antígenos diretamente em sua forma livre. Eles reconhecem fragmentos de antígenos que são apresentados na superfície de células especializadas, chamadas células apresentadoras de antígenos (APCs). As APCs processam os antígenos e os apresentam aos linfócitos T ligados a moléculas do complexo principal de histocompatibilidade (MHC). Existem dois tipos principais de MHC: MHC classe I, que apresenta antígenos para linfócitos T citotóxicos (CD8+), e MHC classe II, que apresenta antígenos para linfócitos T auxiliares (CD4+).">
+                </textarea>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <div class="question">
+                <label for="q7">7. Qual via se inicia com manose reconhecendo lecitina?</label>
+                <select id="q7" name="q7" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Via das lectinas</option>
+                    <option value="b">b) Via alternativa</option>
+                    <option value="c">c) Via lítica</option>
+                    <option value="d">d) Via clássica</option>
+                </select>
+        </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <div class="question">
+                <label for="q8">8. Desde a entrada do antígeno no corpo até a ativação da resposta imune específica pelo Linfócito-T, o que ocorrerá?</label>
+                <textarea id="q8" name="q8" data-correct="As células apresentadoras de antígeno vão para o local da inflamação, endocitam o organismo, processam-no, migram para os vasos linfáticos até encontrar um linfonodo, onde o linfócito T reconhece o epítopo do antígeno e a resposta imune será montada."></textarea>
+            </div>
+            <button type="button" onclick="submitQuiz()">Concluir</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+    </form>
+    <div id="result" class="result"></div>
+    
+</div>
+<script src="../js/script2.js" defer></script>
+</body>
+</html>

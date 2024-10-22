@@ -368,7 +368,7 @@ textarea:focus {
 .quiz-wrapper {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço entre as seções */
+    gap: 20px;
     padding: 20px;
 }
 
@@ -378,6 +378,11 @@ textarea:focus {
     width: 200px;
 }
 
+.quiz-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .form-link {
     display: block;
     margin: 10px 0;
@@ -385,6 +390,20 @@ textarea:focus {
     color: #000;
 }
 
-h3 {
-    margin-bottom: 10px;
+.preview {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 180px;
+    top: 30px;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.quiz-item:hover .preview {
+    display: block;
 }
