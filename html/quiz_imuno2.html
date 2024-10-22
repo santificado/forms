@@ -20,12 +20,12 @@
         <div id="page1" class="page">
             <div class="question">
                 <label for="q1">1. O sistema complemento faz parte de qual tipo de resposta imune?</label>
-                <select id="q1" name="q1" data-correct="b">
+                <select id="q1" name="q1" data-correct="c">
                     <option value="">Selecione uma alternativa</option>
-                    <option value="a">a) Imunidade adaptativa</option>
-                    <option value="b">b) Imunidade inata</option>
-                    <option value="c">c) Imunidade celular</option>
-                    <option value="d">d) Imunidade passiva</option>
+                    <option value="a">a) Imunidade adaptativa e celular</option>
+                    <option value="b">b) Imunidade inata e passiva</option>
+                    <option value="c">c) Imunidade inata e adaptativa</option>
+                    <option value="d">d) Imunidade inata e celular</option>
                 </select>
             </div>
             <button type="button" onclick="nextPage()">Próxima</button>
@@ -190,11 +190,27 @@
             <button type="button" onclick="prevPage()">Anterior</button>
         </div>
 
-        <!-- Página 12 -->
-        <div id="page12" class="page">
+                    <!-- Página 12 -->
+                    <div id="page12" class="page">
+                        <div class="question">
+                            <label for="q12">12. Qual das vias fazem parte de somente resposta específica do sistema complemento?</label>
+                            <select id="q12" name="q12" data-correct="d">
+                                <option value="">Selecione uma alternativa</option>
+                                <option value="a">a) Via das lectinas</option>
+                                <option value="b">b) Via alternativa</option>
+                                <option value="c">c) Via lítica</option>
+                                <option value="d">d) Via clássica</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="nextPage()">Próxima</button>
+                        <button type="button" onclick="prevPage()">Anterior</button>
+                    </div>
+
+        <!-- Página 13 -->
+        <div id="page13" class="page">
             <div class="question">
-                <label for="q12">12. Qual é a principal desvantagem do uso de anticorpos policlonais em testes diagnósticos?</label>
-                <select id="q12" name="q12" data-correct="c">
+                <label for="q13">13. Qual é a principal desvantagem do uso de anticorpos policlonais em testes diagnósticos?</label>
+                <select id="q13" name="q13" data-correct="c">
                     <option value="">Selecione uma alternativa</option>
                     <option value="a">a) São altamente específicos para um único epítopo</option>
                     <option value="b">b) São difíceis de serem produzidos em grandes quantidades</option>

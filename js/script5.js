@@ -1,7 +1,7 @@
 // script.js
 
 let currentPage = 1;
-const totalPages = 12; // Total de perguntas/páginas
+const totalPages = 13; // Total de perguntas/páginas
 
 function showPage(pageNumber) {
     // Oculta todas as páginas e exibe apenas a página atual
