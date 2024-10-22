@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Sistema Complemento e Anticorpos Monoclonais</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+<body>
+
+<div class="container">
+    <h2>Quiz de Sistema Complemento e Anticorpos Monoclonais</h2>
+    
+    <form id="quizForm">
+        <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <label for="q1">1. O sistema complemento faz parte de qual tipo de resposta imune?</label>
+                <select id="q1" name="q1" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Imunidade adaptativa</option>
+                    <option value="b">b) Imunidade inata</option>
+                    <option value="c">c) Imunidade celular</option>
+                    <option value="d">d) Imunidade passiva</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </div>
+        
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <label for="q2">2. Qual é o principal mecanismo de ativação da via clássica do sistema complemento?</label>
+                <select id="q2" name="q2" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Ligação direta ao patógeno</option>
+                    <option value="b">b) Interação com anticorpos ligados ao patógeno</option>
+                    <option value="c">c) Ativação espontânea na superfície do patógeno</option>
+                    <option value="d">d) Interação com proteínas da via alternativa</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <label for="q3">3. Qual função desempenham os anticorpos monoclonais no tratamento de doenças?</label>
+                <select id="q3" name="q3" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Ativam diretamente células T citotóxicas</option>
+                    <option value="b">b) Neutralizam alvos específicos, como proteínas ou células tumorais</option>
+                    <option value="c">c) Produzem citocinas inflamatórias</option>
+                    <option value="d">d) Aumentam a produção de células B</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <label for="q4">4. Uma das características dos anticorpos monoclonais é que eles são:</label>
+                <select id="q4" name="q4" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Produzidos por diferentes clones de células B</option>
+                    <option value="b">b) Produzidos por um único clone de células B</option>
+                    <option value="c">c) Inespecíficos em sua ação</option>
+                    <option value="d">d) Usados apenas em vacinas</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <label for="q5">5. Qual das seguintes proteínas NÃO faz parte do sistema complemento?</label>
+                <select id="q5" name="q5" data-correct="d">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) C1</option>
+                    <option value="b">b) C3</option>
+                    <option value="c">c) C5</option>
+                    <option value="d">d) CD4</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <div class="question">
+                <label for="q6">6. Qual das seguintes afirmações descreve corretamente a função do complexo de ataque à membrana (MAC) no sistema complemento?</label>
+                <select id="q6" name="q6" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) O MAC recruta células T citotóxicas para destruir células infectadas</option>
+                    <option value="b">b) O MAC perfura a membrana plasmática de células alvo, resultando em lise celular</option>
+                    <option value="c">c) O MAC promove a fagocitose por células dendríticas</option>
+                    <option value="d">d) O MAC se liga a anticorpos para neutralizar toxinas bacterianas</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <div class="question">
+                <label for="q7">7. Na via alternativa do sistema complemento, qual componente é responsável pela amplificação do processo de ativação?</label>
+                <select id="q7" name="q7" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) C3 convertase</option>
+                    <option value="b">b) Properdina</option>
+                    <option value="c">c) C5a</option>
+                    <option value="d">d) Fator D</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <div class="question">
+                <label for="q8">8. Durante a produção de anticorpos monoclonais por tecnologia de hibridomas, qual processo é essencial para garantir que os anticorpos sejam específicos e homogêneos?</label>
+                <select id="q8" name="q8" data-correct="a">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Fusão de células B com células mieloma</option>
+                    <option value="b">b) Seleção de clones múltiplos de linfócitos B</option>
+                    <option value="c">c) Vacinação prévia com antígenos vivos atenuados</option>
+                    <option value="d">d) Uso de adjuvantes para aumentar a resposta imune</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 9 -->
+        <div id="page9" class="page">
+            <div class="question">
+                <label for="q9">9. Qual é a diferença entre um anticorpo monoclonal quimérico e um anticorpo monoclonal humanizado?</label>
+                <select id="q9" name="q9" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) O anticorpo quimérico é totalmente humano, enquanto o humanizado é parcialmente murino</option>
+                    <option value="b">b) O anticorpo quimérico possui partes murinas e humanas, enquanto o humanizado possui apenas a região variável murina</option>
+                    <option value="c">c) O anticorpo quimérico é derivado de células humanas, enquanto o humanizado é derivado de células murinas</option>
+                    <option value="d">d) Não há diferença significativa entre os dois tipos de anticorpos</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 10 -->
+        <div id="page10" class="page">
+            <div class="question">
+                <label for="q10">10. Qual o papel do C5a no sistema complemento?</label>
+                <select id="q10" name="q10" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Causa a lise direta das células-alvo</option>
+                    <option value="b">b) Ativa a via da lectina do complemento</option>
+                    <option value="c">c) Atua como anafilatoxina, promovendo inflamação e quimiotaxia</option>
+                    <option value="d">d) É responsável pela opsonização de patógenos</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+            <!-- Página 11 -->
+        <div id="page11" class="page">
+            <div class="question">
+                <label for="q11">11. O que são anticorpos policlonais?</label>
+                <select id="q11" name="q11" data-correct="b">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) Anticorpos produzidos por um único clone de células B</option>
+                    <option value="b">b) Anticorpos produzidos por múltiplos clones de células B, reconhecendo diferentes epítopos do mesmo antígeno</option>
+                    <option value="c">c) Anticorpos que se ligam exclusivamente a células T</option>
+                    <option value="d">d) Anticorpos que atacam indiscriminadamente todas as proteínas de um patógeno</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 12 -->
+        <div id="page12" class="page">
+            <div class="question">
+                <label for="q12">12. Qual é a principal desvantagem do uso de anticorpos policlonais em testes diagnósticos?</label>
+                <select id="q12" name="q12" data-correct="c">
+                    <option value="">Selecione uma alternativa</option>
+                    <option value="a">a) São altamente específicos para um único epítopo</option>
+                    <option value="b">b) São difíceis de serem produzidos em grandes quantidades</option>
+                    <option value="c">c) Podem causar maior variabilidade nos resultados devido à ligação a múltiplos epítopos</option>
+                    <option value="d">d) Não podem ser usados para neutralizar toxinas bacterianas</option>
+                </select>
+            </div>
+            <button type="button" onclick="submitQuiz()">Concluir</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+
+        </div>
+
+    </form>
+    <div id="result" class="result"></div>
+    
+</div>
+<script src="../js/script5.js" defer></script>
+</body>
+</html>
