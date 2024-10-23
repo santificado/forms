@@ -407,3 +407,181 @@ textarea:focus {
 .quiz-item:hover .preview {
     display: block;
 }
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Header image */
+.header-image {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Botões de troca de layout */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+button.active {
+    background-color: #2E7D32;
+}
+
+/* Estilos dos layouts */
+.layout {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.layout.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Seções de quizzes */
+.quiz-section {
+    background-color: #e8f5e9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-section:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+summary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4CAF50;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form-link {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-link:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #388E3C;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 15px 15px 0 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+    color: #d7ffd9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    summary {
+        font-size: 1.2rem;
+    }
+}

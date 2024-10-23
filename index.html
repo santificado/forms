@@ -4,28 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Seleção de Formulários</title>
+    <title>Organização de Quizzes</title>
 </head>
 <body>
     <div class="container">
-        <h2>Selecione o Formulário</h2>
-        <div class="quiz-wrapper">
-            <!-- Seção para quizzes sem "2" no nome -->
-            <div class="quiz-section">
-                <h3>P1</h3>
+        <img src="./images/R20c.gif" alt="necrose" />
+        <h1>Farmácia</h1>
+
+        <!-- Botões de troca de layout -->
+        <div class="toggle-buttons">
+            <button id="btn-materias" class="active">Matérias</button>
+            <button id="btn-provas">Provas</button>
+        </div>
+
+        <!-- Layout de Matérias -->
+        <div id="layout-materias" class="layout active">
+            <h2>Selecione a Matéria</h2>
+            <details class="quiz-section">
+                <summary>Fisiologia</summary>
+                <a href="./html/quiz_fisiologia.html" class="form-link">Adaptações Celulares</a>
+            </details>
+            <details class="quiz-section">
+                <summary>Imunologia</summary>
+                <a href="./html/quiz_imunologia.html" class="form-link">Imunologia</a>
+                <a href="./html/quiz_imuno2.html" class="form-link">Imunologia 2</a>
+                <a href="./html/quiz_imuno3.html" class="form-link">Imunologia 3</a>   
+            </details>
+            <details class="quiz-section">
+                <summary>Bioquímica</summary>
+                <a href="./html/quiz_bioquimica.html" class="form-link">Bioquímica</a>
+            </details>
+            <details class="quiz-section">
+                <summary>Patologia</summary>
                 <a href="./html/quiz_necrose.html" class="form-link">Necrose</a>
+            </details>
+        </div>
+
+        <!-- Layout de Provas -->
+        <div id="layout-provas" class="layout">
+            <h2>Selecione a Prova</h2>
+            <details class="quiz-section">
+                <summary>P1</summary>
                 <a href="./html/quiz_fisiologia.html" class="form-link">Adaptações Celulares</a>
                 <a href="./html/quiz_imunologia.html" class="form-link">Imunologia</a>
                 <a href="./html/quiz_bioquimica.html" class="form-link">Bioquímica</a>
-            </div>
-
-            <!-- Seção para quizzes com "2" no nome -->
-            <div class="quiz-section">
-                <h3>P2</h3>
+                <a href="./html/quiz_necrose.html" class="form-link">Necrose</a>
+            </details>
+            <details class="quiz-section">
+                <summary>P2</summary>
                 <a href="./html/quiz_imuno2.html" class="form-link">Imunologia 2</a>
-                <a href="./html/quiz_imuno3.html" class="form-link">Imunologia 3</a>
-            </div>
+                <a href="./html/quiz_imuno3.html" class="form-link">Imunologia 3</a>            
+            </details>
         </div>
     </div>
+
+    <script src="./js/script_home.js"></script>
 </body>
 </html>
