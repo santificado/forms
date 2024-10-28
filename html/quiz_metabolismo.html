@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Metabolismo do Glicogênio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Metabolismo do Glicogênio</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Durante a glicogenólise, o glicogênio é degradado até glicose-1-fosfato pela ação da:</label>
+                    <select id="q1" name="q1" data-correct="a">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Glicogênio fosforilase</option>
+                        <option value="b">b) Amilase</option>
+                        <option value="c">c) Hexoquinase</option>
+                        <option value="d">d) Glicose-6-fosfatase  </option>
+                        <option value="e">e) α-Cetoglutarato</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. Qual enzima é responsável pela formação de ATP durante a síntese de glicogênio?</label>
+                    <select id="q2" name="q2" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Hexoquinase</option>
+                        <option value="b">b) Glicogênio sintase</option>
+                        <option value="c">c) Glicose-6-fosfatase</option>
+                        <option value="d">d) Fosfoglicose isomerase</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3. Assinale o papel da insulina na síntese de glicogênio</label>
+                    <select id="q3" name="q3" data-correct="c">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Ativar a glicogênio fosforilase</option>
+                        <option value="b">b) Inibir a glicose-6-fosfatase</option>
+                        <option value="c">c) Ativar a glicogênio sintase</option>
+                        <option value="d">d) Inibir a glicose fosforilase</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Qual a função do glicogênio hepático em períodos de jejum?</label>
+                    <select id="q4" name="q4" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Fornecer energia diretamente para os músculos</option>
+                        <option value="b">b) Controlar o nível de glicose no sangue</option>
+                        <option value="c">c) Quebrar gorduras em energia</option>
+                        <option value="d">d) Armazenar glicose por tempo indeterminado</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. A glicogênese ocorre em qual das seguintes condições?</label>
+                    <select id="q5" name="q5" data-correct="c">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Após jejum prolongado</option>
+                        <option value="b">b) Em estados de hipoglicemia</option>
+                        <option value="c">c) Após uma refeição rica em carboidratos</option>
+                        <option value="d">d) Durante exercício intenso</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6. Assinale a principal função do glicogênio muscular:</label>
+                    <select id="q6" name="q6" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Fornecer glicose ao sangue</option>
+                        <option value="b">b) Converter glicose em ácido láctico</option>
+                        <option value="c">c) Produzir ATP para as células musculares</option>
+                        <option value="d">d) Estocar glicose para tecidos periféricos</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <label for="q7">7. Qual dos seguintes hormônios é importante para iniciar a glicogenólise?</label>
+                    <select id="q7" name="q7" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Insulina</option>
+                        <option value="b">b) Adrenalina</option>
+                        <option value="c">c) Aldosterona</option>
+                        <option value="d">d) Somatotrofina</option>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <label for="q8">8. A glicogenólise é regulada principalmente por qual mecanismo?</label>
+                    <select id="q8" name="q8" data-correct="c">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Controle alostérico</option>
+                        <option value="b">b) Disponibilidade de ATP</option>
+                        <option value="c">c) Ação de adrenalina e glucagon</option>
+                        <option value="d">d) Ativação por cálcio no citoplasma</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question">
+                    <label for="q9">9. Explique a função da glicogênio sintase e glicogênio fosforilase na regulação dos estoques de glicose no corpo humano.</label>
+                    <textarea id="q9" name="q9" data-correct="-"></textarea>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question">
+                    <label for="q10">10. Descreva os processos de glicogenólise e glicogênese, comparando as enzimas e os hormônios envolvidos.</label>
+                    <textarea id="q10" name="q10" data-correct="-"></textarea>
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    
