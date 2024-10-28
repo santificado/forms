@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Ciclo de Krebs</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de ciclo de Krebs</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Qual é o saldo energético da fermentação lática a partir de uma molécula de glicose?</label>
+                    <select id="q1" name="q1" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) 1 ATP</option>
+                        <option value="b">b) 2 ATP</option>
+                        <option value="c">c) 4 ATP</option>
+                        <option value="d">d) 0 ATP  </option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. Em condições anaeróbicas, o piruvato é convertido em lactato principalmente para:</label>
+                    <select id="q2" name="q2" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Produzir CO₂</option>
+                        <option value="b">b) Regenerar NAD⁺</option>
+                        <option value="c">c) Estocar energia</option>
+                        <option value="d">d) Produzir ATP</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3.  Qual dos seguintes organismos realiza a fermentação alcoólica?</label>
+                    <select id="q3" name="q3" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Lactobacilos</option>
+                        <option value="b">b) Leveduras</option>
+                        <option value="c">c) Eritrócitos</option>
+                        <option value="d">d) Neurônios</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Assinale o composto final da fermentação lática nos músculos:</label>
+                    <select id="q4" name="q4" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Piruvato</option>
+                        <option value="b">b) Ácido láctico</option>
+                        <option value="c">c) Acetil-CoA</option>
+                        <option value="d">d) Etanol</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. Qual das alternativas descreve corretamente a fermentação alcoólica?</label>
+                    <select id="q5" name="q5" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Gera ácido láctico como produto final</option>
+                        <option value="b">b) Produz etanol e libera CO₂</option>
+                        <option value="c">c) Requer O₂ para produção de ATP</option>
+                        <option value="d">d) Utiliza ácido láctico como substrato</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6. Em qual das situações abaixo a fermentação lática é mais provável de ocorrer no corpo humano?</label>
+                    <select id="q6" name="q6" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Durante o sono</option>
+                        <option value="b">b) Em exercício intenso e anaeróbico</option>
+                        <option value="c">c) Após a ingestão de alimentos ricos em fibras</option>
+                        <option value="d">d) Durante a respiração aeróbica</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <label for="q7">7. Qual o papel do NADH na fermentação lática?</label>
+                    <select id="q7" name="q7" data-correct="c">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Ativar a glicólise</option>
+                        <option value="b">b) Converter glicose em ácido pirúvico</option>
+                        <option value="c">c) Reduzir o piruvato a lactato, regenerando NAD⁺</option>
+                        <option value="d">d) Produzir CO₂ e água</option>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <label for="q8">8. Assinale a diferença entre fermentação lática e alcoólica:</label>
+                    <select id="q8" name="q8" data-correct="b">
+                        <option value="">Selecione uma alternativa</option>
+                        <option value="a">a) Apenas a fermentação alcoólica utiliza NADH</option>
+                        <option value="b">b) A fermentação alcoólica libera CO₂, enquanto a lática não</option>
+                        <option value="c">c) A fermentação lática ocorre exclusivamente em microrganismos</option>
+                        <option value="d">d) Ambas utilizam O₂ para regenerar NAD⁺</option>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question">
+                    <label for="q9">9. Explique a importância da regeneração do NAD⁺ durante a fermentação e como isso sustenta a produção de ATP em condições anaeróbicas.</label>
+                    <textarea id="q9" name="q9" data-correct=" A regeneração de NAD⁺ durante a fermentação é vital para permitir a continuidade da glicólise em condições anaeróbicas. Sem oxigênio, o piruvato é convertido em lactato (fermentação lática) ou etanol e CO₂ (fermentação alcoólica), regenerando o NAD⁺ a partir do NADH produzido na glicólise. Isso mantém o suprimento de NAD⁺ para a oxidação do gliceraldeído-3-fosfato e garante a produção contínua de ATP pela glicólise, mesmo na ausência de oxigênio."></textarea>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question">
+                    <label for="q10">10. Diferencie a fermentação lática da fermentação alcoólica, mencionando o organismo em que cada tipo é predominante e o produto final de cada processo.</label>
+                    <textarea id="q10" name="q10" data-correct="A fermentação lática ocorre em músculos e em algumas bactérias (como Lactobacillus), produzindo lactato como produto final. A fermentação alcoólica é realizada principalmente por leveduras, como Saccharomyces, produzindo etanol e CO₂ como produtos finais. Ambas ocorrem em condições anaeróbicas e permitem a regeneração de NAD⁺, mas diferem nos produtos e nos tipos de organismos que realizam cada processo."></textarea>
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    

@@ -585,3 +585,73 @@ footer {
         font-size: 1.2rem;
     }
 }
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    line-height: 1.6; /* Melhor legibilidade */
+}
+
+.container {
+    max-width: 800px; /* Limitar largura */
+    margin: 0 auto; /* Centralizar */
+    padding: 20px; /* Padding interno */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Cor dos títulos */
+    text-align: center; /* Centralizar títulos */
+}
+
+.toggle-buttons {
+    display: flex; /* Alinhamento horizontal */
+    justify-content: center; /* Centralizar botões */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+button {
+    background-color: #3498db; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Padding do botão */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+button:hover {
+    background-color: #2980b9; /* Cor do botão ao passar o mouse */
+}
+
+.quiz-section {
+    margin-bottom: 15px; /* Espaçamento entre seções */
+}
+
+summary {
+    background-color: #ecf0f1; /* Fundo do summary */
+    padding: 10px; /* Padding do summary */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s; /* Transição suave */
+    font-weight: bold; /* Negrito */
+}
+
+summary:hover {
+    background-color: #bdc3c7; /* Cor de fundo ao passar o mouse */
+}
+
+.form-link {
+    display: block; /* Colocar links em bloco */
+    padding: 8px; /* Padding dos links */
+    margin-top: 5px; /* Espaço acima dos links */
+    color: #3498db; /* Cor do texto dos links */
+    text-decoration: none; /* Sem sublinhado */
+    transition: color 0.3s; /* Transição suave */
+}
+
+.form-link:hover {
+    color: #2980b9; /* Cor dos links ao passar o mouse */
+}
