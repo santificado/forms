@@ -19,160 +19,130 @@
         <form id="quizForm">
             <!-- Página 1 -->
             <div id="page1" class="page">
-                <div class="question">
-                    <label for="q1">1. Qual das seguintes enzimas do ciclo de Krebs é responsável pela conversão de succinato em fumarato?</label>
-                    <select id="q1" name="q1" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Aconitase</option>
-                        <option value="b">b) Malato desidrogenase</option>
-                        <option value="c">c) Succinatodesidrogenase</option>
-                        <option value="d">d) Fumarase  </option>
-                    </select>
+                <div class="question" id="q1">
+                    <p>1. Qual das seguintes enzimas do ciclo de Krebs é responsável pela conversão de succinato em fumarato?</p>
+                    <label><input type="radio" name="q1" value="a"> a) Aconitase</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Malato desidrogenase</label><br>
+                    <label><input type="radio" name="q1" value="c" data-correct="true"> c) Succinatodesidrogenase</label><br>
+                    <label><input type="radio" name="q1" value="d"> d) Fumarase</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 2 -->
             <div id="page2" class="page">
-                <div class="question">
-                    <label for="q2">2. O ciclo de Krebs ocorre em qual parte da célula?</label>
-                    <select id="q2" name="q2" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Citoplasma</option>
-                        <option value="b">b) Membrana celular</option>
-                        <option value="c">c) Mitocôndria</option>
-                        <option value="d">d) Núcleo</option>
-                    </select>
+                <div class="question" id="q2">
+                    <p>2. O ciclo de Krebs ocorre em qual parte da célula?</p>
+                    <label><input type="radio" name="q2" value="a"> a) Citoplasma</label><br>
+                    <label><input type="radio" name="q2" value="b"> b) Membrana celular</label><br>
+                    <label><input type="radio" name="q2" value="c" data-correct="true"> c) Mitocôndria</label><br>
+                    <label><input type="radio" name="q2" value="d"> d) Núcleo</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 3 -->
             <div id="page3" class="page">
-                <div class="question">
-                    <label for="q3">3.  Em qual etapa do ciclo de Krebs ocorre a primeira liberação de CO₂? </label>
-                    <select id="q3" name="q3" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Conversão de citrato em isocitrato</option>
-                        <option value="b">b) Conversão de isocitrato em α-cetoglutarato</option>
-                        <option value="c">c) Conversão de succinato em fumarato</option>
-                        <option value="d">d) Conversão de fumarato em malato</option>
-                    </select>
+                <div class="question" id="q3">
+                    <p>3. Em qual etapa do ciclo de Krebs ocorre a primeira liberação de CO₂? </p>
+                    <label><input type="radio" name="q3" value="a"> a) Conversão de citrato em isocitrato</label><br>
+                    <label><input type="radio" name="q3" value="b" data-correct="true"> b) Conversão de isocitrato em α-cetoglutarato</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) Conversão de succinato em fumarato</label><br>
+                    <label><input type="radio" name="q3" value="d"> d) Conversão de fumarato em malato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 4 -->
             <div id="page4" class="page">
-                <div class="question">
-                    <label for="q4">4. Assinale a molécula que entra no ciclo de Krebs para se combinar com o oxaloacetato:</label>
-                    <select id="q4" name="q4" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Succinato</option>
-                        <option value="b">b) Piruvato</option>
-                        <option value="c">c) Acetil-CoA</option>
-                        <option value="d">d) Citrato</option>
-                    </select>
+                <div class="question" id="q4">
+                    <p>4. Assinale a molécula que entra no ciclo de Krebs para se combinar com o oxaloacetato:</p>
+                    <label><input type="radio" name="q4" value="a"> a) Succinato</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) Piruvato</label><br>
+                    <label><input type="radio" name="q4" value="c" data-correct="true"> c) Acetil-CoA</label><br>
+                    <label><input type="radio" name="q4" value="d"> d) Citrato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 5 -->
             <div id="page5" class="page">
-                <div class="question">
-                    <label for="q5">5. Qual é o papel principal do ciclo de Krebs no metabolismo energético?</label>
-                    <select id="q5" name="q5" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Armazenamento de ATP</option>
-                        <option value="b">b) Oxidação de acetil-CoA para produzir CO₂, NADH e FADH₂</option>
-                        <option value="c">c) Conversão de glicose em lactato</option>
-                        <option value="d">d) Síntese de glicogênio</option>
-                    </select>
+                <div class="question" id="q5">
+                    <p>5. Qual é o papel principal do ciclo de Krebs no metabolismo energético?</p>
+                    <label><input type="radio" name="q5" value="a"> a) Armazenamento de ATP</label><br>
+                    <label><input type="radio" name="q5" value="b" data-correct="true"> b) Oxidação de acetil-CoA para produzir CO₂, NADH e FADH₂</label><br>
+                    <label><input type="radio" name="q5" value="c"> c) Conversão de glicose em lactato</label><br>
+                    <label><input type="radio" name="q5" value="d"> d) Síntese de glicogênio</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 6 -->
             <div id="page6" class="page">
-                <div class="question">
-                    <label for="q6">6. O ciclo de Krebs é uma via metabólica anfibólica porque:</label>
-                    <select id="q6" name="q6" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Consome mais oxigênio do que CO₂</option>
-                        <option value="b">b) Participa de processos anabólicos e catabólicos</option>
-                        <option value="c">c) Produz mais energia do que consome</option>
-                        <option value="d">d) Ocupa o citoplasma celular</option>
-                    </select>
+                <div class="question" id="q6">
+                    <p>6. O ciclo de Krebs é uma via metabólica anfibólica porque:</p>
+                    <label><input type="radio" name="q6" value="a"> a) Consome mais oxigênio do que CO₂</label><br>
+                    <label><input type="radio" name="q6" value="b" data-correct="true"> b) Participa de processos anabólicos e catabólicos</label><br>
+                    <label><input type="radio" name="q6" value="c"> c) Produz mais energia do que consome</label><br>
+                    <label><input type="radio" name="q6" value="d"> d) Ocupa o citoplasma celular</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 7 -->
             <div id="page7" class="page">
-                <div class="question">
-                    <label for="q7">7. Qual é a função da enzima citrato sintase no ciclo de Krebs?</label>
-                    <select id="q7" name="q7" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Transformar piruvato em acetil-CoA</option>
-                        <option value="b">b) Catalisar a conversão de citrato em isocitrato</option>
-                        <option value="c">c) Iniciar o ciclo convertendo oxaloacetato e acetil-CoA em citrato</option>
-                        <option value="d">d) Liberar NADH e ATP</option>
-
-                    </select>
+                <div class="question" id="q7">
+                    <p>7. Qual é a função da enzima citrato sintase no ciclo de Krebs?</p>
+                    <label><input type="radio" name="q7" value="a"> a) Transformar piruvato em acetil-CoA</label><br>
+                    <label><input type="radio" name="q7" value="b"> b) Catalisar a conversão de citrato em isocitrato</label><br>
+                    <label><input type="radio" name="q7" value="c" data-correct="true"> c) Iniciar o ciclo convertendo oxaloacetato e acetil-CoA em citrato</label><br>
+                    <label><input type="radio" name="q7" value="d"> d) Liberar NADH e ATP</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 8 -->
             <div id="page8" class="page">
-                <div class="question">
-                    <label for="q8">8. A produção de NADH no ciclo de Krebs ocorre em todas as etapas abaixo, exceto:</label>
-                    <select id="q8" name="q8" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Isocitrato para α-cetoglutarato</option>
-                        <option value="b">b) α-cetoglutarato para succinil-CoA</option>
-                        <option value="c">c) Succinato para fumarato</option>
-                        <option value="d">d) Malato para oxaloacetato</option>
-                    </select>
+                <div class="question" id="q8">
+                    <p>8. A produção de NADH no ciclo de Krebs ocorre em todas as etapas abaixo, exceto:</p>
+                    <label><input type="radio" name="q8" value="a"> a) Isocitrato para α-cetoglutarato</label><br>
+                    <label><input type="radio" name="q8" value="b"> b) α-cetoglutarato para succinil-CoA</label><br>
+                    <label><input type="radio" name="q8" value="c" data-correct="true"> c) Succinato para fumarato</label><br>
+                    <label><input type="radio" name="q8" value="d"> d) Malato para oxaloacetato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 9 -->
             <div id="page9" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q9">9. Explique o papel do ciclo de Krebs na respiração celular, destacando a importância de NADH e FADH₂ na produção de ATP.</label>
-                    <textarea id="q9" name="q9" data-correct="O ciclo de Krebs ocorre na matriz mitocondrial e é crucial para o catabolismo de carboidratos, lipídeos e aminoácidos, convertendo acetil-CoA em CO₂ e produzindo NADH e FADH₂. Essas moléculas carregadoras de elétrons transportam energia química para a cadeia de transporte de elétrons, onde sua oxidação libera energia que é usada para sintetizar ATP. Assim, o ciclo de Krebs não só gera diretamente um GTP por ciclo, mas é uma fonte essencial de NADH e FADH₂ para a produção de grandes quantidades de ATP na fosforilação oxidativa."></textarea>
+                    <textarea id="q9" name="q9" ></textarea>
+                    <input type="hidden" data-correct-answer="O ciclo de Krebs ocorre na matriz mitocondrial e é crucial para o catabolismo de carboidratos, lipídeos e aminoácidos, convertendo acetil-CoA em CO₂ e produzindo NADH e FADH₂. Essas moléculas carregadoras de elétrons transportam energia química para a cadeia de transporte de elétrons, onde sua oxidação libera energia que é usada para sintetizar ATP. Assim, o ciclo de Krebs não só gera diretamente um GTP por ciclo, mas é uma fonte essencial de NADH e FADH₂ para a produção de grandes quantidades de ATP na fosforilação oxidativa."">
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
             </div>
-    
+
             <!-- Página 10 -->
             <div id="page10" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q10">10. Descreva as etapas em que ocorrem descarboxilações no ciclo de Krebs e explique sua importância para a formação de energia.</label>
-                    <textarea id="q10" name="q10" data-correct="As descarboxilações ocorrem em duas etapas principais do ciclo de Krebs: a conversão de isocitrato em α-cetoglutarato (pela isocitrato desidrogenase) e de α-cetoglutarato em succinil-CoA (pela α-cetoglutarato desidrogenase). Nessas reações, CO₂ é liberado e NADH é produzido, que, em seguida, transporta elétrons para a cadeia respiratória, facilitando a síntese de ATP. As descarboxilações ajudam a completar a oxidação do carbono orgânico, convertendo energia dos substratos em formas úteis para o corpo."></textarea>
+                    <textarea id="q10" name="q10" ></textarea>
+                    <input type="hidden" data-correct-answer="As descarboxilações ocorrem em duas etapas principais do ciclo de Krebs: a conversão de isocitrato em α-cetoglutarato (pela isocitrato desidrogenase) e de α-cetoglutarato em succinil-CoA (pela α-cetoglutarato desidrogenase). Nessas reações, CO₂ é liberado e NADH é produzido, que, em seguida, transporta elétrons para a cadeia respiratória, facilitando a síntese de ATP. As descarboxilações ajudam a completar a oxidação do carbono orgânico, convertendo energia dos substratos em formas úteis para o corpo."">
                 </div>
                 <button type="button" onclick="prevPage()">Anterior</button>
                 <button type="button" onclick="submitQuiz()">Concluir</button>
             </div>
+
         </form>
     
         <div id="result" class="result"></div>

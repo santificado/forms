@@ -21,13 +21,12 @@
             <div id="page1" class="page">
                 <div class="question">
                     <label for="q1">1. Qual é o papel da enzima fosfofrutoquinase-1 na glicólise?</label>
-                    <select id="q1" name="q1" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Transformar glicose em glicose-6-fosfato</option>
-                        <option value="b">b) Fosforilar a frutose-6-fosfato em frutose-1,6-bifosfato</option>
-                        <option value="c">c) Converter piruvato em lactato</option>
-                        <option value="d">d) Clivar frutose-1,6-bifosfato em gliceraldeído-3-fosfato</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q1" value="a">a) Transformar glicose em glicose-6-fosfato</label>
+                        <label><input type="radio" name="q1" value="b" data-correct="true">b) Fosforilar a frutose-6-fosfato em frutose-1,6-bifosfato</label>
+                        <label><input type="radio" name="q1" value="c">c) Converter piruvato em lactato</label>
+                        <label><input type="radio" name="q1" value="d">d) Clivar frutose-1,6-bifosfato em gliceraldeído-3-fosfato</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -38,13 +37,12 @@
             <div id="page2" class="page">
                 <div class="question">
                     <label for="q2">2. A glicólise ocorre em qual local da célula?</label>
-                    <select id="q2" name="q2" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Mitocôndria</option>
-                        <option value="b">b) Núcleo</option>
-                        <option value="c">c) Citoplasma</option>
-                        <option value="d">d) Complexo de Golgi</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q2" value="a">a) Mitocôndria</label>
+                        <label><input type="radio" name="q2" value="b">b) Núcleo</label>
+                        <label><input type="radio" name="q2" value="c" data-correct="true">c) Citoplasma</label>
+                        <label><input type="radio" name="q2" value="d">d) Complexo de Golgi</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -55,13 +53,12 @@
             <div id="page3" class="page">
                 <div class="question">
                     <label for="q3">3. Assinale a alternativa correta sobre o saldo energético líquido da glicólise:</label>
-                    <select id="q3" name="q3" data-correct="a">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) 2 ATP e 2 NADH</option>
-                        <option value="b">b) 4 ATP e 2 NADH</option>
-                        <option value="c">c) 1 ATP e 2 NADH</option>
-                        <option value="d">d) 3 ATP e 2 NADH</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q3" value="a" data-correct="true">a) 2 ATP e 2 NADH</label>
+                        <label><input type="radio" name="q3" value="b">b) 4 ATP e 2 NADH</label>
+                        <label><input type="radio" name="q3" value="c">c) 1 ATP e 2 NADH</label>
+                        <label><input type="radio" name="q3" value="d">d) 3 ATP e 2 NADH</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -72,13 +69,12 @@
             <div id="page4" class="page">
                 <div class="question">
                     <label for="q4">4. Qual é a função do piruvato na glicólise?</label>
-                    <select id="q4" name="q4" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Converter-se diretamente em ATP</option>
-                        <option value="b">b) Ser utilizado como substrato no ciclo de Krebs</option>
-                        <option value="c">c) Armazenar glicose no músculo</option>
-                        <option value="d">d) Ser convertido em lactato sem produzir ATP</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q4" value="a">a) Converter-se diretamente em ATP</label>
+                        <label><input type="radio" name="q4" value="b" data-correct="true">b) Ser utilizado como substrato no ciclo de Krebs</label>
+                        <label><input type="radio" name="q4" value="c">c) Armazenar glicose no músculo</label>
+                        <label><input type="radio" name="q4" value="d">d) Ser convertido em lactato sem produzir ATP</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -89,13 +85,12 @@
             <div id="page5" class="page">
                 <div class="question">
                     <label for="q5">5. O que ocorre durante a fase de “receber o pagamento” na glicólise?</label>
-                    <select id="q5" name="q5" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Consumo de ATP</option>
-                        <option value="b">b) Formação de piruvato e ATP</option>
-                        <option value="c">c) Fosforilação inicial da glicose</option>
-                        <option value="d">d) Clivagem da frutose-6-fosfato</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q5" value="a">a) Consumo de ATP</label>
+                        <label><input type="radio" name="q5" value="b" data-correct="true">b) Formação de piruvato e ATP</label>
+                        <label><input type="radio" name="q5" value="c">c) Fosforilação inicial da glicose</label>
+                        <label><input type="radio" name="q5" value="d">d) Clivagem da frutose-6-fosfato</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -106,13 +101,12 @@
             <div id="page6" class="page">
                 <div class="question">
                     <label for="q6">6.  Qual o destino do piruvato produzido na glicólise em condições anaeróbicas?</label>
-                    <select id="q6" name="q6" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Oxidação completa em CO₂</option>
-                        <option value="b">b) Conversão em lactato ou etanol</option>
-                        <option value="c">c) Produção de ATP na cadeia respiratória</option>
-                        <option value="d">d) Conversão em glicose</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q6" value="a">a) Oxidação completa em CO₂</label>
+                        <label><input type="radio" name="q6" value="b" data-correct="true">b) Conversão em lactato ou etanol</label>
+                        <label><input type="radio" name="q6" value="c">c) Produção de ATP na cadeia respiratória</label>
+                        <label><input type="radio" name="q6" value="d">d) Conversão em glicose</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -123,14 +117,12 @@
             <div id="page7" class="page">
                 <div class="question">
                     <label for="q7">7. Durante a glicólise, o NAD⁺ é reduzido a:</label>
-                    <select id="q7" name="q7" data-correct="a">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) NADH</option>
-                        <option value="b">b) FADH₂</option>
-                        <option value="c">c) NADP⁺</option>
-                        <option value="d">d) ATP</option>
-
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q7" value="a" data-correct="true">a) NADH</label>
+                        <label><input type="radio" name="q7" value="b">b) FADH₂</label>
+                        <label><input type="radio" name="q7" value="c">c) NADP⁺</label>
+                        <label><input type="radio" name="q7" value="d">d) ATP</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -141,13 +133,12 @@
             <div id="page8" class="page">
                 <div class="question">
                     <label for="q8">8. O controle da glicólise é feito por várias enzimas, exceto:</label>
-                    <select id="q8" name="q8" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Hexoquinase</option>
-                        <option value="b">b) Glicose-6-fosfatase</option>
-                        <option value="c">c) Fosfofrutoquinase-1</option>
-                        <option value="d">d) Piruvato quinase</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q8" value="a">a) Hexoquinase</label>
+                        <label><input type="radio" name="q8" value="b" data-correct="true">b) Glicose-6-fosfatase</label>
+                        <label><input type="radio" name="q8" value="c">c) Fosfofrutoquinase-1</label>
+                        <label><input type="radio" name="q8" value="d">d) Piruvato quinase</label>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -156,19 +147,21 @@
     
             <!-- Página 9 -->
             <div id="page9" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q9">9. Explique as diferenças entre a fase de preparação e a fase de pagamento da glicólise</label>
-                    <textarea id="q9" name="q9" data-correct="A glicólise possui duas fases principais. A fase de preparação é endergônica e consome 2 ATPs para converter glicose em frutose-1,6-bifosfato, preparando-a para a clivagem. A fase de pagamento é exergônica e gera 4 ATPs e 2 NADH ao converter gliceraldeído-3-fosfato em piruvato, resultando em um saldo líquido de 2 ATPs por molécula de glicose. Essas fases permitem a conversão de glicose em piruvato com produção de energia utilizável para a célula."></textarea>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="A glicólise possui duas fases principais. A fase de preparação é endergônica e consome 2 ATPs para converter glicose em frutose-1,6-bifosfato, preparando-a para a clivagem. A fase de pagamento é exergônica e gera 4 ATPs e 2 NADH ao converter gliceraldeído-3-fosfato em piruvato, resultando em um saldo líquido de 2 ATPs por molécula de glicose. Essas fases permitem a conversão de glicose em piruvato com produção de energia utilizável para a célula.">
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
             </div>
     
             <!-- Página 10 -->
-            <div id="page10" class="page">
-                <div class="question">
+            <div id="page10" class="page" >
+                <div class="question" data-type="essay">
                     <label for="q10">10. Descreva a importância da regeneração de NAD⁺ na glicólise anaeróbica e o papel do lactato nesse processo. </label>
-                    <textarea id="q10" name="q10" data-correct="Na glicólise anaeróbica, a regeneração de NAD⁺ é essencial para manter a via ativa, pois o NAD⁺ é necessário para a oxidação do gliceraldeído-3-fosfato. Na ausência de oxigênio, o piruvato é convertido em lactato pela enzima lactato desidrogenase, que simultaneamente regenera o NAD⁺. Isso permite que a glicólise continue produzindo ATP em condições anaeróbicas, como durante exercícios intensos ou em tecidos com baixa disponibilidade de oxigênio."></textarea>
+                    <textarea id="q10" name="q10"></textarea>
+                    <input type="hidden" data-correct-answer="Na glicólise anaeróbica, a regeneração de NAD⁺ é essencial para manter a via ativa, pois o NAD⁺ é necessário para a oxidação do gliceraldeído-3-fosfato. Na ausência de oxigênio, o piruvato é convertido em lactato pela enzima lactato desidrogenase, que simultaneamente regenera o NAD⁺. Isso permite que a glicólise continue produzindo ATP em condições anaeróbicas, como durante exercícios intensos ou em tecidos com baixa disponibilidade de oxigênio.">
                 </div>
                 <button type="button" onclick="prevPage()">Anterior</button>
                 <button type="button" onclick="submitQuiz()">Concluir</button>

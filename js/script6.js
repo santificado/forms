@@ -1,72 +1,74 @@
-// script.js
-
-// Variáveis globais
 let currentPage = 1;
 const totalPages = 12;
 
+// Função para exibir a página atual
 function showPage(pageNumber) {
-    // Oculta todas as páginas e exibe apenas a página atual
-    for (let i = 1; i <= totalPages; i++) {
-        document.getElementById('page' + i).style.display = i === pageNumber ? 'block' : 'none';
-    }
-    currentPage = pageNumber;
+    document.querySelectorAll('.page').forEach((page, index) => {
+        page.style.display = (index === pageNumber - 1) ? 'block' : 'none';
+    });
 }
 
+// Inicializa a primeira página
+showPage(currentPage);
+
+// Função para avançar para a próxima página
 function nextPage() {
-    // Move para a próxima página se a página atual não for a última
     if (currentPage < totalPages) {
-        showPage(currentPage + 1);
+        currentPage++;
+        showPage(currentPage);
     }
 }
 
+// Função para voltar à página anterior
 function prevPage() {
-    // Move para a página anterior se a página atual não for a primeira
     if (currentPage > 1) {
-        showPage(currentPage - 1);
+        currentPage--;
+        showPage(currentPage);
     }
 }
 
 function submitQuiz() {
+    const pages = document.querySelectorAll('.page');
+    const results = document.getElementById('result');
     let score = 0;
-    let totalQuestions = 0;
-    let resultHtml = '<h3>Resultado do Quiz</h3>';
-    const formElements = document.getElementById('quizForm').elements;
+    let output = '';
+    let questionCounter = 0;
 
-    // Itera sobre todos os elementos do formulário
-    for (let element of formElements) {
-        // Verifica se o elemento é um campo de texto ou select
-        if (element.tagName === 'TEXTAREA' || element.tagName === 'SELECT') {
-            const userAnswer = element.tagName === 'SELECT' ? element.options[element.selectedIndex].value : element.value;
-            const correctAnswer = element.getAttribute('data-correct');
-            
-            // Apenas considera a questão se ela tiver uma resposta correta
-            if (correctAnswer !== null) {
-                totalQuestions++;
+    // Itera sobre cada página
+    pages.forEach((page, pageIndex) => {
+        const questions = page.querySelectorAll('.question');
+        
+        questions.forEach((question) => {
+            questionCounter++;
 
-                // Verifica se a resposta do usuário está correta
-                if (userAnswer === correctAnswer) {
+            const selectedOption = question.querySelector('input[type="radio"]:checked');
+            const correctOption = question.querySelector('input[data-correct="true"]');
+            const userAnswer = question.querySelector('input[type="text"], textarea');
+            const correctAnswer = question.querySelector('input[data-correct-answer]')?.getAttribute('data-correct-answer');
+
+            if (selectedOption) {
+                // Verifica as respostas das perguntas de múltipla escolha
+                if (selectedOption === correctOption) {
                     score++;
-                    resultHtml += `<p>${element.name}: <span class="correct">Resposta correta!</span></p>`;
+                    output += `<p class="correct">Pergunta ${questionCounter}: <span class="answer-text-correct">Correta!</span></p>`;
                 } else {
-                    // Mostra a resposta correta se a resposta do usuário estiver errada
-                    resultHtml += `<p>${element.name}: <span class="incorrect">Resposta incorreta.</span> <span class="correct-answer">Resposta correta: ${correctAnswer}</span></p>`;
+                    output += `<p class="incorrect">Pergunta ${questionCounter}: <span class="answer-text-incorrect">Errada!</span> Resposta correta: <span class="answer-text-correct">${correctOption.parentNode.innerText}</span></p>`;
                 }
+            } else if (userAnswer && correctAnswer) {
+                // Verifica as respostas das perguntas dissertativas
+                if (userAnswer.value.trim().toLowerCase() === correctAnswer.trim().toLowerCase()) {
+                    score++;
+                    output += `<p class="correct">Pergunta ${questionCounter}: <span class="answer-text-correct">Correta!</span></p>`;
+                } else {
+                    output += `<p class="incorrect">Pergunta ${questionCounter}: <span class="answer-text-incorrect">Errada!</span></br> Sua resposta: <span class="answer-text-incorrect">${userAnswer.value}</span></br>Resposta correta: </br><span class="answer-text-correct">${correctAnswer}</span></p>`;
+                }
+            } else {
+                output += `<p class="incorrect">Pergunta ${questionCounter}: <span class="answer-text-incorrect">Não respondida!</span></p>`;
             }
-        }
-    }
+        });
+    });
 
-    // Calcula o percentual de acerto
-    const percentage = (score / totalQuestions) * 100;
-    resultHtml += `<p>Você acertou ${score} de ${totalQuestions} perguntas.</p>`;
-    resultHtml += `<p>Percentual de acerto: ${percentage.toFixed(2)}%</p>`;
-    
-    // Exibe o resultado no gabarito
-    document.getElementById('result').innerHTML = resultHtml;
-    document.getElementById('result').style.display = 'block'; // Garante que o gabarito será mostrado
-
-    // Move para o topo da página após a submissão para que o usuário veja o gabarito
-    window.scrollTo(0, 0);
+    // Exibe os resultados com a contagem final de acertos
+    results.innerHTML = `<h3>Resultados:</h3>${output}<p class="final-score">Você acertou ${score} de ${questionCounter} perguntas.</p>`;
+    results.style.display = 'block';
 }
-
-// Inicializa na primeira página
-showPage(currentPage);

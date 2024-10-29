@@ -21,13 +21,11 @@
             <div id="page1" class="page">
                 <div class="question">
                     <label for="q1">1. Qual é o produto principal da fase oxidativa da via das pentoses fosfato?</label>
-                    <select id="q1" name="q1" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) ATP</option>
-                        <option value="b">b) NADPH</option>
-                        <option value="c">c) FADH₂</option>
-                        <option value="d">d) Glicose-6-fosfato</option>
-                    </select>
+                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="false">a) ATP</label>
+                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="true">b) NADPH</label>
+                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="false">c) FADH₂</label>
+                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Glicose-6-fosfato</label>
+
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -38,13 +36,14 @@
             <div id="page2" class="page">
                 <div class="question">
                     <label for="q2">2. Qual é a importância do NADPH produzido na via das pentoses fosfato?</label>
-                    <select id="q2" name="q2" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Oxidação de glicose na glicólise</option>
-                        <option value="b">b) Biossíntese redutora, como síntese de ácidos graxos e esteróides</option>
-                        <option value="c">c) Conversão direta de glicose em glicogênio</option>
-                        <option value="d">d) Armazenamento de energia nas mitocôndrias</option>
-                    </select>
+                    
+                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="false">a) Oxidação de glicose na glicólise</label>
+                    
+                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="true">b) Biossíntese redutora, como síntese de ácidos graxos e esteróides</label>
+                    
+                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="false">c) Conversão direta de glicose em glicogênio</label>
+                    
+                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) Armazenamento de energia nas mitocôndrias</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -54,14 +53,15 @@
             <!-- Página 3 -->
             <div id="page3" class="page">
                 <div class="question">
-                    <label for="q3">3. Qual o papel da ribose-5-fosfato na célula?/label>
-                    <select id="q3" name="q3" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Fonte de ATP para o metabolismo celular</option>
-                        <option value="b">b) Síntese de ácidos graxos</option>
-                        <option value="c">c) Produção de nucleotídeos e ácidos nucleicos</option>
-                        <option value="d">d) Conversão em glicose-6-fosfato</option>
-                    </select>
+                    <label for="q3">3. Qual o papel da ribose-5-fosfato na célula?</label>
+                   
+                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Fonte de ATP para o metabolismo celular</label>
+                   
+                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="false">b) Síntese de ácidos graxos</label>
+                   
+                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="true">c) Produção de nucleotídeos e ácidos nucleicos</label>
+                    
+                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Conversão em glicose-6-fosfato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -72,13 +72,13 @@
             <div id="page4" class="page">
                 <div class="question">
                     <label for="q4">4. Em quais tecidos ocorre intensamente a via das pentoses fosfato devido à alta demanda de NADPH?</label>
-                    <select id="q4" name="q4" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Tecido muscular</option>
-                        <option value="b">b) Fígado e tecido adiposo</option>
-                        <option value="c">c) Tecido ósseo</option>
-                        <option value="d">d) Músculo cardíaco</option>
-                    </select>
+                   
+                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="false">a) Tecido muscular</label>
+                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="true">b) Fígado e tecido adiposo</label>
+                    
+                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="false">c) Tecido ósseo</label>
+                    
+                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Músculo cardíaco</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -89,13 +89,14 @@
             <div id="page5" class="page">
                 <div class="question">
                     <label for="q5">5. Qual é o principal substrato que inicia a via das pentoses fosfato?</label>
-                    <select id="q5" name="q5" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Piruvato</option>
-                        <option value="b">b) Acetil-CoA</option>
-                        <option value="c">c) Glicose-6-fosfato</option>
-                        <option value="d">d) Frutose-1,6-bifosfato</option>
-                    </select>
+                    
+                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="false">a) Piruvato</label>
+                    
+                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="false">b) Acetil-CoA</label>
+                    
+                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="true">c) Glicose-6-fosfato</label>
+                    
+                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Frutose-1,6-bifosfato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -106,13 +107,14 @@
             <div id="page6" class="page">
                 <div class="question">
                     <label for="q6">6. Qual é a principal função do NADPH no organismo?</label>
-                    <select id="q6" name="q6" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Fornecer energia para a glicólise</option>
-                        <option value="b">b) Atuar em reações de redução biossintética</option>
-                        <option value="c">c) Participar da cadeia de transporte de elétrons</option>
-                        <option value="d">d) Inibir a oxidação da glicose</option>
-                    </select>
+                    
+                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) Fornecer energia para a glicólise</label>
+                   
+                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="true">b) Atuar em reações de redução biossintética</label>
+                    
+                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="false">c) Participar da cadeia de transporte de elétrons
+                    
+                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) Inibir a oxidação da glicose</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -122,13 +124,11 @@
             <!-- Página 7 -->
             <div id="page7" class="page">
                 <div class="question">
-                    <label for="q7">7. Qual das alternativas descreve uma característica exclusiva da via das pentoses fosfato?</label>
-                    <select id="q7" name="q7" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Produz diretamente ATP</option>
-                        <option value="b">b) Participa da síntese de aminoácidos</option>
-                        <option value="c">c) Gera poder redutor em forma de NADPH</option>
-                        <option value="d">d) Utiliza ribose como substrato inicial</option>
+                    <p for="q7">7. Qual das alternativas descreve uma característica exclusiva da via das pentoses fosfato?</p>
+                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="false">a) Produz diretamente ATP</label>
+                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="false">b) Participa da síntese de aminoácidos</label>
+                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="true">c) Gera poder redutor em forma de NADPH </label>
+                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Utiliza ribose como substrato inicial</label>
 
                     </select>
                 </div>
@@ -140,13 +140,11 @@
             <!-- Página 8 -->
             <div id="page8" class="page">
                 <div class="question">
-                    <label for="q8">8. O que determina o fluxo de glicose-6-fosfato para a via das pentoses fosfato?</label>
-                    <select id="q8" name="q8" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Necessidade de ATP pela célula</option>
-                        <option value="b">b) Demanda celular por NADPH ou ribose-5-fosfato</option>
-                        <option value="c">c) Nível de glicogênio no fígado</option>
-                        <option value="d">d) Quantidade de oxigênio disponível</option>
+                    <p for="q8">8. O que determina o fluxo de glicose-6-fosfato para a via das pentoses fosfato?</p>
+                        <label for="q8a"><input type="radio" name="q8" value="a">a) Necessidade de ATP pela célula</label>
+                        <label for="q8b"><input type="radio" name="q8" value="b" data-correct="true">b) Demanda celular por NADPH ou ribose-5-fosfato</label>
+                        <label for="q8c"><input type="radio" name="q8" value="c">c) Nível de glicogênio no fígado</label>
+                        <label for="q8d"><input type="radio" name="q8" value="d">d) Quantidade de oxigênio disponível</label>
                     </select>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
@@ -156,9 +154,10 @@
     
             <!-- Página 9 -->
             <div id="page9" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q9">9. Explique a importância da via das pentoses fosfato no metabolismo celular, enfatizando a função do NADPH.</label>
-                    <textarea id="q9" name="q9" data-correct="A via das pentoses fosfato é importante para a produção de NADPH e ribose-5-fosfato. O NADPH é essencial para reações de biossíntese redutora, como a síntese de ácidos graxos e esteróides, e para o combate ao estresse oxidativo, protegendo a célula contra danos por radicais livres. A ribose-5-fosfato é utilizada na síntese de nucleotídeos e ácidos nucleicos, essencial para a proliferação e renovação celular."></textarea>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="A via das pentoses fosfato é importante para a produção de NADPH e ribose-5-fosfato. O NADPH é essencial para reações de biossíntese redutora, como a síntese de ácidos graxos e esteróides, e para o combate ao estresse oxidativo, protegendo a célula contra danos por radicais livres. A ribose-5-fosfato é utilizada na síntese de nucleotídeos e ácidos nucleicos, essencial para a proliferação e renovação celular.">
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -166,9 +165,10 @@
     
             <!-- Página 10 -->
             <div id="page10" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q10">10. Descreva as duas fases da via das pentoses fosfato, explicando a importância de cada uma para o metabolismo celular.</label>
-                    <textarea id="q10" name="q10" data-correct="A via das pentoses fosfato tem duas fases: a fase oxidativa e a fase não oxidativa. Na fase oxidativa, a glicose-6-fosfato é convertida em ribulose-5-fosfato, produzindo NADPH. Essa fase é importante para fornecer NADPH para biossíntese e defesa antioxidante. Na fase não oxidativa, a ribulose-5-fosfato é convertida em ribose-5-fosfato (para síntese de nucleotídeos) e intermediários da glicólise, permitindo flexibilidade no uso de substratos e na produção de NADPH conforme a demanda celular."></textarea>
+                    <textarea id="q10" name="q10""></textarea>
+                    <input type="hidden" data-correct-answer="A via das pentoses fosfato tem duas fases: a fase oxidativa e a fase não oxidativa. Na fase oxidativa, a glicose-6-fosfato é convertida em ribulose-5-fosfato, produzindo NADPH. Essa fase é importante para fornecer NADPH para biossíntese e defesa antioxidante. Na fase não oxidativa, a ribulose-5-fosfato é convertida em ribose-5-fosfato (para síntese de nucleotídeos) e intermediários da glicólise, permitindo flexibilidade no uso de substratos e na produção de NADPH conforme a demanda celular.">
                 </div>
                 <button type="button" onclick="prevPage()">Anterior</button>
                 <button type="button" onclick="submitQuiz()">Concluir</button>

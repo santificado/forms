@@ -655,3 +655,217 @@ summary:hover {
 .form-link:hover {
     color: #2980b9; /* Cor dos links ao passar o mouse */
 }
+
+/* Estilos para o gabarito */
+#result {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px; /* Largura máxima do gabarito */
+    margin-left: auto; /* Centraliza o contêiner */
+    margin-right: auto; /* Centraliza o contêiner */
+    overflow: hidden; /* Garante que nada saia do contêiner */
+}
+
+/* Estilos para as respostas */
+.question-response {
+    margin-bottom: 10px;
+    max-width: 100%; /* Limita a largura ao contêiner */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+/* Texto correto e incorreto */
+.answer-text-correct,
+.answer-text-incorrect {
+    font-weight: bold;
+    display: block; /* Faz o texto ocupar uma linha inteira */
+    max-width: 100%; /* Limita a largura ao contêiner */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    margin-top: 5px; /* Adiciona um espaço acima */
+}
+
+/* Contêiner de resposta correta e incorreta */
+.correct,
+.incorrect {
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 100%; /* Limita a largura ao contêiner */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    margin-bottom: 10px; /* Espaçamento entre respostas */
+}
+
+/* Estilos específicos para as respostas corretas e incorretas */
+.correct {
+    color: #2e7d32; /* Verde escuro */
+    background-color: #e8f5e9; /* Fundo verde claro */
+}
+
+.incorrect {
+    color: #d32f2f; /* Vermelho escuro */
+    background-color: #ffebee; /* Fundo vermelho claro */
+}
+
+/* Título do gabarito */
+#result h3 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Texto do desempenho final */
+.final-score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+/* Estilos para inputs de radio */
+input[type="radio"] {
+    appearance: none; /* Remove estilo padrão */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px; /* Espaço entre o input e o texto */
+}
+
+/* Estilo dos inputs quando selecionados */
+input[type="radio"]:checked {
+    background-color: #4caf50; /* Verde para indicar seleção */
+    border-color: #4caf50;
+}
+
+/* Estilo do texto do label */
+label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Contêiner das questões */
+.question {
+    margin-bottom: 15px;
+}
+
+/* Estilizando botões */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007bff; /* Azul padrão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos para textarea */
+textarea {
+    width: 100%;
+    height: 100px; /* Altura padrão para a textarea */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    margin-top: 10px; /* Espaçamento em relação ao elemento acima */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #result {
+        padding: 15px;
+    }
+
+    .results p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .page {
+        padding: 10px;
+    }
+
+    .question label {
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+    }
+
+    textarea {
+        width: 100%;
+        height: auto;
+        resize: none;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}
+/* Estilos para inputs de radio */
+input[type="radio"] {
+    appearance: none; /* Remove estilo padrão */
+    width: 25px; /* Largura do botão de rádio */
+    height: 25px; /* Altura do botão de rádio */
+    border: 2px solid #666; /* Borda padrão */
+    border-radius: 50%; /* Bordas arredondadas */
+    cursor: pointer;
+    margin-right: 10px; /* Espaço entre o input e o texto */
+    position: relative; /* Para posicionar o estado selecionado */
+    outline: none; /* Remove contorno ao focar */
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse */
+input[type="radio"]:hover {
+    border-color: #007bff; /* Azul ao passar o mouse */
+}
+
+/* Estilo do input quando selecionado */
+input[type="radio"]:checked {
+    background-color: #4caf50; /* Verde para indicar seleção */
+    border-color: #4caf50; /* Borda verde */
+}
+
+/* Indicador interno para o botão de rádio selecionado */
+input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 14px; /* Largura do círculo interno */
+    height: 14px; /* Altura do círculo interno */
+    background-color: white; /* Cor interna do círculo */
+    border-radius: 50%; /* Bordas arredondadas */
+    position: absolute; /* Posiciona o círculo interno */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o círculo interno */
+}
+
+/* Ajusta o estilo do label associado ao input */
+label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    text-align: left; /* Alinha o texto à esquerda */
+}

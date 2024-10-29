@@ -7,100 +7,79 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<div class="back-button">
-    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
-</div>
-
 <body>
+    <div class="back-button">
+        <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+    </div>
 
     <div class="container">
         <h2>Quiz de Metabolismo e Ciclo de Krebs</h2>
         
         <form id="quizForm">
             <!-- Página 1 -->
-            <div id="page1" class="page">
-                <div class="question">
-                    <label for="q1">1. Qual das seguintes substâncias não é um intermediário no ciclo do ácido cítrico?</label>
-                    <select id="q1" name="q1" data-correct="a">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Acetil-CoA</option>
-                        <option value="b">b) Citrato</option>
-                        <option value="c">c) Fumarato</option>
-                        <option value="d">d) Succinil-CoA</option>
-                        <option value="e">e) α-Cetoglutarato</option>
-                    </select>
+            <div id="page1" class="page" >
+                <div class="question" id="q1">
+                    <p>1. Qual das seguintes substâncias não é um intermediário no ciclo do ácido cítrico?</p>
+                    <label><input type="radio" name="q1" value="a" data-correct="true"> a) Acetil-CoA</label><br>
+                    <label><input type="radio" name="q1" value="b"> b) Citrato</label><br>
+                    <label><input type="radio" name="q1" value="c"> c) Fumarato</label><br>
+                    <label><input type="radio" name="q1" value="d"> d) Succinil-CoA</label><br>
+                    <label><input type="radio" name="q1" value="e"> e) α-Cetoglutarato</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 2 -->
             <div id="page2" class="page">
                 <div class="question">
-                    <label for="q2">2. Qual dos seguintes metabólitos integra o metabolismo de glicose e ácidos graxos?</label>
-                    <select id="q2" name="q2" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Lactato</option>
-                        <option value="b">b) Acetil-CoA</option>
-                        <option value="c">c) Piruvato</option>
-                        <option value="d">d) Citrato</option>
-                        <option value="e">e) Succinil-CoA</option>
-                    </select>
+                    <p>2. Qual dos seguintes metabólitos integra o metabolismo de glicose e ácidos graxos?</p>
+                    <label><input type="radio" name="q2" value="a"> a) Lactato</label><br>
+                    <label><input type="radio" name="q2" value="b" data-correct="true"> b) Acetil-CoA</label><br>
+                    <label><input type="radio" name="q2" value="c"> c) Piruvato</label><br>
+                    <label><input type="radio" name="q2" value="d"> d) Citrato</label><br>
+                    <label><input type="radio" name="q2" value="e"> e) Succinil-CoA</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 3 -->
             <div id="page3" class="page">
                 <div class="question">
-                    <label for="q3">3. O ciclo do ácido cítrico é importante por fornecer diretamente:</label>
-                    <select id="q3" name="q3" data-correct="e">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Piruvato para fermentação láctica</option>
-                        <option value="b">b) NAD+ para processos oxidativos na glicólise</option>
-                        <option value="c">c) Oxaloacetato para gliconeogênese</option>
-                        <option value="d">d) Acetil-CoA para integração com metabolismo de gorduras</option>
-                        <option value="e">e) Elétrons para a cadeia respiratória</option>
-                    </select>
+                    <p>3. O ciclo do ácido cítrico é importante por fornecer diretamente:</p>
+                    <label><input type="radio" name="q3" value="a"> a) Piruvato para fermentação láctica</label><br>
+                    <label><input type="radio" name="q3" value="b"> b) NAD+ para processos oxidativos na glicólise</label><br>
+                    <label><input type="radio" name="q3" value="c"> c) Oxaloacetato para gliconeogênese</label><br>
+                    <label><input type="radio" name="q3" value="d"> d) Acetil-CoA para integração com metabolismo de gorduras</label><br>
+                    <label><input type="radio" name="q3" value="e" data-correct="true"> e) Elétrons para a cadeia respiratória</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
-    
+
             <!-- Página 4 -->
             <div id="page4" class="page">
                 <div class="question">
-                    <label for="q4">4. Os complexos piruvato desidrogenase e α-cetoglutarato desidrogenase necessitam do seguinte para a descarboxilação oxidativa:</label>
-                    <select id="q4" name="q4" data-correct="c">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) CoA, TPP, NAD+, FAD e biotina</option>
-                        <option value="b">b) CoA e TPP</option>
-                        <option value="c">c) CoA, TPP, NAD+, FAD e lipoato</option>
-                        <option value="d">d) CoA e ácido lipoico</option>
-                        <option value="e">e) NAD+ e FAD</option>
-                    </select>
+                    <p>4. Os complexos piruvato desidrogenase e α-cetoglutarato desidrogenase necessitam do seguinte para a descarboxilação oxidativa:</p>
+                    <label><input type="radio" name="q4" value="a"> a) CoA, TPP, NAD+, FAD e biotina</label><br>
+                    <label><input type="radio" name="q4" value="b"> b) CoA e TPP</label><br>
+                    <label><input type="radio" name="q4" value="c" data-correct="true"> c) CoA, TPP, NAD+, FAD e lipoato</label><br>
+                    <label><input type="radio" name="q4" value="d"> d) CoA e ácido lipoico</label><br>
+                    <label><input type="radio" name="q4" value="e"> e) NAD+ e FAD</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
-
             </div>
     
             <!-- Página 5 -->
             <div id="page5" class="page">
                 <div class="question">
                     <label for="q5">5. A manutenção da atividade do ciclo do ácido cítrico requer a regeneração de:</label>
-                    <select id="q5" name="q5" data-correct="a">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Oxaloacetato</option>
-                        <option value="b">b) Piruvato</option>
-                        <option value="c">c) NADPH</option>
-                        <option value="d">d) Citrato</option>
-                        <option value="e">e) NADP</option>
-                    </select>
+                    <label><input type="radio" name="q5" value="a" data-correct="true"> a) Oxaloacetato</label><br>
+                    <label><input type="radio" name="q5" value="b"> b) Piruvato</label><br>
+                    <label><input type="radio" name="q5" value="c"> c) NADPH</label><br>
+                    <label><input type="radio" name="q5" value="d"> d) Citrato</label><br>
+                    <label><input type="radio" name="q5" value="e"> e) NADP</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -111,14 +90,11 @@
             <div id="page6" class="page">
                 <div class="question">
                     <label for="q6">6. A oxidação do succinato para formação de fumarato requer como transportador de elétrons:</label>
-                    <select id="q6" name="q6" data-correct="a">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) FAD</option>
-                        <option value="b">b) NAD+</option>
-                        <option value="c">c) NADP+</option>
-                        <option value="d">d) Biotina</option>
-                        <option value="e">e) TPP</option>
-                    </select>
+                    <label><input type="radio" name="q6" value="a" data-correct="true"> a) FAD</label><br>
+                    <label><input type="radio" name="q6" value="b"> b) NAD+</label><br>
+                    <label><input type="radio" name="q6" value="c"> c) NADP+</label><br>
+                    <label><input type="radio" name="q6" value="d"> d) Biotina</label><br>
+                    <label><input type="radio" name="q6" value="e"> e) TPP</label><br>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -129,14 +105,11 @@
             <div id="page7" class="page">
                 <div class="question">
                     <label for="q7">7. A fosforilação em nível de substrato ocorre na etapa catalisada por:</label>
-                    <select id="q7" name="q7" data-correct="d">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Isocitrato desidrogenase</option>
-                        <option value="b">b) Aconitase</option>
-                        <option value="c">c) Citrato sintase</option>
-                        <option value="d">d) Succinil-CoA sintetase</option>
-                        <option value="e">e) Malato desidrogenase</option>
-                    </select>
+                    <label><input type="radio" name="q7" value="a"> a) Isocitrato desidrogenase</label><br>
+                    <label><input type="radio" name="q7" value="b"> b) Aconitase</label><br>
+                    <label><input type="radio" name="q7" value="c"> c) Citrato sintase</label><br>
+                    <label><input type="radio" name="q7" value="d" data-correct="true"> d) Succinil-CoA sintetase</label><br>
+                    <label><input type="radio" name="q7" value="e"> e) Malato desidrogenase</label><br>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -147,14 +120,11 @@
             <div id="page8" class="page">
                 <div class="question">
                     <label for="q8">8. Assinale a alternativa que melhor completa a sentença abaixo: "A velocidade do fluxo de elétrons através da cadeia transportadora de elétrons é mais diretamente regulada através ______________."</label>
-                    <select id="q8" name="q8" data-correct="d">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Da inibição por feedback pela água.</option>
-                        <option value="b">b) Da velocidade da fosforilação oxidativa.</option>
-                        <option value="c">c) Da concentração de acetil-CoA.</option>
-                        <option value="d">d) Da razão ATP:ADP.</option>
-                        <option value="e">e) Da velocidade catalítica da citocromo oxidase.</option>
-                    </select>
+                    <label><input type="radio" name="q8" value="a"> a) Da inibição por feedback pela água.</label><br>
+                    <label><input type="radio" name="q8" value="b"> b) Da velocidade da fosforilação oxidativa.</label><br>
+                    <label><input type="radio" name="q8" value="c"> c) Da concentração de acetil-CoA.</label><br>
+                    <label><input type="radio" name="q8" value="d" data-correct="true"> d) Da razão ATP:ADP.</label><br>
+                    <label><input type="radio" name="q8" value="e"> e) Da velocidade catalítica da citocromo oxidase.</label><br>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -163,16 +133,15 @@
     
             <!-- Página 9 -->
             <div id="page9" class="page">
-                <div class="question">
+                <div class="question" >
                     <label for="q9">9. Qual das alternativas abaixo fornece diretamente a energia necessária para a síntese de ATP na mitocôndria?</label>
-                    <select id="q9" name="q9" data-correct="e">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Oxidação da acetil-CoA.</option>
-                        <option value="b">b) Formação de espécies reativas de oxigênio.</option>
-                        <option value="c">c) Transporte de elétrons através da lançadeira de glicerol-3-fosfato.</option>
-                        <option value="d">d) Desacoplamento na cadeia transportadora de elétrons.</option>
-                        <option value="e">e) Um gradiente eletroquímico de prótons.</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q9" value="a">a) Oxidação da acetil-CoA.</label><br>
+                        <label><input type="radio" name="q9" value="b">b) Formação de espécies reativas de oxigênio.</label><br>
+                        <label><input type="radio" name="q9" value="c">c) Transporte de elétrons através da lançadeira de glicerol-3-fosfato.</label><br>
+                        <label><input type="radio" name="q9" value="d">d) Desacoplamento na cadeia transportadora de elétrons.</label><br>
+                        <label><input type="radio" name="q9" value="e" data-correct="true">e) Um gradiente eletroquímico de prótons.</label><br>
+                    </div>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -181,47 +150,48 @@
     
             <!-- Página 10 -->
             <div id="page10" class="page">
-                <div class="question">
+                <div class="question" >
                     <label for="q10">10. Uma criança, encontrando um frasco com comprimidos coloridos, ingere um grande número desses comprimidos. Qual dos seguintes efeitos poderia ser observado no ciclo de Krebs?</label>
-                    <select id="q10" name="q10" data-correct="b">
-                        <option value="">Selecione uma alternativa</option>
-                        <option value="a">a) Aumento da atividade da succinato desidrogenase.</option>
-                        <option value="b">b) Inibição da atividade da α-cetoglutarato desidrogenase.</option>
-                        <option value="c">c) Estímulo da produção de ATP.</option>
-                        <option value="d">d) Aumento da concentração de NADH.</option>
-                        <option value="e">e) Aumento da concentração de FADH2.</option>
-                    </select>
+                    <div>
+                        <label><input type="radio" name="q10" value="a"> a) Aumento da atividade da succinato desidrogenase.</label><br>
+                        <label><input type="radio" name="q10" value="b" data-correct="true"> b) Inibição da atividade da α-cetoglutarato desidrogenase.</label><br>
+                        <label><input type="radio" name="q10" value="c"> c) Estímulo da produção de ATP.</label><br>
+                        <label><input type="radio" name="q10" value="d"> d) Aumento da concentração de NADH.</label><br>
+                        <label><input type="radio" name="q10" value="e"> e) Aumento da concentração de FADH2.</label><br>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
             </div>
+            </div>
 
             <!-- Página 11 -->
-                <div id="page11" class="page">
-                    <div class="question">
-                         <label for="q11">11. Explique o mecanismo envolvido no diabetes mellitus tipo 1, a insulina e o glut 4.</label>
-                        <textarea id="q11" name="q11" data-correct="O diabetes mellitus tipo 1 é mais prevalente em crianças e afeta muito a vida de seus portadores. O mecanismo da diabetes mellitus tipo 1 é que ocorre uma degradação das celulas beta pancreaticas e tem uma extrema redução da produção de insulina, isso faz com que a glicose não consiga entrar nos tecidos que são insulino dependentes e se acumule nos que são insulino independentes. 
-                        A glicose precisa de um transportador para entrar nas células, ele é denominado Glut, mas em diferentes tecidos se encontra em diferentes lugares, então foram criadas divisões de acordo com onde é encontrado. 
-                        Os Gluts 1,2,3 estão na superfície da membrana plasmática das células eritrocíticas ou cristalino, fígado e cérebro respectivamente. Por isso são denominados insulino independentes, não precisam da insulina para levar o Glut à membrana.
-                        Os tecidos que possuem como receptor de insulina o Glut 4 (músculo esquelético, cardíaco, tecido adiposo e glândula mamária) são insulino dependentes, pois esse receptor fica em vesículas dentro das células e precisa receber a insulina para que ela ative uma cascata de reações e o receptor venha para a membrana da célula e consiga receber a glicose para que dê início ao processo de gerar ATP.
-                        Isso leva ao acúmulo de glicose no olho, cérebro e fígado, podendo causar complicações como a cegueira, falência renal, já que os rins são sobrecarregados, ou doenças cardíacas pois o coração é insulino dependente . Para isso o paciente deve receber insulina exógena, que levará o Glut 4 para a membrana e outros tecidos também irão receber essa glicose.
-                        O diabetes tipo 1 leva a uma baixa concentração de insulina e alta de glicose no sangue.
-                       "></textarea>
-                    </div>
-                    <button type="button" onclick="nextPage()">Próxima</button>
-                    <button type="button" onclick="prevPage()">Anterior</button>
+            <div id="page11" class="page">
+                <div class="question"data-type="essay">
+                    <p for="q11">11. Explique o mecanismo envolvido no diabetes mellitus tipo 1, a insulina e o glut 4.</p>
+                    <textarea id="q11" name="q11" ></textarea>
+                    <input type="hidden" data-correct-answer="O diabetes mellitus tipo 1 é mais prevalente em crianças e afeta muito a vida de seus portadores. O mecanismo da diabetes mellitus tipo 1 é que ocorre uma degradação das celulas beta pancreaticas e tem uma extrema redução da produção de insulina, isso faz com que a glicose não consiga entrar nos tecidos que são insulino dependentes e se acumule nos que são insulino independentes. 
+                    A glicose precisa de um transportador para entrar nas células, ele é denominado Glut, mas em diferentes tecidos se encontra em diferentes lugares, então foram criadas divisões de acordo com onde é encontrado. 
+                    Os Gluts 1,2,3 estão na superfície da membrana plasmática das células eritrocíticas ou cristalino, fígado e cérebro respectivamente. Por isso são denominados insulino independentes, não precisam da insulina para levar o Glut à membrana.
+                    Os tecidos que possuem como receptor de insulina o Glut 4 (músculo esquelético, cardíaco, tecido adiposo e glândula mamária) são insulino dependentes, pois esse receptor fica em vesículas dentro das células e precisa receber a insulina para que ela ative uma cascata de reações e o receptor venha para a membrana da célula e consiga receber a glicose para que dê início ao processo de gerar ATP.
+                    Isso leva ao acúmulo de glicose no olho, cérebro e fígado, podendo causar complicações como a cegueira, falência renal, já que os rins são sobrecarregados, ou doenças cardíacas pois o coração é insulino dependente . Para isso o paciente deve receber insulina exógena, que levará o Glut 4 para a membrana e outros tecidos também irão receber essa glicose.
+                    O diabetes tipo 1 leva a uma baixa concentração de insulina e alta de glicose no sangue
+                    ">
                 </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
                                     
                         
             <!-- Página 12 -->
             <div id="page12" class="page">
-                <div class="question">
+                <div class="question" data-type="essay">
                     <label for="q12">12. Pesquise e responda sobre o diabetes mellitus tipo 2 (relação da insulina e glut 4)  </label>
-                    <textarea id="q12" name="q12" data-correct="O diabetes Mellitus tipo 2  é o problema na absorção de insulina, em algumas das enzimas e mecanismos que fazem parte do reconhecimento da insulina, ou seja o paciente fica com alta concentração de insulina e com alta glicemia. 
-                    Neste caso, a insulina não é reconhecida  pelos tecidos insulino dependentes e o Glut4 não se desloca para a membrana da célula e as células não recebem glicose. 
-                    Ela pode ser adquirida por hábitos de sedentarismo e é mais prevalente em adultos.
-                    Pode vir a se tornar insulino dependente pois com o passar do tempo o corpo pode parar de produzir insulina pelo não uso da mesma e a pessoa ter que fazer a aplicação exógena."></textarea>
+                    <textarea id="q12" name="q12" ></textarea>
                 </div>
+                <input type="hidden" data-correct-answer="diabetes Mellitus tipo 2  é o problema na absorção de insulina, em algumas das enzimas e mecanismos que fazem parte do reconhecimento da insulina, ou seja o paciente fica com alta concentração de insulina e com alta glicemia. 
+                Neste caso, a insulina não é reconhecida  pelos tecidos insulino dependentes e o Glut4 não se desloca para a membrana da célula e as células não recebem glicose. 
+                Ela pode ser adquirida por hábitos de sedentarismo e é mais prevalente em adultos.
+                Pode vir a se tornar insulino dependente pois com o passar do tempo o corpo pode parar de produzir insulina pelo não uso da mesma e a pessoa ter que fazer a aplicação exógena." >
                 <button type="button" onclick="prevPage()">Anterior</button>
                 <button type="button" onclick="submitQuiz()">Concluir</button>
             </div>
