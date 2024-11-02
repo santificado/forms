@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz Introdução - Sistema cardiovascular</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Introdução Cardiovascular</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <p>1. O sistema cardiovascular é composto por quais componentes principais?</p>
+                    <label><input type="radio" name="q1" value="a"> a) Coração e pulmões</label>
+                    <label><input type="radio" name="q1" value="b" data-correct="true"> b) Coração e vasos sanguíneos</label>
+                    <label><input type="radio" name="q1" value="c"> c) Pulmões e vasos linfáticos</label>
+                    <label><input type="radio" name="q1" value="d"> d) Fígado e rins</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+            </div>
+
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <p>2. Qual camada do coração é a mais espessa e composta de músculo estriado cardíaco?</p>
+                    <label><input type="radio" name="q2" value="a"> a) Endocárdio</label>
+                    <label><input type="radio" name="q2" value="b" data-correct="true"> b) Epicárdio</label> 
+                    <label><input type="radio" name="q2" value="c"> c) Miocárdio</label>
+                    <label><input type="radio" name="q2" value="d"> d) Pericárdio</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <p>3. Qual função do sistema cardiovascular envolve a coagulação?</p>
+                    <label><input type="radio" name="q3" value="a"> a) Transporte</label>
+                    <label><input type="radio" name="q3" value="b" data-correct="true"> b) Proteção</label>
+                    <label><input type="radio" name="q3" value="c" > c) Regulação hormonal</label>
+                    <label><input type="radio" name="q3" value="d"> d) Regulação da temperatura</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <p>4. Qual das válvulas impede o refluxo de sangue dos ventrículos para os átrios?</p>
+                    <label><input type="radio" name="q4" value="a"> a) Válvula pulmonar</label>
+                    <label><input type="radio" name="q4" value="b" data-correct="true"> b) Válvula tricúspide</label>
+                    <label><input type="radio" name="q4" value="c"> c) Válvula aórtica</label>
+                    <label><input type="radio" name="q4" value="d"> d) Válvula mitral</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <p>5. Quais são as propriedades do coração que contribuem para a sua capacidade de contrair e conduzir impulsos elétricos?</p>
+                    <label><input type="radio" name="q5" value="a" data-correct="true"> a) Inotropismo, cronotropismo, batmotropismo, dromotropismo</label> 
+                    <label><input type="radio" name="q5" value="b" > b) Sístole, diástole, pressão sanguínea</label>
+                    <label><input type="radio" name="q5" value="c"> c) Automaticidade, elasticidade, tensão</label>
+                    <label><input type="radio" name="q5" value="d"> d) Vasoconstrição, vasodilatação, fluxo venoso</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <p>6.  Como é realizada a troca de íons que permite o relaxamento cardíaco?</p>
+                    <label><input type="radio" name="q6" value="a"> a) Através da abertura de canais de sódio</label>
+                    <label><input type="radio" name="q6" value="b" data-correct="true"> b) Pelo trocador sódio-cálcio e proteína SERCA</label>
+                    <label><input type="radio" name="q6" value="c"> c) Por difusão simples</label>
+                    <label><input type="radio" name="q6" value="d"> d) Por absorção de potássioa</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <p>7. Qual a função das válvulas semilunares do coração?</p>
+                    <label><input type="radio" name="q7" value="a"> a) Separar átrios e ventrículos</label>
+                    <label><input type="radio" name="q7" value="b"> b) Permitir fluxo sanguíneo nos ventrículos</label>
+                    <label><input type="radio" name="q7" value="c" data-correct="true"> c) Evitar refluxo do sangue para os ventrículos</label>
+                    <label><input type="radio" name="q7" value="d"> d) Controlar a pressão nos átrios</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <p>8. Em que direção o sangue flui dentro do sistema cardiovascular?</p>
+                    <label><input type="radio" name="q8" value="a"> a) Do coração direito para o coração esquerdo</label>
+                    <label><input type="radio" name="q8" value="b" > b) De maior para menor pressão, do átrio esquerdo para o átrio direito</label>
+                    <label><input type="radio" name="q8" value="c"> c) De menor para maior pressão</label>
+                    <label><input type="radio" name="q8" value="d" data-correct="true"> d) Da aorta para a veia cava</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question" data-type="essay">
+                    <p>9. Explique a estrutura básica das camadas da parede cardíaca e a função de cada uma</p>
+                    <textarea id="q9" name="q9" ></textarea>
+                    <input type="hidden" data-correct-answer="AAs três camadas da barreira de filtração glomerular são:
+                    Endotélio: Camada com fenestras que permite a passagem de moléculas pequenas, mas impede a passagem de células sanguíneas.
+                    Membrana basal: Composta por glicoproteínas e proteoglicanos, atua como uma barreira eletrostática e física contra moléculas maiores, como proteínas plasmáticas.
+                    Podócitos: Células epiteliais que formam pedicelos, criando pequenas fendas que impedem a passagem de moléculas médias e grandes, oferecendo seletividade adicional na filtragem do sangue​">
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question" data-type="essay">
+                    <p>10. Descreva as fases do ciclo cardíaco, enfatizando os eventos de pressão e as mudanças na abertura e fechamento das válvulas</p>
+                    <textarea id="q10" name="q10" ></textarea>
+                    <input type="hidden" data-correct-answer="Autorregulação da TFG: A teoria miogênica diz que o aumento da pressão arterial causa contração dos vasos sanguíneos, mantendo a pressão capilar constante e prevenindo a elevação excessiva da TFG. Já o feedback tubuloglomerular depende da mácula densa, que detecta concentrações de NaCl no túbulo distal; se a concentração é baixa, a arteríola aferente dilata, aumentando a TFG. Esses mecanismos estabilizam o fluxo e a filtragem mesmo com variações de pressão arterial​">
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+</body>
+</html>
