@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Filtração e Reabsorção</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Filtração e Reabsorção</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Qual a função das artérias elásticas no corpo?</label>
+                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="false">a) Aumentar a resistência ao fluxo</label>
+                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="true">b) Conduzir o sangue de forma contínua</label>
+                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="false">c) Armazenar sangue para o coração</label>
+                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Filtrar o sangue para os rins</label>
+
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. As artérias possuem qual característica estrutural específica?</label>
+                    
+                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="false">a) Paredes finas com baixa elasticidadee</label>
+                    
+                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="true">b) Camada espessa de músculo liso e elasticidade moderada</label>
+                    
+                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="false">c) Alta complacência e válvulas internas</label>
+                    
+                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) Filtragem ativa de nutrientes</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3. A microcirculação inclui quais tipos de vasos? </label>
+                   
+                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Capilares, veias e linfáticos</label>
+                   
+                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="false">b) Artérias, arteríolas e capilares fenestrados</label>
+                   
+                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="true">c) Arteríolas, capilares e vênulas</label>
+                    
+                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Linfáticos, capilares e arteríolas</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Qual é o papel da pressão coloidosmótica no processo de filtração e reabsorção?</label>
+                   
+                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="false">a) Promover a filtragem nas artérias </label>
+
+                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="false">b) Estabelecer uma barreira osmótica no interstício</label>
+                    
+                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="true">c) Promover a reabsorção nos capilares</label>
+                    
+                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Aumentar a pressão nos vasos linfáticos                    </label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. As veias auxiliam no retorno do sangue ao coração através de quais mecanismos?</label>
+                    
+                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="false">a) Alta elasticidade e bombas musculares</label>
+                    
+                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="true">b) Válvulas venosas e contração muscular esquelética </label>
+                    
+                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="false">c) Contração cardíaca direta</label>
+                    
+                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Absorção de nutrientes nos músculos</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6. Qual a função dos vasos linfáticos na fisiologia circulatória?</label>
+                    
+                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) Reabsorção direta de nutrientes do sangue</label>
+                   
+                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="true">b) Transporte de lipídios absorvidos e linfócitos</label>
+                    
+                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="false">c) Filtração de proteínas no sangue</label>
+                    
+                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) Armazenamento de nutrientes essenciais</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <p for="q7">7. Como a contração do diafragma contribui para o retorno venoso?</p>
+                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="false">a) Aumenta a pressão intratorácica, empurrando sangue para as veias torácicas</label>
+                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="false">b) Reduz a pressão intra-abdominal, facilitando o retorno venoso</label>
+                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="true">c) Eleva a pressão intra-abdominal, favorecendo o fluxo venoso </label>
+                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Provoca contração direta das veias</label>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <p for="q8">8. Em que região dos capilares ocorre principalmente a filtração?</p>
+                        <label for="q8a"><input type="radio" name="q8" value="a">a) Segmento venoso</label>
+                        <label for="q8b"><input type="radio" name="q8" value="b"">b) Região do coração</label>
+                        <label for="q8c"><input type="radio" name="q8" value="c" data-correct="true">c) Segmento arterial dos capilares</label>
+                        <label for="q8d"><input type="radio" name="q8" value="d">d) Nos linfonodos</label>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q9">9. Explique a estrutura básica das artérias elásticas e seu papel na circulação</label>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="A via das pentoses fosfato é importante para a produção de NADPH e ribose-5-fosfato. O NADPH é essencial para reações de biossíntese redutora, como a síntese de ácidos graxos e esteróides, e para o combate ao estresse oxidativo, protegendo a célula contra danos por radicais livres. A ribose-5-fosfato é utilizada na síntese de nucleotídeos e ácidos nucleicos, essencial para a proliferação e renovação celular.">
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q10">10. Descreva o processo de microcirculação e como as forças de Starling influenciam na filtração e reabsorção capilar</label>
+                    <textarea id="q10" name="q10""></textarea>
+                    <input type="hidden" data-correct-answer="A via das pentoses fosfato tem duas fases: a fase oxidativa e a fase não oxidativa. Na fase oxidativa, a glicose-6-fosfato é convertida em ribulose-5-fosfato, produzindo NADPH. Essa fase é importante para fornecer NADPH para biossíntese e defesa antioxidante. Na fase não oxidativa, a ribulose-5-fosfato é convertida em ribose-5-fosfato (para síntese de nucleotídeos) e intermediários da glicólise, permitindo flexibilidade no uso de substratos e na produção de NADPH conforme a demanda celular.">
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    

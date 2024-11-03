@@ -34,8 +34,8 @@
                 <div class="question">
                     <p>2. Qual camada do coração é a mais espessa e composta de músculo estriado cardíaco?</p>
                     <label><input type="radio" name="q2" value="a"> a) Endocárdio</label>
-                    <label><input type="radio" name="q2" value="b" data-correct="true"> b) Epicárdio</label> 
-                    <label><input type="radio" name="q2" value="c"> c) Miocárdio</label>
+                    <label><input type="radio" name="q2" value="b" > b) Epicárdio</label> 
+                    <label><input type="radio" name="q2" value="c" data-correct="true"> c) Miocárdio</label>
                     <label><input type="radio" name="q2" value="d"> d) Pericárdio</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
@@ -58,7 +58,7 @@
             <!-- Página 4 -->
             <div id="page4" class="page">
                 <div class="question">
-                    <p>4. Qual das válvulas impede o refluxo de sangue dos ventrículos para os átrios?</p>
+                    <p>4. Qual das válvulas impede o refluxo de sangue do ventrículo direito para o átrio esquerdo?</p>
                     <label><input type="radio" name="q4" value="a"> a) Válvula pulmonar</label>
                     <label><input type="radio" name="q4" value="b" data-correct="true"> b) Válvula tricúspide</label>
                     <label><input type="radio" name="q4" value="c"> c) Válvula aórtica</label>
@@ -113,8 +113,8 @@
                     <p>8. Em que direção o sangue flui dentro do sistema cardiovascular?</p>
                     <label><input type="radio" name="q8" value="a"> a) Do coração direito para o coração esquerdo</label>
                     <label><input type="radio" name="q8" value="b" > b) De maior para menor pressão, do átrio esquerdo para o átrio direito</label>
-                    <label><input type="radio" name="q8" value="c"> c) De menor para maior pressão</label>
-                    <label><input type="radio" name="q8" value="d" data-correct="true"> d) Da aorta para a veia cava</label>
+                    <label><input type="radio" name="q8" value="c" data-correct="true"> c) De menor para maior pressão</label>
+                    <label><input type="radio" name="q8" value="d"> d) Da aorta para a veia cava</label>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -123,12 +123,9 @@
             <!-- Página 9 -->
             <div id="page9" class="page">
                 <div class="question" data-type="essay">
-                    <p>9. Explique a estrutura básica das camadas da parede cardíaca e a função de cada uma</p>
+                    <p>9. Descreva o processo de acoplamento excitação-contração nas células cardíacas e como o cálcio é regulado nesse processo.</p>
                     <textarea id="q9" name="q9" ></textarea>
-                    <input type="hidden" data-correct-answer="AAs três camadas da barreira de filtração glomerular são:
-                    Endotélio: Camada com fenestras que permite a passagem de moléculas pequenas, mas impede a passagem de células sanguíneas.
-                    Membrana basal: Composta por glicoproteínas e proteoglicanos, atua como uma barreira eletrostática e física contra moléculas maiores, como proteínas plasmáticas.
-                    Podócitos: Células epiteliais que formam pedicelos, criando pequenas fendas que impedem a passagem de moléculas médias e grandes, oferecendo seletividade adicional na filtragem do sangue​">
+                    <input type="hidden" data-correct-answer="AO acoplamento excitação-contração nas células cardíacas inicia-se com a propagação do potencial de ação, que abre canais de cálcio dependentes de voltagem. O cálcio entra na célula e estimula a liberação de mais cálcio do retículo sarcoplasmático, aumentando a concentração de cálcio no citoplasma. Esse cálcio se liga à troponina C, que permite a interação entre actina e miosina, resultando na contração muscular. Para que ocorra o relaxamento, o cálcio é removido do citoplasma por meio da proteína SERCA, que o transporta de volta para o retículo sarcoplasmático, e pelo trocador sódio-cálcio, garantindo o retorno à condição de repouso."></input>
                 </div>
                 <button type="button" onclick="nextPage()">Próxima</button>
                 <button type="button" onclick="prevPage()">Anterior</button>
@@ -139,7 +136,7 @@
                 <div class="question" data-type="essay">
                     <p>10. Descreva as fases do ciclo cardíaco, enfatizando os eventos de pressão e as mudanças na abertura e fechamento das válvulas</p>
                     <textarea id="q10" name="q10" ></textarea>
-                    <input type="hidden" data-correct-answer="Autorregulação da TFG: A teoria miogênica diz que o aumento da pressão arterial causa contração dos vasos sanguíneos, mantendo a pressão capilar constante e prevenindo a elevação excessiva da TFG. Já o feedback tubuloglomerular depende da mácula densa, que detecta concentrações de NaCl no túbulo distal; se a concentração é baixa, a arteríola aferente dilata, aumentando a TFG. Esses mecanismos estabilizam o fluxo e a filtragem mesmo com variações de pressão arterial​">
+                    <input type="hidden" data-correct-answer="AO ciclo cardíaco possui duas fases principais: sístole e diástole. Na diástole, as válvulas atrioventriculares (AV) estão abertas e o sangue flui dos átrios para os ventrículos, aumentando a pressão ventricular gradualmente. Durante a sístole ventricular, ocorre a contração dos ventrículos, o que fecha as válvulas AV devido ao aumento da pressão ventricular acima da pressão atrial. Em seguida, as válvulas semilunares (aórtica e pulmonar) abrem-se quando a pressão ventricular excede a pressão nas artérias, permitindo a ejeção de sangue. Após a ejeção, a pressão ventricular cai, fechando as válvulas semilunares para evitar o refluxo arterial, e inicia-se o relaxamento isovolumétrico, com as válvulas AV permanecendo fechadas até que a pressão ventricular diminua o suficiente para iniciar um novo ciclo​">
                 </div>
                 <button type="button" onclick="prevPage()">Anterior</button>
                 <button type="button" onclick="submitQuiz()">Concluir</button>
