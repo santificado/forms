@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Filtração Glomerular</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Filtração e Reabsorção</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Qual dos seguintes fatores aumenta a taxa de filtração glomerular? </label>
+                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="true">a) Aumento da pressão arterial</label>
+                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="false">b) Diminuição do fluxo sanguíneo renal</label>
+                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="false">c) Contração das células mesangiais</label>
+                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Redução do diâmetro das arteríolas aferentes</label>
+
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. O que representa a fração de filtração glomerular?</label>
+                    
+                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="false">a) A proporção de sódio filtrado pelo néfron</label>
+                    
+                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="false">b) A quantidade de sangue que passa pelos glomérulos por minuto</label>
+                    
+                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="true">c) A fração do plasma filtrado que entra no espaço de Bowman</label>
+                    
+                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) A quantidade de urina produzida por hora</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3. Qual é a função da barreira de filtração glomerular? </label>
+                   
+                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Impedir a passagem de todas as substâncias para o néfron</label>
+                   
+                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="false">b) Permitir a passagem de proteínas para o espaço de Bowman</label>
+                   
+                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="true">c) Selecionar as moléculas a serem filtradas com base em tamanho e carga</label>
+                    
+                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Impedir a filtração de íons e nutrientes essenciais</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Como os capilares glomerulares se diferenciam dos capilares sistêmicos?</label>
+                   
+                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="true">a) Possuem maior permeabilidade</label>
+
+                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="false">b) São impermeáveis à água</label>
+                    
+                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="false">c) Apresentam paredes mais espessas</label>
+                    
+                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Não possuem camada endotelial </label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. Qual é a pressão que mais diretamente influencia a taxa de filtração glomerular? </label>
+                    
+                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="false">a) Pressão osmótica das proteínas plasmáticas</label>
+                    
+                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="false">b) Pressão hidrostática na cápsula de Bowman </label>
+                    
+                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="true">c) Pressão hidrostática glomerular</label>
+                    
+                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Pressão arterial média</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6. Qual estrutura é diretamente responsável por impedir a passagem de proteínas para o ultrafiltrado glomerular?</label>
+                    
+                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) Camada endotelial dos capilares</label>
+                   
+                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="true">b) Podócitos</label>
+                    
+                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="false">c) Túbulo contorcido proximal</label>
+                    
+                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) Cápsula de Bowman</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <label for="q7">7. A filtração glomerular é determinada por três pressões principais. Qual das seguintes combinações está correta?</label>
+                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="false">a) Pressão hidrostática capilar, pressão osmótica do filtrado e pressão hidrostática capsular</label>
+                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="true">b) Pressão hidrostática capilar, pressão oncótica glomerular e pressão hidrostática capsular                        </label>
+                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="false">c) Pressão osmótica do filtrado, pressão arterial média e pressão hidrostática capsular </label>
+                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Pressão oncótica do filtrado, pressão arterial e pressão hidrostática capilar</label>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <label for="q8">8. Em que condição a taxa de filtração glomerular seria reduzida?</label>
+                        <label for="q8a"><input type="radio" name="q8" value="a" data-correct="true">a) Diminuição da pressão hidrostática glomerular</label>
+                        <label for="q8b"><input type="radio" name="q8" value="b"">b) Aumento do fluxo sanguíneo renal</label>
+                        <label for="q8c"><input type="radio" name="q8" value="c" >c) Diminuição da pressão oncótica capilar</label>
+                        <label for="q8d"><input type="radio" name="q8" value="d">d) Aumento da dilatação das arteríolas aferentes</label>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q9">9. Explique o conceito de taxa de filtração glomerular (TFG) e quais são os principais fatores que a influenciam.</label>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="A TFG representa o volume de líquido filtrado pelos glomérulos por unidade de tempo, geralmente em mililitros por minuto. A TFG reflete a capacidade dos rins em filtrar o plasma e depende de três principais pressões: pressão hidrostática nos capilares glomerulares, pressão oncótica das proteínas plasmáticas e pressão hidrostática na cápsula de Bowman. Pressão arterial, resistência das arteríolas aferente e eferente e permeabilidade da barreira glomerular influenciam a TFG.">
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q10">10. Descreva o processo de microcirculação e como as forças de Starling influenciam na filtração e reabsorção capilar</label>
+                    <textarea id="q10" name="q10""></textarea>
+                    <input type="hidden" data-correct-answer="A barreira de filtração glomerular inclui três camadas: endotélio capilar fenestrado, membrana basal glomerular e podócitos com fendas de filtração. Essa barreira permite a passagem de pequenas moléculas e água, bloqueando proteínas e células sanguíneas, que são mantidas no sangue. A barreira é essencial para a seletividade da filtração e para a manutenção da homeostase.">
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    

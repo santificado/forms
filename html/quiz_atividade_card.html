@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Elétrica no ciclo cardiaco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Atividade Elétrica no ciclo cardiaco</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Durante o ciclo cardíaco, o nó sinoatrial (SA) desempenha qual papel fundamental? </label>
+                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="false">a) Propagar diretamente o impulso para o músculo ventricular</label>
+                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="true">b) Atuar como marcapasso ao iniciar o potencial de ação cardíaco</label>
+                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="false">c) Sincronizar a contração dos átrios e ventrículos simultaneamente</label>
+                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Impedir a repolarização das células do nó AV</label>
+
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. Qual é o principal evento que permite o atraso de condução no nó atrioventricular (AV)?</label>
+                    
+                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="false">a) Expressão de canais rápidos de sódio</label>
+                    
+                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="true">b) Resistência aumentada e menor diâmetro das fibras no nó AV</label>
+                    
+                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="false">c) Conexão direta entre átrios e ventrículos</label>
+                    
+                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) Despolarização mais rápida que o nó SA</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3. Durante a fase de platô do potencial de ação ventricular, qual íon desempenha um papel essencial em sua manutenção? </label>
+                   
+                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Potássio (K⁺)</label>
+                   
+                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="false">b) Sódio (Na⁺)</label>
+                   
+                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="true">c) Cálcio (Ca²⁺)</label>
+                    
+                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Cloro (Cl⁻)</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Qual das alternativas descreve corretamente o papel do sistema de Purkinje no ciclo cardíaco?</label>
+                   
+                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="false">a) Despolarizar o nó SA para iniciar o ciclo cardíaco</label>
+
+                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="true">b) Conduzir rapidamente o potencial de ação para os ventrículos</label>
+                    
+                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="false">c) Sincronizar a contração dos átrios e ventrículo</label>
+                    
+                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Reduzir a velocidade de propagação do impulso elétrico </label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. O que ocorre na fase de repolarização rápida do potencial de ação ventricular? </label>
+                    
+                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="false">a) Entrada de íons sódio nas células ventriculares</label>
+                    
+                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="true">b) Saída de íons potássio das células ventriculares </label>
+                    
+                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="false">c) Entrada de íons cálcio nas células ventriculares</label>
+                    
+                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Manutenção do potencial de ação sem movimentação iônica</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6.Qual dos fatores a seguir pode levar a uma diminuição da frequência de disparos do nó SA?</label>
+                    
+                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) Estimulação simpática</label>
+                   
+                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="true">b) Estimulação parassimpática</label>
+                    
+                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="false">c) Aumento de íons cálcio extracelular</label>
+                    
+                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) Diminuição da temperatura corporal</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <label for="q7">7. Qual é o papel do nó AV em relação à sequência de contração entre átrios e ventrículos?</label>
+                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="false">a) PPermitir que os ventrículos se contraiam antes dos átrios</label>
+                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="true">b) Criar um intervalo que permite o enchimento dos ventrículos após a contração atrial</label>
+                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="false">c) Impedir a propagação do potencial de ação para os ventrículo</label>
+                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Estabelecer uma contração simultânea dos átrios e ventrículos</label>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <label for="q8">8. Durante a despolarização ventricular, qual estrutura do sistema de condução se ativa primeiro?</label>
+                        <label for="q8a"><input type="radio" name="q8" value="a" >a) Nó AV</label>
+                        <label for="q8b"><input type="radio" name="q8" value="b"">b) Fibras de Purkinje</label>
+                        <label for="q8c"><input type="radio" name="q8" value="c" data-correct="true">c) Feixe de His </label>
+                        <label for="q8d"><input type="radio" name="q8" value="d">d) Nó SA</label>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q9">9. Explique o processo de despolarização que ocorre no nó SA e descreva como ele influencia a frequência cardíaca.</label>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="O nó SA gera automaticamente impulsos elétricos devido a uma alta permeabilidade ao sódio, permitindo despolarização gradual. Essa despolarização gera um potencial de ação que se espalha pelos átrios, sincronizando suas contrações. Fatores como a estimulação simpática (aumenta a frequência cardíaca ao aumentar a permeabilidade ao sódio e cálcio) e parassimpática (reduz a frequência cardíaca ao aumentar a permeabilidade ao potássio e reduzir o influxo de cálcio) modulam a taxa de disparos, influenciando diretamente a frequência cardíaca.">
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q10">10. Descreva o papel dos íons cálcio na fase de platô do potencial de ação e como isso afeta a contratilidade cardíaca</label>
+                    <textarea id="q10" name="q10""></textarea>
+                    <input type="hidden" data-correct-answer="Durante a fase de platô do potencial de ação ventricular, canais de cálcio tipo L se abrem, permitindo entrada de Ca²⁺. Esse influxo mantém a despolarização e prolonga a fase de platô, facilitando o processo de contração muscular sustentada. Além disso, o Ca²⁺ que entra ativa mais liberação de cálcio do retículo sarcoplasmático, intensificando a força de contração. Dessa forma, o cálcio é essencial para a duração e intensidade da contratilidade cardíaca, sendo influenciado por estímulos externos que podem modificar a resposta do músculo cardíaco.">
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    
