@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Sitema Renal</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz de Sistema Renal</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <label for="q1">1. Um paciente apresenta um quadro de hipovolemia aguda. Qual é a sequência esperada de respostas fisiológicas do sistema renal para tentar restaurar o volume sanguíneo?</label>
+                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="false">a) Diminuição da secreção de ADH e aumento da filtração glomerular</label>
+                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="true">b) Aumento da liberação de renina e ativação do SRAA, promovendo reabsorção de sódio e água</label>
+                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="false">c) Diminuição na liberação de aldosterona e aumento na secreção de potássio</label>
+                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Aumento da filtração glomerular para eliminar água em excesso</label>
+
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <label for="q2">2. Em um gráfico que mostra a filtração glomerular em função da pressão arterial, observa-se que a filtração se mantém constante dentro de uma faixa de pressão. Essa estabilidade ocorre devido a:  </label>
+                    
+                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="false">a) Regulação pela angiotensina II</label>
+                    
+                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="true">b) Regulação pelo mecanismo miogênico e feedback tubuloglomerular</label>
+                    
+                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="false">c) Liberação de eritropoietina pelo rim</label>
+                    
+                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) Ação exclusiva do ADH nos ductos coletores</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <label for="q3">3. Um paciente com insuficiência renal crônica tem dificuldade em manter o equilíbrio ácido-base. Qual é a principal explicação para essa dificuldade?</label>
+                   
+                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Redução na reabsorção de sódio e secreção de potássio</label>
+                   
+                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="true">b) Redução na capacidade de secretar íons hidrogênio e reabsorver bicarbonato</label>
+                   
+                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="false">c) Redução da pressão hidrostática no glomérulo</label>
+                    
+                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Produção excessiva de amônia no túbulo proximal</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <label for="q4">4. Em condições de acidose metabólica, qual alteração é esperada na atividade renal para restaurar o pH normal?</label>
+                   
+                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="false">a) Aumentar a excreção de bicarbonato</label>
+
+                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="false">b) Reduzir a secreção de amônia</label>
+                    
+                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="true">c) Aumentar a secreção de H⁺ e reabsorção de HCO₃⁻</label>
+                    
+                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Inibir a reabsorção de sódio para diminuir a osmolaridade urinária </label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <label for="q5">5. Um paciente desenvolve edema severo e altos níveis de aldosterona circulante. Qual das seguintes condições pode ser uma explicação fisiológica para esse quadro?</label>
+                    
+                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="true">a) Hiperaldosteronismo primário, que leva à retenção excessiva de sódio e água</label>
+                    
+                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="false">b) Hiperalemia, que causa diminuição na reabsorção de sódio</label>
+                    
+                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="false">c) Baixa concentração de ADH, que promove diurese e edema</label>
+                    
+                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Insuficiência renal aguda, que resulta em redução da reabsorção de sódio</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <label for="q6">6. Considere um paciente que apresenta acidose metabólica e um aumento significativo na excreção de amônia. O que isso sugere sobre a função renal e quais são as possíveis causas?</label>
+                    
+                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) O rim está compensando a acidose ao tamponar íons H⁺ com amônia; causas podem incluir insuficiência renal crônica ou doença pulmonar obstrutiva</label>
+                   
+                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="true">b) O rim está falhando em compensar a acidose, sugerindo insuficiência cardíaca</label>
+                    
+                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="false">c) O aumento da amônia indica falha do sistema respiratório</label>
+                    
+                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) O rim está excretando amônia para reduzir o pH urinário e prevenir alcalose</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <label for="q7">7. Em um paciente saudável, o aumento na ingestão de sódio levará a uma série de respostas renais para excretar o excesso. Qual é a sequência fisiológica correta de respostas esperadas?</label>
+                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="false">a) Aumento na liberação de renina, seguido por maior reabsorção de sódio</label>
+                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="true">b) Aumento na filtração glomerular e redução na liberação de aldosterona, promovendo excreção de sódio</label>
+                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="false">c) Estimulação do ADH para reter mais água e sódio nos túbulos</label>
+                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Ativação do SRAA e aumento da reabsorção de sódio</label>
+
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <label for="q8">8. Um paciente é diagnosticado com síndrome nefrótica, apresentando perda significativa de proteínas na urina. Quais são os possíveis efeitos dessa condição na pressão osmótica do plasma e no volume sanguíneo?</label>
+                        <label for="q8a"><input type="radio" name="q8" value="a" >a) Aumento da pressão osmótica do plasma e do volume sanguíneo</label>
+                        <label for="q8b"><input type="radio" name="q8" value="b"  data-correct="true">b) Redução da pressão osmótica do plasma, levando a edema e diminuição do volume sanguíneo efetivo</label>
+                        <label for="q8c"><input type="radio" name="q8" value="c">c) Aumento da filtração glomerular e acúmulo de sódio no plasma</label>
+                        <label for="q8d"><input type="radio" name="q8" value="d">d) Aumento da reabsorção de potássio para compensar a perda de proteínas</label>
+                    </select>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q9">9. Um paciente com insuficiência cardíaca apresenta hiponatremia e edema generalizado. Descreva como o sistema renal pode contribuir para o desenvolvimento dessa hiponatremia e explique por que o tratamento com um inibidor do sistema renina-angiotensina-aldosterona pode ser benéfico nesse caso.</label>
+                    <textarea id="q9" name="q9"></textarea>
+                    <input type="hidden" data-correct-answer="Na insuficiência cardíaca, o volume efetivo de sangue circulante está reduzido, levando o rim a interpretar isso como hipovolemia. Isso ativa o SRAA e aumenta a liberação de ADH, promovendo retenção de sódio e água para elevar o volume sanguíneo. Entretanto, como a função cardíaca está comprometida, o volume acumulado resulta em edema, e o excesso de água dilui o sódio, causando hiponatremia. Inibidores do SRAA ajudam a reduzir essa retenção, melhorando a excreção de sódio e água e, assim, aliviando a sobrecarga hídrica.">
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 10 -->
+            <div id="page10" class="page">
+                <div class="question" data-type="essay">
+                    <label for="q10">10. Explique como o rim compensa uma alcalose respiratória e quais são as mudanças na excreção de bicarbonato e íons hidrogênio nesse processo.</label>
+                    <textarea id="q10" name="q10""></textarea>
+                    <input type="hidden" data-correct-answer="Na alcalose respiratória, o nível de CO₂ no sangue está reduzido, elevando o pH sanguíneo. Para compensar, o rim diminui a reabsorção de bicarbonato (HCO₃⁻) e reduz a secreção de íons H⁺, permitindo que o bicarbonato seja excretado na urina. Esse processo ajuda a neutralizar o pH, pois menos HCO₃⁻ no sangue reduz o efeito alcalino. Essa compensação renal ocorre mais lentamente e é crucial para estabilizar o pH em casos prolongados de alcalose respiratória.">
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script5.js"></script>
+    </body>
+    </html>
+    
