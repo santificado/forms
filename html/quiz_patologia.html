@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Quiz de Controle Arterial a longo prazo</title>
+    <title>Quiz de Lâminas</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,173 +14,245 @@
 <body>
 
     <div class="container">
-        <h2>Quiz de Controle Arterial a longo prazo</h2>
-        
+        <h2>Quiz de Lâminas</h2>
+                
         <form id="quizForm">
-            <!-- Página 1 -->
-            <div id="page1" class="page">
-                <div class="question">
-                    <label for="q1">1. Observe a imagem abaixo. Qual alteração é observada?</label>
-                    <img src="" alt="">
-                    <label><input type="radio" id="q1a" name="q1" value="a" data-correct="false">a) Vasoconstrição periférica</label>
-                    <label><input type="radio" id="q1b" name="q1" value="b" data-correct="false">b)  Liberação de adrenalina</label>
-                    <label><input type="radio" id="q1c" name="q1" value="c" data-correct="true">c) Controle do volume sanguíneo</label>
-                    <label><input type="radio" id="q1d" name="q1" value="d" data-correct="false"> d) Aumento da frequência cardíaca</label>
-
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
-
+                    <!-- Página 1 -->
+        <div id="page1" class="page">
+            <div class="question">
+                <p>1. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q1" value="a"> a) Calcificação distrófica</label>
+                <label><input type="radio" name="q1" value="b" data-correct="true"> b) Antracose</label>
+                <label><input type="radio" name="q1" value="c"> c) Necrose liquefativa</label>
+                <label><input type="radio" name="q1" value="d"> d) Hiperplasia prostática</label>
             </div>
-    
-            <!-- Página 2 -->
-            <div id="page2" class="page">
-                <div class="question">
-                    <label for="q2">2. O sistema renina-angiotensina-aldosterona atua na regulação da pressão arterial a longo prazo através de qual mecanismo?</label>
-                    
-                    <label for="q2a"><input type="radio" id="q2a" name="q2" value="a" data-correct="true">a) Aumento da reabsorção de sódio e água</label>
-                    
-                    <label for="q2b"><input type="radio" id="q2b" name="q2" value="b" data-correct="false">b) Estímulo do nó sinoatrial</label>
-                    
-                    <label for="q2c"><input type="radio" id="q2c" name="q2" value="c" data-correct="false">c) Inibição do sistema parassimpático</label>
-                    
-                    <label for="q2d"><input type="radio" id="q2d" name="q2" value="d" data-correct="false">d) Liberação de peptídeos natriuréticos</label>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </div>
 
+        <!-- Página 2 -->
+        <div id="page2" class="page">
+            <div class="question">
+                <p>2. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q2" value="a"> a) Calcificação metastática pulmonar</label>
+                <label><input type="radio" name="q2" value="b"> b) Necrose caseosa</label>
+                <label><input type="radio" name="q2" value="c" data-correct="true"> c) Trombo em organização</label>
+                <label><input type="radio" name="q2" value="d"> d) Hiperqueratose</label>
             </div>
-    
-            <!-- Página 3 -->
-            <div id="page3" class="page">
-                <div class="question">
-                    <label for="q3">3. A liberação de peptídeo natriurético atrial (PNA) em resposta ao aumento do volume sanguíneo tem como efeito: </label>
-                   
-                    <label for="q3a"> <input type="radio" id="q3a" name="q3" value="a" data-correct="false">a) Retenção de sódio nos rins</label>
-                   
-                    <label for="q3b"> <input type="radio" id="q3b" name="q3" value="b" data-correct="false">b) Aumento da resistência vascular periférica</label>
-                   
-                    <label for="q3c"> <input type="radio" id="q3c" name="q3" value="c" data-correct="true">c) Vasodilatação e excreção de sódio</label>
-                    
-                    <label for="q3d"><input type="radio" id="q3d" name="q3" value="d" data-correct="false">d) Redução da filtração glomerular</label>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 3 -->
+        <div id="page3" class="page">
+            <div class="question">
+                <p>3. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q3" value="a" data-correct="true"> a) Calcificação distrófica</label>
+                <label><input type="radio" name="q3" value="b"> b) Antracose</label>
+                <label><input type="radio" name="q3" value="c"> c) Metaplasia</label>
+                <label><input type="radio" name="q3" value="d"> d) Atrofia do testículo</label>
             </div>
-    
-            <!-- Página 4 -->
-            <div id="page4" class="page">
-                <div class="question">
-                    <label for="q4">4. Qual das opções descreve melhor o papel da aldosterona na regulação da pressão arterial a longo prazo?</label>
-                   
-                    <label for="q4a"> <input type="radio" id="q4a" name="q4" value="a" data-correct="true">a) Aumenta a excreção de potássio e retenção de sódio</label>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
-                    <label for="q4b">  <input type="radio" id="q4b" name="q4" value="b" data-correct="false">b) Promove vasodilatação nos vasos renais</label>
-                    
-                    <label for="q4c"><input type="radio" id="q4c" name="q4" value="c" data-correct="false">c) Inibe a liberação de renina</label>
-                    
-                    <label for="q4d"><input type="radio" id="q4d" name="q4" value="d" data-correct="false">d) Reduz a reabsorção de água nos túbulos renais</label>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+        <!-- Página 4 -->
+        <div id="page4" class="page">
+            <div class="question">
+                <p>4. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q4" value="a"> a) Necrose liquefativa</label>
+                <label><input type="radio" name="q4" value="b" data-correct="true"> b) Calcificação metastática pulmonar</label>
+                <label><input type="radio" name="q4" value="c"> c) Esteatose hepática</label>
+                <label><input type="radio" name="q4" value="d"> d) Cicatrização de 14 dias</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 5 -->
+        <div id="page5" class="page">
+            <div class="question">
+                <p>5. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q5" value="a"> a) Metaplasia</label>
+                <label><input type="radio" name="q5" value="b" data-correct="true"> b) Hiperqueratose</label>
+                <label><input type="radio" name="q5" value="c"> c) Necrose de coagulação</label>
+                <label><input type="radio" name="q5" value="d"> d) Adenoma mamário</label>
             </div>
-    
-            <!-- Página 5 -->
-            <div id="page5" class="page">
-                <div class="question">
-                    <label for="q5">5. A redução crônica na perfusão renal ativa a renina. Qual a consequência disso no sistema cardiovascular?</label>
-                    
-                    <label for="q5a"><input type="radio" id="q5a" name="q5" value="a" data-correct="false">a) Diminuição da frequência cardíaca</label>
-                    
-                    <label for="q5b"><input type="radio" id="q5b" name="q5" value="b" data-correct="false">b) Redução da pressão arterial</label>
-                    
-                    <label for="q5c"><input type="radio" id="q5c" name="q5" value="c" data-correct="true">c) Formação de angiotensina II, que eleva a pressão</label>
-                    
-                    <label for="q5d"><input type="radio" id="q5d" name="q5" value="d" data-correct="false">d) Inibição da aldosterona</label>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+        <!-- Página 6 -->
+        <div id="page6" class="page">
+            <div class="question">
+                <p>6. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q6" value="a"> a) Necrose caseosa</label>
+                <label><input type="radio" name="q6" value="b" data-correct="true"> b) Atrofia do testículo</label>
+                <label><input type="radio" name="q6" value="c"> c) Hiperplasia prostática</label>
+                <label><input type="radio" name="q6" value="d"> d) Teratoma de ovário</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 7 -->
+        <div id="page7" class="page">
+            <div class="question">
+                <p>7. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q7" value="a" data-correct="true"> a) Esteatose de tetracloreto de carbono</label>
+                <label><input type="radio" name="q7" value="b"> b) Metaplasia</label>
+                <label><input type="radio" name="q7" value="c"> c) Necrose liquefativa</label>
+                <label><input type="radio" name="q7" value="d"> d) Cicatrização de 14 dias</label>
             </div>
-    
-            <!-- Página 6 -->
-            <div id="page6" class="page">
-                <div class="question">
-                    <label for="q6">6. A angiotensina II atua de forma a aumentar a pressão arterial a longo prazo, pois ela:</label>
-                    
-                    <label for="q6a"><input type="radio"name="q6" value="a" data-correct="false">a) Induz bradicardia</label>
-                   
-                    <label for="q6b"> <input type="radio"name="q6" value="b" data-correct="false">b) Aumenta a excreção de sódio</label>
-                    
-                    <label for="q6c"><input type="radio" name="q6" value="c" data-correct="true">c) Promove vasoconstrição e estimula a liberação de aldosterona</label>
-                    
-                    <label for="q6d"><input type="radio" name="q6" value="d" data-correct="false">d) Reduz o volume sanguíneo circulante</label>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 8 -->
+        <div id="page8" class="page">
+            <div class="question">
+                <p>8. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q8" value="a"> a) Necrose liquefativa</label>
+                <label><input type="radio" name="q8" value="b" data-correct="true"> b) Necrose de coagulação</label>
+                <label><input type="radio" name="q8" value="c"> c) Calcificação metastática pulmonar</label>
+                <label><input type="radio" name="q8" value="d"> d) Adenoma mamário</label>
             </div>
-    
-            <!-- Página 7 -->
-            <div id="page7" class="page">
-                <div class="question">
-                    <label for="q7">7. O sistema nervoso simpático contribui para o controle de pressão arterial a longo prazo ao:</label>
-                        <label for="q7a"><input type="radio" name="q7" value="a" data-correct="true">a) Estimular a liberação de renina pelos rins</label>
-                        <label for="q7b"><input type="radio" name="q7" value="b" data-correct="false">b) Inibir a liberação de aldosterona</label>
-                        <label for="q7c"><input type="radio" name="q7" value="c" data-correct="false">c) Promover a filtração glomerular</label>
-                        <label for="q7d"><input type="radio" name="q7" value="d" data-correct="false">d) Diminuir a resistência vascular periférica</label>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
-                    </select>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+        <!-- Página 9 -->
+        <div id="page9" class="page">
+            <div class="question">
+                <p>9. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q9" value="a" data-correct="true"> a) Necrose liquefativa</label>
+                <label><input type="radio" name="q9" value="b"> b) Antracose</label>
+                <label><input type="radio" name="q9" value="c"> c) Hiperqueratose</label>
+                <label><input type="radio" name="q9" value="d"> d) Necrose de coagulação</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 10 -->
+        <div id="page10" class="page">
+            <div class="question">
+                <p>10. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q10" value="a"> a) Calcificação distrófica</label>
+                <label><input type="radio" name="q10" value="b" data-correct="true"> b) Necrose caseosa</label>
+                <label><input type="radio" name="q10" value="c"> c) Atrofia do testículo</label>
+                <label><input type="radio" name="q10" value="d"> d) Metaplasia</label>
             </div>
-    
-            <!-- Página 8 -->
-            <div id="page8" class="page">
-                <div class="question">
-                    <label for="q8">8. Qual dos seguintes hormônios é mais diretamente associado à regulação da pressão arterial e controle de volume a longo prazo?</label>
-                        <label for="q8a"><input type="radio" name="q8" value="a" >a) Adrenalina</label>
-                        <label for="q8b"><input type="radio" name="q8" value="b"data-correct="true">b) Vasopressina (ADH)</label>
-                        <label for="q8c"><input type="radio" name="q8" value="c" >c) Glucagon</label>
-                        <label for="q8d"><input type="radio" name="q8" value="d">d) Insulina </label>
-                    </select>
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
 
+        <!-- Página 11 -->
+        <div id="page11" class="page">
+            <div class="question">
+                <p>11. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q11" value="a" data-correct="true"> a) Hiperplasia prostática</label>
+                <label><input type="radio" name="q11" value="b"> b) Teratoma de ovário</label>
+                <label><input type="radio" name="q11" value="c"> c) Necrose caseosa</label>
+                <label><input type="radio" name="q11" value="d"> d) Esteatose hepática</label>
             </div>
-    
-            <!-- Página 9 -->
-            <div id="page9" class="page">
-                <div class="question" data-type="essay">
-                    <label for="q9">9. Explique como o sistema renina-angiotensina-aldosterona regula a pressão arterial a longo prazo, considerando os efeitos na retenção de sódio e na vasoconstrição.</label>
-                    <textarea id="q9" name="q9"></textarea>
-                    <input type="hidden" data-correct-answer="O sistema renina-angiotensina-aldosterona (SRAA) é ativado em resposta à redução da perfusão renal, promovendo a liberação de renina. A renina converte angiotensinogênio em angiotensina I, que é convertida em angiotensina II. Angiotensina II provoca vasoconstrição, aumentando a pressão arterial e estimulando a secreção de aldosterona, que promove a retenção de sódio e água nos rins, elevando o volume sanguíneo e, consequentemente, a pressão arterial a longo prazo.">
-                </div>
-                <button type="button" onclick="nextPage()">Próxima</button>
-                <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 12 -->
+        <div id="page12" class="page">
+            <div class="question">
+                <p>12. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q12" value="a"> a) Calcificação distrófica</label>
+                <label><input type="radio" name="q12" value="b" data-correct="true"> b) Metaplasia</label>
+                <label><input type="radio" name="q12" value="c"> c) Adenocarcinoma mamário</label>
+                <label><input type="radio" name="q12" value="d"> d) Trombo em organização</label>
             </div>
-    
-            <!-- Página 10 -->
-            <div id="page10" class="page">
-                <div class="question" data-type="essay">
-                    <label for="q10">10. Descreva a influência dos peptídeos natriuréticos no controle de pressão arterial e como eles contrastam com o SRAA.</label>
-                    <textarea id="q10" name="q10""></textarea>
-                    <input type="hidden" data-correct-answer="Os peptídeos natriuréticos, como o peptídeo natriurético atrial (PNA), são liberados em resposta ao aumento do volume sanguíneo e da pressão nas câmaras cardíacas. Eles promovem a excreção de sódio e água pelos rins, diminuindo o volume sanguíneo e reduzindo a pressão arterial. Esse mecanismo contrasta com o SRAA, que tende a conservar sódio e aumentar o volume sanguíneo, elevando a pressão arterial. Dessa forma, os peptídeos natriuréticos contrabalançam os efeitos do SRAA, facilitando a homeostase.">
-                </div>
-                <button type="button" onclick="prevPage()">Anterior</button>
-                <button type="button" onclick="submitQuiz()">Concluir</button>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 13 -->
+        <div id="page13" class="page">
+            <div class="question">
+                <p>13. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q13" value="a"> a) Hiperplasia prostática</label>
+                <label><input type="radio" name="q13" value="b" data-correct="true"> b) Cicatrização de 14 dias</label>
+                <label><input type="radio" name="q13" value="c"> c) Calcificação metastática pulmonar</label>
+                <label><input type="radio" name="q13" value="d"> d) Adenoma mamário</label>
             </div>
-        </form>
-    
-        <div id="result" class="result"></div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 14 -->
+        <div id="page14" class="page">
+            <div class="question">
+                <p>14. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q14" value="a"> a) Adenoma mamário</label>
+                <label><input type="radio" name="q14" value="b" data-correct="true"> b) Carcinoma de tireoide</label>
+                <label><input type="radio" name="q14" value="c"> c) Hiperqueratose</label>
+                <label><input type="radio" name="q14" value="d"> d) Metaplasia</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 15 -->
+        <div id="page15" class="page">
+            <div class="question">
+                <p>15. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q15" value="a"> a) Calcificação distrófica</label>
+                <label><input type="radio" name="q15" value="b"> b) Carcinoma de colo do útero</label>
+                <label><input type="radio" name="q15" value="c" data-correct="true"> c) Teratoma de ovário</label>
+                <label><input type="radio" name="q15" value="d"> d) Esteatose de tetracloreto de carbono</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 16 -->
+        <div id="page16" class="page">
+            <div class="question">
+                <p>16. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q16" value="a"> a) Adenoma mamário</label>
+                <label><input type="radio" name="q16" value="b" data-correct="true"> b) Carcinoma de colo do útero</label>
+                <label><input type="radio" name="q16" value="c"> c) Hiperplasia prostática</label>
+                <label><input type="radio" name="q16" value="d"> d) Necrose de coagulação</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 17 -->
+        <div id="page17" class="page">
+            <div class="question">
+                <p>17. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q17" value="a"> a) Metaplasia</label>
+                <label><input type="radio" name="q17" value="b" data-correct="true"> b) Carcinoma mamário</label>
+                <label><input type="radio" name="q17" value="c"> c) Cicatrização de 14 dias</label>
+                <label><input type="radio" name="q17" value="d"> d) Esteatose de tetracloreto de carbono</label>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+            <button type="button" onclick="prevPage()">Anterior</button>
+        </div>
+
+        <!-- Página 18 -->
+        <div id="page18" class="page">
+            <div class="question">
+                <p>18. Qual alteração é observada na lâmina histológica abaixo?</p>
+                <label><input type="radio" name="q18" value="a" data-correct="true"> a) Adenocarcinoma mamário</label>
+                <label><input type="radio" name="q18" value="b"> b) Carcinoma de colo do útero</label>
+                <label><input type="radio" name="q18" value="c"> c) Carcinoma tireoide</label>
+                <label><input type="radio" name="q18" value="d"> d) Necrose liquefativa</label>
+            </div>
+            <button type="button" onclick="prevPage()">Anterior</button>
+            <button type="button" onclick="submitQuiz()">Concluir</button>
+        </div>
+</form>
+
+    <div id="result" class="result"></div>
     </div>
-
-    <script src="../js/script5.js"></script>
-    </body>
-    </html>
-    
+</div>
+<script src="../js/script7.js"></script>
+</body>
+</html>

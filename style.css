@@ -1,871 +1,716 @@
-/* Estilo geral do corpo */
+/* Estilização global */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Container principal */
+body:hover {
+    background-color: #eef1f3; /* Cor suave para o fundo ao passar o mouse */
+}
+
 .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    margin: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    max-width: 900px;
+    margin: 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
 }
 
 .container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Título do quiz */
-.container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 24px;
-    letter-spacing: 1.2px;
-    transition: color 0.3s ease;
-}
-
-/* Estilo das perguntas */
-.question {
-    margin-bottom: 20px;
-}
-
-.question label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #444;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.question input[type="text"],
-.question select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: #fafafa;
-    font-size: 16px;
-    color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-
-.question input[type="text"]:focus,
-.question select:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
-}
-
-/* Estilo dos botões de navegação */
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.navigation-buttons button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.navigation-buttons button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.navigation-buttons button:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
-}
-
-/* Estilo do botão de submissão */
-button[type="button"] {
-    width: 100%;
-    padding: 14px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 25px;
-}
-
-button[type="button"]:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
-button[type="button"]:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(40, 167, 69, 0.4);
-}
-
-/* Estilo do resultado */
-.result {
-    display: none;
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f0f8ff;
-    border-radius: 10px;
-    border: 1px solid #d1e7ff;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.result h3 {
-    color: #007bff;
-    margin-bottom: 18px;
-    font-size: 22px;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
-.result p {
-    margin: 10px 0;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.5;
-    transition: color 0.3s ease;
-}
-
-/* Estilo das respostas corretas e incorretas */
-.correct {
-    color: #28a745;
-    font-weight: bold;
-}
-
-.incorrect {
-    color: #dc3545;
-    font-weight: bold;
-}
-
-/* Estilo da resposta correta após erro */
-.correct-answer {
-    color: #007bff;
-    font-weight: normal;
-    font-style: italic;
-    font-size: 14px;
-}
-
-/* Modo escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.container.dark-mode {
-    background-color: #1f1f1f;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-}
-
-.container.dark-mode h2 {
-    color: #e0e0e0;
-}
-
-.question.dark-mode label {
-    color: #cccccc;
-}
-
-.question.dark-mode input[type="text"],
-.question.dark-mode select {
-    background-color: #333;
-    color: #e0e0e0;
-    border-color: #555;
-}
-
-.question.dark-mode input[type="text"]:focus,
-.question.dark-mode select:focus {
-    border-color: #bb86fc;
-    box-shadow: 0 0 8px rgba(187, 134, 252, 0.3);
-}
-
-.navigation-buttons.dark-mode button {
-    background-color: #bb86fc;
-    color: #121212;
-}
-
-.navigation-buttons.dark-mode button:hover {
-    background-color: #9a67ea;
-}
-
-.navigation-buttons.dark-mode button:focus {
-    box-shadow: 0 0 6px rgba(187, 134, 252, 0.4);
-}
-
-button[type="button"].dark-mode {
-    background-color: #03dac6;
-    color: #121212;
-}
-
-button[type="button"].dark-mode:hover {
-    background-color: #00c4b4;
-}
-
-button[type="button"].dark-mode:focus {
-    box-shadow: 0 0 6px rgba(3, 218, 198, 0.4);
-}
-
-.result.dark-mode {
-    background-color: #333;
-    border-color: #444;
-}
-
-.result.dark-mode h3 {
-    color: #ffffff;
-}
-
-.result.dark-mode p {
-    color: #cccccc;
-}
-
-/* Estilo responsivo para dispositivos móveis */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px;
-        margin: 10px;
-    }
-
-    .container h2 {
-        font-size: 20px;
-    }
-
-    .question label {
-        font-size: 14px;
-    }
-
-    .question input[type="text"],
-    .question select {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .navigation-buttons button {
-        width: 45%;
-        font-size: 13px;
-    }
-
-    button[type="button"] {
-        font-size: 14px;
-    }
-
-    .result h3 {
-        font-size: 18px;
-    }
-
-    .result p {
-        font-size: 14px;
-    }
-}
-
-img {
-    display: block; 
-    margin: 20px auto; 
-    max-width: 50%; 
-    height: auto; 
-    border: 5px solid #2c3e50; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease; 
-}
-
-img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-}
-
-/* Estilo dos links principais */
-a.form-link {
-    display: block;
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-a.form-link:hover {
-    background-color: #0056b3;
     transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-a.form-link:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+h2 {
+    color: #2a9d8f; /* Turquesa */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
-/* Estilo para o botão de voltar com ícone */
+
 .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Garantir que o botão esteja acima de outros elementos */
 }
 
 .btn-back {
-    background-color: transparent; /* Sem cor de fundo */
-    color: #4CAF50; /* Cor do ícone */
-    font-size: 24px; /* Tamanho do ícone */
-    text-decoration: none; /* Remove o sublinhado */
-    padding: 10px; /* Espaçamento */
-    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #e76f51; /* Laranja */
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-back:hover {
-    color: #45a049; /* Muda a cor ao passar o mouse */
-}
-/* Estilo para as textareas */
-textarea {
-    width: 95%;
-    height: 100px; /* Altura fixa */
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease;
+    background-color: #f4a261; /* Laranja mais claro */
+    transform: translateY(-4px);
 }
 
-textarea:focus {
-    border-color: #4CAF50;
+.btn-back:focus {
     outline: none;
 }
 
+/* Formulário */
+form {
+    margin-top: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.question {
+    margin-bottom: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    padding: 14px;
+    background-color: #e9f5f2; /* Cor suave turquesa */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+label:hover {
+    background-color: #cde9e5; /* Cor hover mais forte */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Botões de navegação */
+button {
+    background-color: #2a9d8f; /* Turquesa */
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #26878b; /* Tom mais escuro de turquesa */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Campo de texto */
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    margin-top: 10px;
+    resize: vertical;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus {
+    border-color: #e76f51; /* Laranja */
+    outline: none;
+    box-shadow: 0 0 6px rgba(231, 111, 81, 0.6); /* Laranja suave */
+}
+
+/* Estilização para selects */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #e1e1e1;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:hover {
+    border-color: #e76f51; /* Laranja */
+}
+
+select:focus {
+    border-color: #2a9d8f; /* Turquesa */
+}
+
+/* Resultados */
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e9f5f2;
+    border: 2px solid #e76f51; /* Laranja */
+    border-radius: 8px;
+    color: #333;
+    display: none;
+    font-size: 1rem;
+}
+
+/* Links e imagens */
+a {
+    color: #2a9d8f; /* Turquesa */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+a:hover {
+    color: #e76f51; /* Laranja */
+    transform: translateX(5px); /* Efeito de deslizamento suave */
+}
+
+img {
+    width: 100px; /* Defina o tamanho desejado */
+    height: 100px; /* Igual à largura para garantir formato quadrado */
+    object-fit: cover; /* Garante que a imagem se ajuste ao espaço sem distorcer */
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave nas imagens */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    .gabarito {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .gabarito h3 {
+        font-size: 1.3rem;
+    }
+
+    .gabarito ul {
+        padding-left: 15px;
+    }
+}
+
+.gabarito {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Adicionar posição relativa para controlar sua camada */
+    z-index: 1; /* Garantir que o gabarito fique abaixo do botão */
+}
+
+.gabarito h3 {
+    color: #2a9d8f; /* Cor para o título */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.gabarito p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+/* Resposta correta */
+.correct {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+}
+
+/* Resposta incorreta */
+.incorrect {
+    color: #dc3545; /* Vermelho */
+    font-weight: bold;
+}
+
+/* Estilo para links no index (lista) */
+a {
+    display: block;
+    color: #2a9d8f; /* Turquesa */
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: #f0f4f8;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+a:hover {
+    background-color: #e9f5f2; /* Turquesa mais suave */
+    padding-left: 20px; /* Efeito de deslizamento */
+}
+
+/* Gabarito estilizado */
+.gabarito {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: none;
+    font-size: 1rem;
+}
+
+.gabarito h3 {
+    color: #2a9d8f; /* Cor para o título */
+}
+
+.gabarito p {
+    margin: 8px 0;
+}
+
+/* Resposta correta */
+.correct {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+}
+
+/* Resposta incorreta */
+.incorrect {
+    color: #dc3545; /* Vermelho */
+    font-weight: bold;
+}
+
+/* Estilo para links no index (lista) */
+a {
+    display: block;
+    color: #2a9d8f; /* Turquesa */
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: #f0f4f8;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #e9f5f2;
+    color: #e76f51; /* Laranja */
+    padding-left: 20px; /* Efeito de deslizamento */
+}
+
+a:active {
+    background-color: #cde9e5;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para os botões */
+button {
+    background-color: #2a9d8f; /* Turquesa */
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #26878b; /* Tom mais escuro de turquesa */
+    transform: translateY(-3px);
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+
+/* Reset básico */
+body, h1, h2, details, summary, a, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
 .container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
     width: 100%;
     text-align: center;
 }
 
-.quiz-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.quiz-section {
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-}
-
-.quiz-item {
-    position: relative;
+.container img {
+    width: 100px;
+    height: auto;
     margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.form-link {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #000;
-}
-
-.preview {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 180px;
-    top: 30px;
-    left: 0;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.quiz-item:hover .preview {
-    display: block;
-}
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Body */
-body {
-    background-color: #f7f8fa;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-}
-
-/* Header image */
-.header-image {
-    width: 150px;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Cabeçalho */
 h1 {
+    color: #2a9d8f; /* Turquesa */
+    margin-bottom: 10px;
     font-size: 2.5rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
 }
 
-/* Botões de troca de layout */
+h2 {
+    color: #264653;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Botões de alternância */
 .toggle-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
+.toggle-buttons button {
+    background-color: #2a9d8f; /* Turquesa */
+    color: #ffffff;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 50px;
+    padding: 10px 20px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #388E3C;
+.toggle-buttons button.active {
+    background-color: #e76f51; /* Laranja */
 }
 
-button.active {
-    background-color: #2E7D32;
+.toggle-buttons button:hover {
+    background-color: #26878b; /* Turquesa mais forte */
 }
 
-/* Estilos dos layouts */
+/* Layouts de detalhes */
 .layout {
     display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .layout.active {
     display: block;
-    opacity: 1;
-}
-
-/* Seções de quizzes */
-.quiz-section {
-    background-color: #e8f5e9;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.quiz-section:hover {
-    background-color: #c8e6c9;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-}
-
-summary {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #4CAF50;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.form-link {
-    display: block;
-    margin-top: 10px;
-    padding: 12px;
-    background-color: #fff;
-    border: 2px solid #4CAF50;
-    color: #4CAF50;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.form-link:hover {
-    background-color: #4CAF50;
-    color: white;
-    border-color: #388E3C;
-}
-
-/* Footer */
-footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 15px 15px 0 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.footer-content ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.footer-content ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.footer-content ul li a:hover {
-    color: #d7ffd9;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    button {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-
-    summary {
-        font-size: 1.2rem;
-    }
-}
-body {
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    background-color: #f4f4f4; /* Cor de fundo suave */
-    color: #333; /* Cor do texto */
-    line-height: 1.6; /* Melhor legibilidade */
-}
-
-.container {
-    max-width: 800px; /* Limitar largura */
-    margin: 0 auto; /* Centralizar */
-    padding: 20px; /* Padding interno */
-    background-color: #fff; /* Fundo branco */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    border-radius: 8px; /* Bordas arredondadas */
-}
-
-h1, h2 {
-    color: #2c3e50; /* Cor dos títulos */
-    text-align: center; /* Centralizar títulos */
-}
-
-.toggle-buttons {
-    display: flex; /* Alinhamento horizontal */
-    justify-content: center; /* Centralizar botões */
-    margin-bottom: 20px; /* Espaço abaixo */
-}
-
-button {
-    background-color: #3498db; /* Cor do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px 20px; /* Padding do botão */
-    cursor: pointer; /* Cursor de mão */
-    transition: background-color 0.3s; /* Transição suave */
-}
-
-button:hover {
-    background-color: #2980b9; /* Cor do botão ao passar o mouse */
 }
 
 .quiz-section {
-    margin-bottom: 15px; /* Espaçamento entre seções */
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-summary {
-    background-color: #ecf0f1; /* Fundo do summary */
-    padding: 10px; /* Padding do summary */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mão */
-    transition: background-color 0.3s; /* Transição suave */
-    font-weight: bold; /* Negrito */
-}
-
-summary:hover {
-    background-color: #bdc3c7; /* Cor de fundo ao passar o mouse */
-}
-
-.form-link {
-    display: block; /* Colocar links em bloco */
-    padding: 8px; /* Padding dos links */
-    margin-top: 5px; /* Espaço acima dos links */
-    color: #3498db; /* Cor do texto dos links */
-    text-decoration: none; /* Sem sublinhado */
-    transition: color 0.3s; /* Transição suave */
-}
-
-.form-link:hover {
-    color: #2980b9; /* Cor dos links ao passar o mouse */
-}
-
-/* Estilos para o gabarito */
-#result {
-    font-family: Arial, sans-serif;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    max-width: 600px; /* Largura máxima do gabarito */
-    margin-left: auto; /* Centraliza o contêiner */
-    margin-right: auto; /* Centraliza o contêiner */
-    overflow: hidden; /* Garante que nada saia do contêiner */
-}
-
-/* Estilos para as respostas */
-.question-response {
-    margin-bottom: 10px;
-    max-width: 100%; /* Limita a largura ao contêiner */
-    overflow-wrap: break-word; /* Quebra palavras longas */
-}
-
-/* Texto correto e incorreto */
-.answer-text-correct,
-.answer-text-incorrect {
-    font-weight: bold;
-    display: block; /* Faz o texto ocupar uma linha inteira */
-    max-width: 100%; /* Limita a largura ao contêiner */
-    overflow-wrap: break-word; /* Quebra palavras longas */
-    margin-top: 5px; /* Adiciona um espaço acima */
-}
-
-/* Contêiner de resposta correta e incorreta */
-.correct,
-.incorrect {
-    padding: 8px;
-    border-radius: 5px;
-    max-width: 100%; /* Limita a largura ao contêiner */
-    overflow-wrap: break-word; /* Quebra palavras longas */
-    margin-bottom: 10px; /* Espaçamento entre respostas */
-}
-
-/* Estilos específicos para as respostas corretas e incorretas */
-.correct {
-    color: #2e7d32; /* Verde escuro */
-    background-color: #e8f5e9; /* Fundo verde claro */
-}
-
-.incorrect {
-    color: #d32f2f; /* Vermelho escuro */
-    background-color: #ffebee; /* Fundo vermelho claro */
-}
-
-/* Título do gabarito */
-#result h3 {
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-/* Texto do desempenho final */
-.final-score {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-    color: #555;
-}
-
-/* Estilos para inputs de radio */
-input[type="radio"] {
-    appearance: none; /* Remove estilo padrão */
-    width: 20px;
-    height: 20px;
-    border: 2px solid #666;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 10px; /* Espaço entre o input e o texto */
-}
-
-/* Estilo dos inputs quando selecionados */
-input[type="radio"]:checked {
-    background-color: #4caf50; /* Verde para indicar seleção */
-    border-color: #4caf50;
-}
-
-/* Estilo do texto do label */
-label {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-/* Contêiner das questões */
-.question {
-    margin-bottom: 15px;
-}
-
-/* Estilizando botões */
-button {
-    width: 100%;
+.quiz-section summary {
+    background-color: #2a9d8f;
+    color: #fff;
     padding: 15px;
-    font-size: 18px;
-    background-color: #007bff; /* Azul padrão */
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+}
+
+.quiz-section summary:hover {
+    background-color: #1d7e72; /* Mais escuro */
+}
+
+.quiz-section details[open] summary {
+    background-color: #e76f51; /* Laranja */
+}
+
+.quiz-section details[open] summary:hover {
+    background-color: #f4a261;
+}
+/* Estilo para botões quadrados */
+button {
+    background-color: #2a9d8f; /* Turquesa */
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0; /* Sem borda arredondada */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+    background-color: #26878b; /* Tom mais escuro de turquesa */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
 }
 
-/* Estilos para textarea */
-textarea {
-    width: 100%;
-    height: 100px; /* Altura padrão para a textarea */
-    resize: vertical; /* Permite redimensionar verticalmente */
-    margin-top: 10px; /* Espaçamento em relação ao elemento acima */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    #result {
-        padding: 15px;
-    }
+/* Estilo para os links no index (lista) */
+a {
+    display: block;
+    color: #2a9d8f; /* Turquesa */
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .results p {
-        font-size: 14px;
-        max-width: 90%;
-    }
+a:hover {
+    background-color: #e9f5f2;
+    color: #e76f51; /* Laranja */
+    padding-left: 20px; /* Adicionando um efeito de "deslizamento" ao passar o mouse */
+}
 
-    .page {
-        padding: 10px;
-    }
+a:active {
+    background-color: #cde9e5;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
 
-    .question label {
-        font-size: 16px;
-    }
+/* Estilo para a lista de links */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
 
-    input[type="radio"] {
-        margin-right: 10px;
-        transform: scale(1.2);
-    }
+ul li {
+    margin-bottom: 10px;
+}
 
-    textarea {
-        width: 100%;
-        height: auto;
-        resize: none;
+/* Gabarito estilizado */
+.gabarito {
+    background-color: #e9f5f2;
+    border: 2px solid #e76f51;
+    border-radius: 8px;
+    padding: 20px;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: none;
+}
+
+.gabarito h3 {
+    color: #2a9d8f; /* Turquesa */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.gabarito ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.gabarito li {
+    margin-bottom: 10px;
+}
+
+.gabarito .correct {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+.gabarito .incorrect {
+    color: #e76f51;
+    font-weight: bold;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
     }
 
     button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    a {
+        font-size: 1rem;
         padding: 10px;
-        font-size: 18px;
-        margin: 5px 0;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    .gabarito {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .gabarito h3 {
+        font-size: 1.3rem;
+    }
+
+    .gabarito ul {
+        padding-left: 15px;
     }
 }
-/* Estilos para inputs de radio */
-input[type="radio"] {
-    appearance: none; /* Remove estilo padrão */
-    width: 25px; /* Largura do botão de rádio */
-    height: 25px; /* Altura do botão de rádio */
-    border: 2px solid #666; /* Borda padrão */
-    border-radius: 50%; /* Bordas arredondadas */
+/* Estilo para o gabarito */
+.gabarito {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+    font-size: 1rem;
+}
+
+.gabarito h3 {
+    color: #2a9d8f; /* Cor para o título */
+}
+
+.gabarito p {
+    margin: 8px 0;
+}
+
+/* Resposta correta */
+.correct {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+}
+
+/* Resposta incorreta */
+.incorrect {
+    color: #dc3545; /* Vermelho */
+    font-weight: bold;
+}
+
+/* Resposta correta do gabarito */
+.correct-answer {
+    color: #28a745;
+    font-style: italic;
+}
+
+/* Resposta incorreta do gabarito */
+.incorrect-answer {
+    color: #dc3545;
+    font-style: italic;
+}
+/* Estilo inicial da imagem */
+img.zoomable {
+    transition: transform 0.3s ease; /* Efeito suave de zoom */
     cursor: pointer;
-    margin-right: 10px; /* Espaço entre o input e o texto */
-    position: relative; /* Para posicionar o estado selecionado */
-    outline: none; /* Remove contorno ao focar */
-    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+        height: auto;
 }
 
-/* Efeito ao passar o mouse */
-input[type="radio"]:hover {
-    border-color: #007bff; /* Azul ao passar o mouse */
+/* Aumenta a imagem quando ela é clicada */
+img.zoomable:active {
+    transform: scale(30); /* Aumenta a imagem para 150% */
+    z-index: 9999; /* Garante que a imagem fique sobre outros elementos */
+    position: relative;
+}
+.quiz-image {
+    width: 300px; /* Tornar a imagem maior */
+    height: 300px; /* Definir altura igual à largura para torná-la quadrada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px; /* Adicionar cantos levemente arredondados, opcional */
+    margin: 10px auto; /* Centralizar e adicionar espaçamento */
+    display: block; /* Garantir alinhamento central */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adicionar destaque visual */
+    border: 2px solid #ddd; /* Bordas para realce */
+    transition: transform 0.2s ease-in-out; /* Animação para hover */
 }
 
-/* Estilo do input quando selecionado */
-input[type="radio"]:checked {
-    background-color: #4caf50; /* Verde para indicar seleção */
-    border-color: #4caf50; /* Borda verde */
+/* Efeito de hover */
+.quiz-image:hover {
+    transform: scale(1.05); /* Aumenta levemente no hover */
+    border-color: #007bff; /* Realça a borda no hover */
+}
+img {
+    width: 150px; /* Defina o tamanho desejado */
+    height: 150px; /* O mesmo valor da largura para manter quadrado */
+    object-fit: cover; /* Garante que a imagem preencha o quadrado corretamente */
+    border-radius: 0; /* Remove bordas arredondadas */
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Indicador interno para o botão de rádio selecionado */
-input[type="radio"]:checked::after {
-    content: '';
-    display: block;
-    width: 14px; /* Largura do círculo interno */
-    height: 14px; /* Altura do círculo interno */
-    background-color: white; /* Cor interna do círculo */
-    border-radius: 50%; /* Bordas arredondadas */
-    position: absolute; /* Posiciona o círculo interno */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o círculo interno */
-}
-
-/* Ajusta o estilo do label associado ao input */
-label {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    text-align: left; /* Alinha o texto à esquerda */
+img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave nas imagens */
 }
