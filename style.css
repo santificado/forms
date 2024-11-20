@@ -203,18 +203,7 @@ a:hover {
     transform: translateX(5px); /* Efeito de deslizamento suave */
 }
 
-img {
-    width: 100px; /* Defina o tamanho desejado */
-    height: 100px; /* Igual à largura para garantir formato quadrado */
-    object-fit: cover; /* Garante que a imagem se ajuste ao espaço sem distorcer */
-    margin-bottom: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
 
-img:hover {
-    transform: scale(1.05); /* Efeito de zoom suave nas imagens */
-}
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
@@ -413,14 +402,6 @@ body {
     max-width: 900px;
     width: 100%;
     text-align: center;
-}
-
-.container img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
@@ -701,16 +682,21 @@ img.zoomable:active {
     transform: scale(1.05); /* Aumenta levemente no hover */
     border-color: #007bff; /* Realça a borda no hover */
 }
+
 img {
-    width: 150px; /* Defina o tamanho desejado */
-    height: 150px; /* O mesmo valor da largura para manter quadrado */
-    object-fit: cover; /* Garante que a imagem preencha o quadrado corretamente */
-    border-radius: 0; /* Remove bordas arredondadas */
-    margin-bottom: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: 230px; /* Imagem grande */
+    height: 230px; /* Mantém o formato quadrado */
+    object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer */
+    border-radius: 15px; /* Bordas levemente arredondadas */
+    border: 5px solid #f0f0f0; /* Borda clara para destaque */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transição suave para efeitos */
+    margin: 20px auto; /* Espaçamento ao redor */
+    display: block; /* Centraliza as imagens */
 }
 
 img:hover {
-    transform: scale(1.05); /* Efeito de zoom suave nas imagens */
+    transform: scale(1.1); /* Zoom elegante ao passar o mouse */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3); /* Sombra aumenta para destacar */
+    border-color: #ddd; /* Borda muda levemente no hover */
 }
