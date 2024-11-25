@@ -18,3 +18,17 @@ document.getElementById("btn-provas").addEventListener("click", function() {
     this.classList.add("active");
     document.getElementById("btn-materias").classList.remove("active");
 });
+document.getElementById("notification-btn").addEventListener("click", function () {
+    const notificationMessage = document.getElementById("notification-message");
+
+    // Adicione a mensagem personalizada aqui:
+    notificationMessage.textContent = "Nova atualização! Adição do Quiz - Lipideos";
+
+    // Mostre a mensagem
+    notificationMessage.classList.add("visible");
+
+    // Opcional: oculte a mensagem após alguns segundos
+    setTimeout(() => {
+        notificationMessage.classList.remove("visible");
+    }, 5000); // 5 segundos
+});
