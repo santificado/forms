@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Quiz de Lipideos></title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<div class="back-button">
+    <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz - Lipideos</h2>
+        
+        <form id="quizForm">
+            <!-- Página 1 -->
+            <div id="page1" class="page">
+                <div class="question">
+                    <p>1. Assinale a alternativa incorreta </p>
+                    <label><input type="radio" name="q1" value="a" data-correct="true"> a) A apo E ativa lipoproteína lipase</label>
+                    <label><input type="radio" name="q1" value="b"> b) A Apo CII é importante para o reconhecimento renal</label>
+                    <label><input type="radio" name="q1" value="c" > c) Indivíduo com deficiência da apo E  pode ter aumento de quilomicron remanescente</label>
+                    <label><input type="radio" name="q1" value="d"> d) Indivíduo com deficiência de lipoproteína lipase podem ter o sangue com aspecto leitoso que significa aumento de quilomicron</label>
+                    <label><input type="radio" name="q1" value="e"> e) Indivíduo com deficiência nos receptores de LDL tem alto risco coronariano devido a maior frequência de placas de aterona.</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 2 -->
+            <div id="page2" class="page">
+                <div class="question">
+                    <p>2. Assinale a alternativa incorreta</p>
+                    <label><input type="radio" name="q2" value="a"> a) O Quilomicron é uma lipoproteína rica em triglicérides, ela contém exclusivamente lipídeos vindo da dieta</label>
+                    <label><input type="radio" name="q2" value="b" > b) O LDL também chamado de mau colesterol tem característica aterogênica</label>
+                    <label><input type="radio" name="q2" value="c"> c) O HDL faz o transporte reverso do colesterol, ou seja, retira lipídeos dos tecidos periféricos e leva ao fígado</label>
+                    <label><input type="radio" name="q2" value="d"> d) O VLDL é rico de triglicérides, ele contém os lipídeos remanescentes que sobraram do quilomicron mais os que foram adicionados no fígado</label>
+                    <label><input type="radio" name="q2" value="e" data-correct="true"> e) A célula espumosa é formada após a tentativa de degradaçao do lipídeo pelos macrófagos, contribuindo para aumento dos níveis de HDL e melhora da função endotelial</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 3 -->
+            <div id="page3" class="page">
+                <div class="question">
+                    <p>3. Assinale a alternativa incorreta</p>
+                    <label><input type="radio" name="q3" value="a"> a) Xantomas e xanteplasmas são manifestações clínicas das dislipidemias</label>
+                    <label><input type="radio" name="q3" value="b"> b) A quantidade de colesterol presente no sangue é uma somatória do endógeno (síntese) o exógeno (dieta)</label>
+                    <label><input type="radio" name="q3" value="c"> c) O colesterol é derivado do ciclopentanoperhidrofenantreno</label>
+                    <label><input type="radio" name="q3" value="d" > d) O colesterol pode ter sua síntese endógena inibida através de medicamentos (estatinas)</label>
+                    <label><input type="radio" name="q3" value="e" data-correct="true"> e) O colesterol é utilizado para síntese de sais biliares, vitamina D e hormônios sexuais , o que explica após a menopausa sua concentração sanguinea menor em mulheres.</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 4 -->
+            <div id="page4" class="page">
+                <div class="question">
+                    <p>4. Assinale a alternativa incorreta</p>
+                    <label><input type="radio" name="q4" value="a"> a) Os triglicérides  são lipídeos simples podem ser armazenados nos adipócitos</label>
+                    <label><input type="radio" name="q4" value="b"data-correct="true"> b) Os triglicérides são formados de 3 ácidos graxos e um glicerol e possui função orgânica eter e ácido carboxílico de cadeia longa.</label>
+                    <label><input type="radio" name="q4" value="c" > c) Os lipídeos tem natureza hidrofóbica, são uma forma eficiente do organismo armazenar energia</label>
+                    <label><input type="radio" name="q4" value="d"> d) Os sais biliares emulsificam os lipideos da dieta e após isso a lipase degrada os triglicérides para serem absorvidos no intestino</label>
+                    <label><input type="radio" name="q5" value="e"> e) A lipase gástrica é importante para degradação  de triclicérides com ácidos graxos de cadeia curta, sendo importantes na fase de lactação (já que esses ácidos graxos são encontrados no leite).</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 5 -->
+            <div id="page5" class="page">
+                <div class="question">
+                    <p>5. São transaminases exceto:</p>
+                    <label><input type="radio" name="q5" value="a"> a) AST</label>
+                    <label><input type="radio" name="q5" value="b"> b) ALT</label>
+                    <label><input type="radio" name="q5" value="c"> c) TGO</label>
+                    <label><input type="radio" name="q5" value="d" > d) TGP</label>
+                    <label><input type="radio" name="q5" value="e"data-correct="true"> e) CPK</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 6 -->
+            <div id="page6" class="page">
+                <div class="question">
+                    <p>6. Assinale a alternativa incorreta:</p>
+                    <label><input type="radio" name="q6" value="a"> a) A ureia é hidrossolúvel</label>
+                    <label><input type="radio" name="q6" value="b"> b) A ureia é uma forma do organismo eliminar o nitrogênio que em excesso formaria a amônia que é tóxica</label>
+                    <label><input type="radio" name="q6" value="c" data-correct="true"> c) Produzida no rim através das reações de transaminação</label>
+                    <label><input type="radio" name="q6" value="d"> d) A ureia é excretada na urina</label>
+                    <label><input type="radio" name="q6" value="e"> e) A ureia é encontrada no sangue e na urina</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 7 -->
+            <div id="page7" class="page">
+                <div class="question">
+                    <p>7. Reportagem extraída do Jornal o Globo 05/02/2012. <br><br>
+ 
+                        O acidente aconteceu na quinta-feira, 26 de janeiro. Karolyne, vendedora de loja em Iturama, Minas Gerais, pegou a estrada no fim da tarde. Ela ia viajar 90 quilômetros para visitar um amigo em Jales, no estado de São Paulo. Por volta das 19h30, na metade do caminho, a viagem foi interrompida.
+                        “Eu não me lembro de mais nada, porque eu dormi”, conta Karolyne. Foi por pouco o carro não bateu em cheio em uma árvore. Mas passou por uma parte, quebrou um galho, foi arrastando tudo o que encontrava pela frente.
+                        O carro voou. Parou dez metros abaixo do nível da estrada. Karolyne deixou o carro pelo porta-malas, que se abriu com o impacto da colisão. Mas não teve forças para chegar à estrada. “Eu tinha que pegar minha perna que estava fraturada, jogar ela e depois jogar o corpo, isso demorava muito e o cansaço vinha”, lembra Karolyne.
+                        Começava ali o primeiro dia de espera por ajuda. Na manhã seguinte, preocupada com o desaparecimento, a família começou as buscas. “Viva ou morta eu esperava encontrar ela”, diz a mãe. Eles procuraram no lugar errado. Karolyne havia dito à mãe que deixaria Iturama para visitar a avó nas redondezas, em Alexandrita. Uma rota completamente diferente da que a vendedora fez rumo a Jales, para se encontrar com um amigo.
+                        <br>
+                        Enquanto as buscas se concentravam em Minas, Karolyne gritava por socorro no trecho paulista da estrada.
+                        Com sede, ela se arrasta para beber água de um riacho que corre ali. Foi a água que a manteve viva. “Alimentação não é tão importante quanto a água. Mais três dias sem beber água ela iria desmaiar. Eu acredito que ela teve uma sorte muito grande de ter caído perto de um riacho”, afirma Fernando Bertucci médico-chefe da UTI de Santa Casa.
+                        Após 72 horas do acidente, Karolyne finalmente deixou o buraco. Ela teve sete fraturas. Três na bacia, quatro na perna esquerda. Nesta semana, Karolyne reencontrou os responsáveis pelo resgate. “Eu fiquei muito feliz de ver ela agora já fora de perigo, tranquila”, disse o comerciante Antônio Laerte Margioti. O quadro de Karolyne é estável, mas ela segue na UTI por causa de uma anemia. Karolyne também passará por uma cirurgia por causa das fraturas. Serão pelo menos três meses de recuperação até voltar a andar novamente.
+                        Um esforço que nem parece tão grande para uma sobrevivente como ela. “Para mim eu sou uma vitoriosa, consegui uma nova vida”.
+                        Uma grande preocupação poderia ser a alteração do pH sanguíneo, quais seriam os motivos de uma cetoacidose metabólica neste caso (Karolyne)?
+                        </p>
+                    <label><input type="radio" name="q7" value="a"> a) Ao decréscimo dos níveis circulantes de glucagon</label>
+                    <label><input type="radio" name="q7" value="b" > b) Ao decréscimo da formação de acetil Coa no fígado</label>
+                    <label><input type="radio" name="q7" value="c"data-correct="true"> c)  Ao aumento dos níveis séricos de ácidos graxos livres</label>
+                    <label><input type="radio" name="q7" value="d"> d) À inibição da beta-oxidação de ácidos graxos no fígado</label>
+                    <label><input type="radio" name="q7" value="e"> e)A um decréscimo da atividade da lípase sensível a hormônio no tecido adiposo.</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 8 -->
+            <div id="page8" class="page">
+                <div class="question">
+                    <p>8. Qual das fontes citadas abaixo seria a mais importante para a manutenção da glicemia durante as últimas horas antes de ser encontrada, ou seja após o seu jejum de 48 horas:</p>
+                    <label><input type="radio" name="q8" value="a"> a) Glicogênio muscular</label>
+                    <label><input type="radio" name="q8" value="b"> b) Acetoacetato</label>
+                    <label><input type="radio" name="q8" value="c"> c) Glicogênio hepático</label>
+                    <label><input type="radio" name="q8" value="d" > d) Lactato</label>
+                    <label><input type="radio" name="q8" value="e"data-correct="true"> e) Aminoácidos</label>
+                </div>
+                <button type="button" onclick="nextPage()">Próxima</button>
+                <button type="button" onclick="prevPage()">Anterior</button>
+            </div>
+    
+            <!-- Página 9 -->
+            <div id="page9" class="page">
+                <div class="question">
+                    <p>9. No caso acima, a garota foi levada ao hospital e teve tratamento adequado. No decorrer da recuperação ela recebeu soro glicosado e assim que restabelecidas suas forças alimentação via oral. Após a alimentação adequada, podemos dizer que há uma elevação de compostos no plasma. Assinale a alternativa em que cita o composto que é o primeiro a ter sua concentração elevada  no plasma durante o período absortivo (alimentado), quando comparado ao estado pré-absortivo (jejum)?
+                    </p>
+                    <label><input type="radio" name="q9" value="a"> a) Glucagon</label>
+                    <label><input type="radio" name="q9" value="b"> b) Acetoacetato</label>
+                    <label><input type="radio" name="q9" value="c" data-correct="true"> c) Quilomícron</label>
+                    <label><input type="radio" name="q9" value="d" > d) Ácidos graxos livres</label>
+                    <label><input type="radio" name="q9" value="e"> e) Lactato</label>
+                </div>
+                <button type="button" onclick="prevPage()">Anterior</button>
+                <button type="button" onclick="submitQuiz()">Concluir</button>              
+            </div>
+
+        </form>
+    
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="../js/script8.js"></script>
+    </body>
+    </html>
+    
