@@ -3,27 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imagex/png" href="./images/R20c.gif">
+    <link rel="shortcut icon" type="image/png" href="./images/R20c.gif">
     <link rel="stylesheet" href="style.css">
     <title>Farmácia</title>
+    <script>
+        // Verificar modo escuro ao carregar a página
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+
+        // Função para alternar a visibilidade do menu lateral
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            menu.classList.toggle("active");
+        }
+
+        // Função para alternar o modo escuro
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            const currentMode = document.body.classList.contains("dark-mode") ? "enabled" : "disabled";
+            localStorage.setItem("darkMode", currentMode);
+        }
+    </script>
 </head>
+
 <body>
-    <div class="notification-button">
-        <button id="notification-btn">
-            🔔
-            <span class="notification-count">!</span>
-        </button>
+    <!-- Botão de Hambúrguer -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        &#9776; <!-- Símbolo do hambúrguer -->
     </div>
-    <div id="notification-message" class="hidden"></div>
-    
+
+    <!-- Menu Lateral -->
+    <div id="side-menu" class="side-menu">
+        <!-- Mantenha os botões dentro do menu lateral -->
+        <button id="notification-btn">🔔</button>
+        <div id="notification-message" class="notification hidden"></div>
+
+        <button id="dark-mode-btn" onclick="toggleDarkMode()">🌙</button>
+    </div>
+
     <div class="container">
-        <img src="./images/R20c.gif" alt="icon" style="border-radius: 50"/>
+        <img src="./images/R20c.gif" alt="Ícone de logo da farmácia" style="border-radius: 50%">
         <h1>Farmácia</h1>
 
         <!-- Botões de troca de layout -->
         <div class="toggle-buttons">
-            <button id="btn-materias" class="active">Matérias</button>
-            <button id="btn-provas">Provas</button>
+            <button id="btn-materias" class="active" onclick="toggleLayout('materias')">Matérias</button>
+            <button id="btn-provas" onclick="toggleLayout('provas')">Provas</button>
         </div>
 
         <!-- Layout de Matérias -->
@@ -32,37 +60,38 @@
             <details class="quiz-section">
                 <summary>Fisiologia</summary>
                 <a href="./html/quiz_fisio1_intro.html" class="form-link">Introdução - Sistema cardiovascular</a>
-                <a href="./html/quiz_atividade_card.html" class="form-link">Elétrica no ciclo cardiaco</a>
+                <a href="./html/quiz_atividade_card.html" class="form-link">Elétrica no ciclo cardíaco</a>
                 <a href="html/quiz_filtracao_glo.html" class="form-link">Filtração Glomerular</a> 
                 <a href="./html/quiz_pa_longoprazo.html" class="form-link">Pressão arterial a longo prazo</a>
                 <a href="./html/quiz_sistemarenal.html" class="form-link">Sistema Renal</a>
                 <a href="./html/quiz_casopaciente.html" class="form-link">Casos de Pacientes</a>
-
             </details>
+
             <details class="quiz-section">
                 <summary>Imunologia</summary>
                 <a href="./html/quiz_imunologia.html" class="form-link">Imunologia</a>
                 <a href="./html/quiz_imuno2.html" class="form-link">Imunologia 2</a>
                 <a href="./html/quiz_imuno3.html" class="form-link">Imunologia 3</a>   
             </details>
+
             <details class="quiz-section">
                 <summary>Bioquímica</summary>
                 <a href="./html/quiz_cte_krebs.html" class="form-link">CTE e Ciclo de Krebs</a>
-                <a href="html/quiz_carbo.html" class="form-link">Disgestão de carboidratos</a>
+                <a href="html/quiz_carbo.html" class="form-link">Digestão de carboidratos</a>
                 <a href="html/quiz_metabolismo.html" class="form-link">Metabolismo do Glicogênio</a>
                 <a href="html/quiz_krebs.html" class="form-link">Ciclo de Krebs</a>
-                <a href="html/quiz_glicolise.html"class="form-link">Glicólise</a>
+                <a href="html/quiz_glicolise.html" class="form-link">Glicólise</a>
                 <a href="html/quiz_bioenergetica.html" class="form-link">Bioenergética</a>
                 <a href="html/quiz_lipideomet.html" class="form-link">Metabolismo de Lipídeos</a>
                 <a href="html/quiz_pentose.html" class="form-link">Via das Pentoses Fosfato</a>
-                <a href="html/quiz_lipideos.html" class="form-link">Lipideos</a>
+                <a href="html/quiz_lipideos.html" class="form-link">Lipídeos</a>
             </details>
+
             <details class="quiz-section">
                 <summary>Patologia</summary>
                 <a href="./html/quiz_necrose.html" class="form-link">Necrose</a>
                 <a href="./html/quiz_fisiologia.html" class="form-link">Adaptações Celulares</a>
                 <a href="./html/quiz_patologia.html" class="form-link">Lâminas</a>
-
             </details>
         </div>
 
@@ -80,50 +109,44 @@
             <details class="quiz-section">
                 <summary>P2</summary>
                 <details class="quiz-section">
-                <summary>Imunologia                </summary> 
+                    <summary>Imunologia</summary> 
                     <a href="./html/quiz_imuno2.html" class="form-link">Imunologia 2</a>
                     <a href="./html/quiz_imuno3.html" class="form-link">Imunologia 3</a> 
-
-
-                </details>  
-
-                <details class="quiz-section">
-                <summary>Bioquímica</summary>            
-                        <a href="./html/quiz_cte_krebs.html" class="form-link">CTE e Ciclo de Krebs</a>
-                        <a href="html/quiz_carbo.html" class="form-link">Disgestão de carboidratos</a>
-                        <a href="html/quiz_metabolismo.html" class="form-link">Metabolismo do Glicogênio</a>
-                        <a href="html/quiz_krebs.html" class="form-link">Ciclo de Krebs</a>
-                        <a href="html/quiz_glicolise.html"class="form-link">Glicólise</a>
-                        <a href="html/quiz_bioenergetica.html" class="form-link">Bioenergética</a>
-                        <a href="html/quiz_lipideomet.html" class="form-link">Metabolismo de Lipídeos</a>
-                        <a href="html/quiz_pentose.html" class="form-link">Via das Pentoses Fosfato</a>
-                        <a href="html/quiz_fermentação.html" class="form-link">Fermentação</a>
-                        <a href="html/quiz_lipideos.html" class="form-link">Lipideos</a>
-
                 </details>
 
+                <details class="quiz-section">
+                    <summary>Bioquímica</summary>            
+                    <a href="./html/quiz_cte_krebs.html" class="form-link">CTE e Ciclo de Krebs</a>
+                    <a href="html/quiz_carbo.html" class="form-link">Digestão de carboidratos</a>
+                    <a href="html/quiz_metabolismo.html" class="form-link">Metabolismo do Glicogênio</a>
+                    <a href="html/quiz_krebs.html" class="form-link">Ciclo de Krebs</a>
+                    <a href="html/quiz_glicolise.html" class="form-link">Glicólise</a>
+                    <a href="html/quiz_bioenergetica.html" class="form-link">Bioenergética</a>
+                    <a href="html/quiz_lipideomet.html" class="form-link">Metabolismo de Lipídeos</a>
+                    <a href="html/quiz_pentose.html" class="form-link">Via das Pentoses Fosfato</a>
+                    <a href="html/quiz_fermentacao.html" class="form-link">Fermentação</a>
+                    <a href="html/quiz_lipideos.html" class="form-link">Lipídeos</a>
+                </details>
 
                 <details class="quiz-section">
                     <summary>Fisiologia</summary>            
-                    <a href="./html/quiz_atividade_card.html" class="form-link">Elétrica no ciclo cardiaco</a>
+                    <a href="./html/quiz_atividade_card.html" class="form-link">Elétrica no ciclo cardíaco</a>
                     <a href="html/quiz_filtracao_glo.html" class="form-link">Filtração Glomerular</a> 
                     <a href="./html/quiz_fisio1_intro.html" class="form-link">Introdução - Sistema cardiovascular</a>
                     <a href="./html/quiz_pa_longoprazo.html" class="form-link">Pressão arterial a longo prazo</a>
                     <a href="./html/quiz_sistemarenal.html" class="form-link">Sistema Renal</a>
                     <a href="./html/quiz_casopaciente.html" class="form-link">Casos de Pacientes</a>
-                    </details>
-                      
-
-                    <details class="quiz-section">
-                        <summary>Patologia</summary>            
-                        <a href="./html/quiz_patologia.html" class="form-link">Lâminas</a>
-                        </details>
+                </details>
             </details>
-
-        </details>
         </div>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>&copy; 2024 Farmácia</p>
+        </footer>
     </div>
 
-    <script src="./js/script_home.js"></script>
+    <script src="js/script_home.js"></script>
+    <script src="js/styles.js"></script>
 </body>
 </html>

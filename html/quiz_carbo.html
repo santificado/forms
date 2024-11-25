@@ -6,6 +6,14 @@
     <title>Quiz de digestão de carboidratos e destino da glicose</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        // Verificar modo escuro ao carregar a página
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+    </script>
 </head>
 <div class="back-button">
     <a href="../index.html" class="btn-back"><i class="fas fa-home"></i></a>

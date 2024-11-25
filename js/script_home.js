@@ -1,34 +1,103 @@
 // Função para alternar entre os layouts
-document.getElementById("btn-materias").addEventListener("click", function() {
-    // Exibe o layout de matérias e esconde o de provas
-    document.getElementById("layout-materias").classList.add("active");
-    document.getElementById("layout-provas").classList.remove("active");
-    
-    // Adiciona a classe 'active' ao botão de matérias e remove do botão de provas
-    this.classList.add("active");
-    document.getElementById("btn-provas").classList.remove("active");
+const btnMaterias = document.getElementById("btn-materias");
+const btnProvas = document.getElementById("btn-provas");
+const layoutMaterias = document.getElementById("layout-materias");
+const layoutProvas = document.getElementById("layout-provas");
+
+if (btnMaterias && btnProvas && layoutMaterias && layoutProvas) {
+    btnMaterias.addEventListener("click", function () {
+        layoutMaterias.classList.add("active");
+        layoutProvas.classList.remove("active");
+        this.classList.add("active");
+        btnProvas.classList.remove("active");
+    });
+
+    btnProvas.addEventListener("click", function () {
+        layoutProvas.classList.add("active");
+        layoutMaterias.classList.remove("active");
+        this.classList.add("active");
+        btnMaterias.classList.remove("active");
+    });
+}
+
+// Alternar Modo Escuro
+function toggleDarkMode(buttonId) {
+    document.body.classList.toggle("dark-mode");
+    const button = document.getElementById(buttonId);
+
+    if (button) {
+        if (document.body.classList.contains("dark-mode")) {
+            button.innerHTML = "🌙";
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            button.innerHTML = "☀️";
+            localStorage.setItem("darkMode", "disabled");
+        }
+    }
+}
+
+const darkModeBtn = document.getElementById("dark-mode-btn");
+if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", function () {
+        toggleDarkMode("dark-mode-btn");
+    });
+}
+
+// Verificar se o modo escuro está ativo ao carregar
+document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        if (darkModeBtn) darkModeBtn.innerHTML = "🌙";
+    }
 });
 
-document.getElementById("btn-provas").addEventListener("click", function() {
-    // Exibe o layout de provas e esconde o de matérias
-    document.getElementById("layout-provas").classList.add("active");
-    document.getElementById("layout-materias").classList.remove("active");
-    
-    // Adiciona a classe 'active' ao botão de provas e remove do botão de matérias
-    this.classList.add("active");
-    document.getElementById("btn-materias").classList.remove("active");
-});
-document.getElementById("notification-btn").addEventListener("click", function () {
+// Notificação de Atualização
+function showNotification(message = "Notificação padrão") {
     const notificationMessage = document.getElementById("notification-message");
 
-    // Adicione a mensagem personalizada aqui:
-    notificationMessage.textContent = "Nova atualização! Adição do Quiz - Lipideos";
+    if (notificationMessage) {
+        notificationMessage.textContent = message;
+        notificationMessage.classList.add("visible");
 
-    // Mostre a mensagem
-    notificationMessage.classList.add("visible");
+        setTimeout(() => {
+            notificationMessage.classList.remove("visible");
+        }, 5000);
+    } else {
+        console.error("Elemento com ID 'notification-message' não encontrado!");
+    }
+}
 
-    // Opcional: oculte a mensagem após alguns segundos
-    setTimeout(() => {
-        notificationMessage.classList.remove("visible");
-    }, 5000); // 5 segundos
-});
+const notificationBtn = document.getElementById("notification-btn");
+if (notificationBtn) {
+    notificationBtn.addEventListener("click", function () {
+        showNotification("Nova atualização! Adição do Quiz - Lipídeos");
+    });
+}
+
+// Alternância do Menu Lateral
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const sideMenu = document.querySelector(".side-menu");
+const menuToggleBtn = document.getElementById("menu-toggle-btn");
+
+function toggleMenu() {
+    if (sideMenu) {
+        sideMenu.classList.toggle("open");
+    }
+}
+
+if (hamburgerMenu) {
+    hamburgerMenu.addEventListener("click", toggleMenu);
+}
+
+if (menuToggleBtn) {
+    menuToggleBtn.addEventListener("click", toggleMenu);
+}
+
+// Fechar o Menu Lateral ao clicar em qualquer botão dentro
+if (sideMenu) {
+    sideMenu.querySelectorAll("button").forEach(function (button) {
+        button.addEventListener("click", function () {
+            sideMenu.classList.remove("open");
+        });
+    });
+}
