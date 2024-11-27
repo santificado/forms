@@ -209,5 +209,32 @@ function restartGame() {
     gameInterval = setInterval(draw, 10);
 }
 
+// Definir variáveis para os controles de toque
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Detectar o movimento de toque para controlar a raquete
+document.addEventListener("touchstart", touchStartHandler, false);
+document.addEventListener("touchmove", touchMoveHandler, false);
+
+function touchStartHandler(e) {
+    touchStartX = e.touches[0].clientX; // Posição inicial do toque
+}
+
+function touchMoveHandler(e) {
+    touchEndX = e.touches[0].clientX; // Posição final do toque
+
+    let deltaX = touchEndX - touchStartX;
+
+    // Atualizar a posição da raquete de acordo com o movimento do toque
+    if (deltaX > 0 && paddleX < canvas.width - paddleWidth) {
+        paddleX += 7; // Mover para a direita
+    } else if (deltaX < 0 && paddleX > 0) {
+        paddleX -= 7; // Mover para a esquerda
+    }
+
+    touchStartX = touchEndX; // Atualiza a posição inicial do toque
+}
+
 resetBricks(); // Inicializa os tijolos
 gameInterval = setInterval(draw, 10);
