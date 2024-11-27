@@ -1,0 +1,164 @@
+/* Resetando margens, paddings e fontes globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e; /* Fundo escuro suave para destacar os elementos */
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container principal do jogo */
+#gameContainer {
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(145deg, #343a40, #23272b); /* Gradiente suave */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Canvas onde o jogo acontece */
+#gameCanvas {
+    background-color: #2c2f33; /* Fundo escuro para o jogo */
+    border: 4px solid #0095DD;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo das informações: pontuação, vidas e nível */
+#scoreDisplay, #livesDisplay, #levelDisplay {
+    font-size: 18px;
+    margin: 10px;
+    color: #f5f5f5;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#scoreDisplay {
+    color: #ffbc00; /* Amarelo vibrante para a pontuação */
+}
+
+#livesDisplay {
+    color: #e74c3c; /* Vermelho para vidas */
+}
+
+#levelDisplay {
+    color: #2ecc71; /* Verde para o nível */
+}
+
+/* Botão para iniciar o jogo */
+#startButton {
+    padding: 14px 30px;
+    font-size: 22px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#startButton:active {
+    background-color: #388e3c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de game over */
+#gameOverMessage {
+    font-size: 28px;
+    color: #e74c3c;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    display: none;
+    margin-top: 30px;
+}
+
+/* Estilo para os tijolos */
+.brick {
+    background-color: #4CAF50; /* Verde vibrante para os tijolos */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.brick:hover {
+    background-color: #388e3c;
+    transform: scale(1.1);
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    #scoreDisplay, #livesDisplay, #levelDisplay {
+        font-size: 14px;
+    }
+
+    #startButton {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #gameOverMessage {
+        font-size: 24px;
+    }
+}
+
+/* Efeito para transições no canvas */
+canvas {
+    transition: box-shadow 0.3s ease;
+}
+
+#gameCanvas:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Mais destaque no hover */
+}
+
+/* Efeitos dinâmicos de partículas */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleEffect 0.8s ease-out forwards;
+}
+
+@keyframes particleEffect {
+    0% {
+        transform: scale(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(-100px);
+        opacity: 0;
+    }
+}

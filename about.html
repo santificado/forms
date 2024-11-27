@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Brick Breaker</title>
+    <link rel="stylesheet" href="kart.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="back-button">
+    <a href="index.html" class="btn-back"><i class="fas fa-home"></i></a>
+</div>
+
+
+</head>
+<body>
+
+<div id="gameContainer">
+    <h1 style="color: white;">Brick Breaker</h1>
+
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+
+    <div id="scoreDisplay">Pontuação: 0</div>
+    <div id="livesDisplay">Vidas: 3</div>
+    <div id="levelDisplay">Nível: 1</div>
+
+    <!-- Adicionando a mensagem de Game Over -->
+    <div id="gameOverMessage" style="display:none; color: white; font-size: 24px; text-align: center;">Game Over!</div>
+
+    <!-- Adicionando o botão para reiniciar o jogo -->
+    <button id="restartBtn" style="display:none;">Reiniciar Jogo</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
